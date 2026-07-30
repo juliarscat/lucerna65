@@ -1,0 +1,11 @@
+.env
+.venv/
+.pytest_cache/
+__pycache__/
+*.pyc
+server.*.log
+tmp/
+output/
+node_modules/
+docs/concurs/
+backend/test_*.py

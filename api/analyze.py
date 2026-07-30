@@ -4,10 +4,10 @@ from __future__ import annotations
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import JSONResponse, Response
+from fastapi.responses import FileResponse, JSONResponse, Response
 from pydantic import BaseModel, Field
 
-from backend.config import load_config
+from backend.config import ROOT, load_config
 from backend.pdf_report import render_report_pdf
 from backend.report import build_report
 from backend.text_analysis import extract_facts
@@ -28,9 +28,11 @@ SECURITY_HEADERS = {
     "Referrer-Policy": "no-referrer",
     "Content-Security-Policy": (
         "default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; "
-        "script-src 'self'; connect-src 'self'; base-uri 'none'; frame-ancestors 'none'"
+        "script-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'"
     ),
 }
+
+STATIC_TOP_LEVEL = {"index.html", "app.js", "styles.css", "assets", "content"}
 
 
 @app.middleware("http")
@@ -161,3 +163,25 @@ def analyze(payload: AnalyzeRequest):
     if payload.state:
         return build_report(payload.state)
     return extract_facts(payload.text, payload.locale)
+
+
+@app.get("/", include_in_schema=False)
+def frontend_index():
+    return FileResponse(ROOT / "index.html", media_type="text/html; charset=utf-8")
+
+
+@app.get("/{asset_path:path}", include_in_schema=False)
+def frontend_asset(asset_path: str):
+    if not asset_path or asset_path.startswith("api/"):
+        return JSONResponse(status_code=404, content={"error": "Not found"})
+    first = asset_path.split("/", 1)[0]
+    if first not in STATIC_TOP_LEVEL:
+        return FileResponse(ROOT / "index.html", media_type="text/html; charset=utf-8")
+    target = (ROOT / asset_path).resolve()
+    try:
+        target.relative_to(ROOT)
+    except ValueError:
+        return JSONResponse(status_code=404, content={"error": "Not found"})
+    if target.is_file():
+        return FileResponse(target)
+    return JSONResponse(status_code=404, content={"error": "Not found"})

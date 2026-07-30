@@ -1,15 +1,25 @@
 from fastapi.testclient import TestClient
 
-from api.analyze import app
+from api.analyze import app as fastapi_app
 
 
-client = TestClient(app)
+client = TestClient(fastapi_app)
 
 
 def test_health():
     response = client.get("/api/health")
     assert response.status_code == 200
     assert response.json()["ok"] is True
+
+
+def test_fastapi_entrypoint_serves_frontend_assets():
+    index = client.get("/")
+    assert index.status_code == 200
+    assert "LUCERNA 65" in index.text
+
+    script = client.get("/app.js")
+    assert script.status_code == 200
+    assert "/api/session/start" in script.text
 
 
 def test_ai_status_contract_does_not_expose_secrets():
