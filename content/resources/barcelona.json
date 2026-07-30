@@ -1,0 +1,47 @@
+[
+  {
+    "id": "service_internal_protocol",
+    "name_ca": "Circuit intern del servei o centre",
+    "name_es": "Circuito interno del servicio o centro",
+    "description_ca": "Recurs placeholder: activar segons protocol intern verificat abans d'atendre casos reals.",
+    "description_es": "Recurso provisional: activar según el protocolo interno verificado antes de atender casos reales.",
+    "territory": "Barcelona",
+    "min_attention": "urgent",
+    "verification_status": "pending",
+    "source_ids": [
+      "barcelona_resources_directory"
+    ],
+    "name_en": "Internal pathway of the service or centre",
+    "description_en": "Placeholder resource: activate according to the verified internal protocol before handling real cases."
+  },
+  {
+    "id": "specialized_vm_network",
+    "name_ca": "Xarxa especialitzada en violencies masclistes",
+    "name_es": "Red especializada en violencias machistas",
+    "description_ca": "Entrada pendent de contrast amb el directori oficial territorial i el circuit professional aplicable.",
+    "description_es": "Entrada pendiente de contraste con el directorio oficial territorial y el circuito profesional aplicable.",
+    "territory": "Barcelona/Catalunya",
+    "min_attention": "medium",
+    "verification_status": "pending",
+    "source_ids": [
+      "barcelona_resources_directory"
+    ],
+    "name_en": "Specialized network on gender-based violence",
+    "description_en": "Entry pending checking against the official territorial directory and applicable professional pathway."
+  },
+  {
+    "id": "older_women_community_support",
+    "name_ca": "Suport comunitari i gent gran",
+    "name_es": "Apoyo comunitario y personas mayores",
+    "description_ca": "Entrada pendent de verificacio per districtes: casals, serveis socials, salut comunitaria i entitats.",
+    "description_es": "Entrada pendiente de verificación por distritos: centros de mayores, servicios sociales, salud comunitaria y entidades.",
+    "territory": "Barcelona",
+    "min_attention": "exploratory",
+    "verification_status": "pending",
+    "source_ids": [
+      "barcelona_resources_directory"
+    ],
+    "name_en": "Community and older-person support",
+    "description_en": "Entry pending district-level verification: community centres, social services, community health and organizations."
+  }
+]

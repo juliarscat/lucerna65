@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="ca">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LUCERNA 65</title>
+    <meta name="description" content="Sistema orientatiu de suport professional per explorar indicadors de violències masclistes envers dones grans.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="assets/lucerna-mark.svg" type="image/svg+xml">
+  </head>
+  <body>
+    <a class="skipLink" href="#mainQuestion">Saltar al contingut principal</a>
+
+    <header class="appHeader" aria-label="Capçalera de LUCERNA 65">
+      <div class="brandBlock" aria-label="LUCERNA 65">
+        <img src="assets/lucerna-mark.svg" alt="" class="brandMark" width="56" height="56">
+        <div>
+          <h1>LUCERNA 65</h1>
+          <p id="headerSubline">Suport professional orientatiu</p>
+        </div>
+      </div>
+
+      <div class="headerControls">
+        <span class="profileIcon" aria-hidden="true"></span>
+        <label class="field compactField">
+          <span id="profileLabel">Perfil</span>
+          <select id="profileSelect">
+            <option value="health">Salut</option>
+            <option value="social">Serveis socials</option>
+            <option value="psychology">Psicologia</option>
+            <option value="care">Cures i residències</option>
+            <option value="legal">Àmbit jurídic</option>
+            <option value="community">Comunitari</option>
+          </select>
+        </label>
+        <div class="segmented" id="localeToggle" role="group" aria-label="Idioma">
+          <button type="button" class="isActive" data-locale="ca" aria-pressed="true">CA</button>
+          <button type="button" data-locale="es" aria-pressed="false">ES</button>
+          <button type="button" data-locale="en" aria-pressed="false">EN</button>
+        </div>
+        <button type="button" id="resetButton" class="newCaseButton">
+          <span id="resetButtonText">Nou cas</span>
+          <span aria-hidden="true" class="buttonIcon">+</span>
+        </button>
+      </div>
+    </header>
+
+    <div class="offlineBanner" id="offlineBanner" role="status" hidden>
+      <strong id="offlineTitle">Connexió limitada</strong>
+      <span id="offlineText">Algunes funcions poden no estar disponibles fins que l'API local respongui.</span>
+    </div>
+
+    <main class="workbench" aria-label="Espai de treball professional">
+      <aside class="journeySidebar" aria-label="Itinerari de preguntes">
+        <section class="sidebarSection">
+          <div class="sidebarEyebrow" id="progressTitle">Itinerari</div>
+          <div class="progressSummary">
+            <div>
+              <span id="answeredLabel">Respostes</span>
+              <strong id="answeredCount">0</strong>
+            </div>
+            <div>
+              <span id="pendingLabel">Pendents</span>
+              <strong id="pendingCount">0</strong>
+            </div>
+          </div>
+          <div class="progressTrack" aria-hidden="true"><span id="progressBar"></span></div>
+          <div class="progressMeta">
+            <span id="progressLabel">Progrés</span>
+            <strong id="progressPercent">0%</strong>
+          </div>
+        </section>
+
+        <section class="sidebarSection domainSection">
+          <h2 id="domainsTitle">Dominis explorats</h2>
+          <div id="domainList" class="domainList"></div>
+        </section>
+
+        <section class="sidebarSection trainingSection">
+          <h2 id="trainingTitle">Formació</h2>
+          <label class="srOnly" for="trainingSelect" id="trainingSelectLabel">Cas formatiu</label>
+          <select id="trainingSelect"></select>
+          <button type="button" id="loadCaseButton" class="sidebarButton">Carregar relat</button>
+        </section>
+
+        <footer class="sidebarFooter" aria-label="Informació de suport">
+          <a href="#helpDialog" id="guideLink" data-help-topic="guide" aria-haspopup="dialog">Guia d'ús</a>
+          <a href="#helpDialog" id="privacyLink" data-help-topic="privacy" aria-haspopup="dialog">Privacitat</a>
+          <a href="#helpDialog" id="projectInfoLink" data-help-topic="project" aria-haspopup="dialog">Informació del projecte</a>
+          <span>Versió 0.1.0</span>
+        </footer>
+      </aside>
+
+      <section class="mainColumn">
+        <section class="questionCard" id="mainQuestion" aria-live="polite" aria-labelledby="questionText">
+          <div class="questionHeader">
+            <div>
+              <div class="statusLine" id="statusLine" role="status">Preparant sessió...</div>
+              <div class="nodeMeta">
+                <span id="domainPill" class="pill">Context</span>
+                <span id="priorityPill" class="attentionPill">Exploratòria</span>
+              </div>
+            </div>
+            <span class="reviewStatus" id="reviewStatus">Informe pendent de revisió professional</span>
+          </div>
+
+          <h2 id="questionText">...</h2>
+          <p id="helpText" class="helpText"></p>
+
+          <div id="answerPanel" class="answerGrid" role="group" aria-label="Opcions de resposta"></div>
+
+          <section class="notesPanel" aria-labelledby="noteLabel">
+            <div class="noteHeader">
+              <div>
+                <h3 id="noteLabel">Observació professional opcional</h3>
+                <p id="noteDescription">Afegeix context útil per a la valoració professional.</p>
+              </div>
+              <span id="noteCounter">0 / 1200</span>
+            </div>
+            <textarea id="noteInput" rows="5" maxlength="1200" placeholder="Afegeix observacions rellevants sobre el context, actituds, llenguatge no verbal, presència d'altres persones o limitacions de l'entrevista." aria-describedby="privacyNote noteDescription noteCounter"></textarea>
+            <p class="privacyHint" id="privacyNote">No incloguis dades identificatives que no siguin necessàries.</p>
+          </section>
+        </section>
+
+        <aside class="safetyReminder" aria-label="Recordatori professional">
+          <span class="infoMark" aria-hidden="true">i</span>
+          <p id="safetyReminderText"><strong>Recordatori:</strong> si hi ha risc imminent, activa els protocols d'emergència segons el procediment del teu centre.</p>
+        </aside>
+      </section>
+
+      <aside class="contextPanel" aria-label="Informació orientativa">
+        <section class="contextBlock attentionBlock">
+          <div>
+            <div class="contextTitleRow">
+              <span class="infoMark" aria-hidden="true">i</span>
+              <h2 id="attentionLabel">Informació orientativa</h2>
+            </div>
+            <p id="attentionText">La informació obtinguda és orientativa i no substitueix el criteri professional ni els protocols vigents.</p>
+            <strong id="attentionValue">Exploració inicial</strong>
+          </div>
+          <button type="button" id="reportButton" class="primaryButton" disabled>Generar informe</button>
+        </section>
+
+        <section class="contextBlock">
+          <h2 id="indicatorTitle">Indicadors que convé explorar</h2>
+          <div id="indicatorList" class="stackList"></div>
+        </section>
+
+        <section class="contextBlock">
+          <h2 id="recommendationTitle">Recomanacions de suport</h2>
+          <div id="recommendationList" class="stackList"></div>
+        </section>
+
+        <section class="contextBlock">
+          <h2 id="pendingTitle">Àrees pendents</h2>
+          <div id="pendingList" class="stackList"></div>
+        </section>
+
+        <section class="contextBlock">
+          <h2 id="sourcesTitle">Fonts i protocols</h2>
+          <div id="sourcesList" class="stackList"></div>
+        </section>
+
+        <section class="contextBlock">
+          <h2 id="limitsTitle">Limitacions de l'entrevista</h2>
+          <div id="limitsList" class="stackList"></div>
+        </section>
+      </aside>
+    </main>
+
+    <section class="factBand" id="factExtractor" aria-labelledby="factTitle">
+      <div class="factHeader">
+        <div>
+          <h2 id="factTitle">Text lliure</h2>
+          <p id="factSubline">Fets proposats, sempre confirmables per la professional.</p>
+          <p id="aiStatusLine" class="aiStatusLine" aria-live="polite">Extracció local determinista.</p>
+        </div>
+        <button type="button" id="extractFactsButton" class="secondaryButton">Extreure fets</button>
+      </div>
+      <textarea id="freeTextInput" rows="5" maxlength="6000" placeholder="Enganxa un relat breu o notes professionals per proposar fets confirmables." aria-label="Text lliure per extreure fets confirmables"></textarea>
+      <div id="factList" class="factList"></div>
+      <button type="button" id="addFactsButton" class="ghostButton">Afegir fets confirmats</button>
+    </section>
+
+    <section class="reportBand" id="reportPanel" hidden aria-labelledby="reportTitle">
+      <div class="reportHeader">
+        <div>
+          <h2 id="reportTitle">Informe orientatiu</h2>
+          <p id="reportSubline">Revisable abans de compartir o arxivar.</p>
+        </div>
+        <div class="reportActions">
+          <button type="button" id="printButton" class="secondaryButton">Descarregar PDF</button>
+          <button type="button" id="downloadButton" class="ghostButton">Descarregar JSON</button>
+        </div>
+      </div>
+      <div id="reportContent" class="reportContent"></div>
+    </section>
+
+    <footer class="appFooter" aria-label="Suport i crèdits de LUCERNA 65">
+      <section class="donationFooter" aria-label="Suport al projecte">
+        <p>Si LUCERNA 65 us resulta útil per sostenir una atenció més clara i curosa, podeu contribuir a mantenir-ne la llum encesa.</p>
+        <div class="donationActions" aria-label="Opcions de donació">
+          <a class="donationButton" href="https://www.paypal.com/paypalme/crisles87" target="_blank" rel="noopener noreferrer">Donar amb PayPal</a>
+          <a class="donationButton" href="https://www.gofundme.com/f/dona-suport-a-un-espai-de-pensament-lliure-i-creacio-critica?attribution_id=sl:45a5ad02-f20a-415f-9acc-cc2bc6aa5eb3" target="_blank" rel="noopener noreferrer">Donar a GoFundMe</a>
+        </div>
+      </section>
+      <section class="creditFooter" aria-label="Autoria">
+        <span>CREAT PER JÚLIA ROSELL SALDAÑA - UT ALII VIVANT</span>
+      </section>
+    </footer>
+
+    <dialog id="newCaseDialog" class="modalDialog" aria-labelledby="newCaseTitle">
+      <form method="dialog">
+        <h2 id="newCaseTitle">Iniciar un nou cas?</h2>
+        <p id="newCaseText">Es reiniciarà la sessió efímera i es buidaran les respostes visibles d'aquest itinerari.</p>
+        <div class="modalActions">
+          <button type="button" id="cancelNewCaseButton" class="ghostButton">Cancel·lar</button>
+          <button type="button" id="confirmNewCaseButton" class="primaryButton">Nou cas</button>
+        </div>
+      </form>
+    </dialog>
+
+    <dialog id="generateReportDialog" class="modalDialog" aria-labelledby="generateReportTitle">
+      <form method="dialog">
+        <h2 id="generateReportTitle">Generar informe orientatiu</h2>
+        <p id="generateReportText">L'informe és un esborrany de suport i queda pendent de revisió professional abans de compartir-lo o arxivar-lo.</p>
+        <div class="modalActions">
+          <button type="button" id="cancelReportButton" class="ghostButton">Cancel·lar</button>
+          <button type="button" id="confirmReportButton" class="primaryButton">Generar esborrany</button>
+        </div>
+      </form>
+    </dialog>
+
+    <dialog id="helpDialog" class="modalDialog infoDialog" aria-labelledby="helpDialogTitle" aria-describedby="helpDialogBody">
+      <form method="dialog">
+        <div class="modalTitleRow">
+          <span class="infoMark" aria-hidden="true">i</span>
+          <h2 id="helpDialogTitle">Guia d'ús</h2>
+        </div>
+        <div id="helpDialogBody" class="infoDialogBody"></div>
+        <div class="modalActions">
+          <button type="button" id="closeHelpDialogButton" class="primaryButton">Entesos</button>
+        </div>
+      </form>
+    </dialog>
+
+    <script src="app.js"></script>
+  </body>
+</html>

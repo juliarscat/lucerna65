@@ -1,0 +1,265 @@
+{
+  "_meta": {
+    "project": "LUCERNA 65",
+    "version": "0.2.0-draft",
+    "language": "ca",
+    "generated_at": "2026-07-30",
+    "status": "prototip_no_validat",
+    "disclaimer": "Contingut de prototip per al desenvolupament i la validació de LUCERNA 65. No és un instrument clínic, social, jurídic ni policial validat. No diagnostica, no determina l'existència de violència i no substitueix el criteri professional, els protocols vigents ni l'actuació d'emergència."
+  },
+  "attention_levels": [
+    {
+      "id": "urgent",
+      "label": "Atenció immediata",
+      "meaning": "Possible perill, lesió greu o represàlia imminent. Aplicar protocol vigent."
+    },
+    {
+      "id": "priority",
+      "label": "Valoració prioritària",
+      "meaning": "Indicadors rellevants que requereixen revisió o derivació prompta."
+    },
+    {
+      "id": "scheduled",
+      "label": "Seguiment programable",
+      "meaning": "Cal ampliar informació o fer seguiment sense indici actual d'urgència."
+    },
+    {
+      "id": "preventive",
+      "label": "Informació preventiva",
+      "meaning": "No s'han identificat indicadors suficients, però es faciliten recursos i s'indiquen limitacions."
+    }
+  ],
+  "rules": [
+    {
+      "id": "R001",
+      "when": {
+        "any_indicator": [
+          "immediate_danger",
+          "serious_injury",
+          "object_assault",
+          "threats"
+        ],
+        "current_or_recent": true
+      },
+      "then": {
+        "attention_level": "urgent",
+        "action": "ACTION_URGENT_ASSESS"
+      },
+      "explanation": "La combinació pot requerir actuació immediata segons protocol."
+    },
+    {
+      "id": "R002",
+      "when": {
+        "all_indicators": [
+          "privacy_denied",
+          "fearful_behavior"
+        ]
+      },
+      "then": {
+        "attention_level": "priority",
+        "action": "ACTION_PRIVATE_INTERVIEW"
+      },
+      "explanation": "La manca de privacitat i el temor observable poden limitar la llibertat de resposta."
+    },
+    {
+      "id": "R003",
+      "when": {
+        "any_indicator": [
+          "unable_to_refuse_sex",
+          "sex_despite_refusal",
+          "coercive_consequences"
+        ]
+      },
+      "then": {
+        "attention_level": "priority",
+        "action": "ACTION_SPECIALIST_SUPPORT"
+      },
+      "explanation": "Cal explorar consentiment, impacte actual i suport especialitzat."
+    },
+    {
+      "id": "R004",
+      "when": {
+        "all_indicators": [
+          "permission_for_small_purchases",
+          "unknown_financial_state"
+        ]
+      },
+      "then": {
+        "attention_level": "priority",
+        "action": "ACTION_SOCIAL_PRIORITY"
+      },
+      "explanation": "La combinació és compatible amb control econòmic i pèrdua d'autonomia."
+    },
+    {
+      "id": "R005",
+      "when": {
+        "any_indicator": [
+          "coerced_signature",
+          "property_pressure"
+        ]
+      },
+      "then": {
+        "attention_level": "priority",
+        "action": "ACTION_LEGAL_REVIEW"
+      },
+      "explanation": "Pot ser necessària una revisió jurídica independent."
+    },
+    {
+      "id": "R006",
+      "when": {
+        "all_indicators": [
+          "caregiver_retaliation"
+        ],
+        "care_alternatives": [
+          "limited_alternatives",
+          "no_alternatives"
+        ]
+      },
+      "then": {
+        "attention_level": "priority",
+        "action": "ACTION_SOCIAL_PRIORITY"
+      },
+      "explanation": "La dependència de la persona que amenaça de retirar cures pot augmentar el risc."
+    },
+    {
+      "id": "R007",
+      "when": {
+        "any_indicator": [
+          "historical_normalization",
+          "duty_language",
+          "excusing_perpetrator",
+          "minimization"
+        ]
+      },
+      "then": {
+        "attention_level": "scheduled",
+        "action": "ASK_FACTUAL_FOLLOWUP"
+      },
+      "explanation": "Les expressions de normalització indiquen que convé preguntar pels fets i la llibertat de decisió."
+    },
+    {
+      "id": "R008",
+      "when": {
+        "all_indicators": [
+          "violence_toward_staff",
+          "fearful_behavior"
+        ]
+      },
+      "then": {
+        "attention_level": "priority",
+        "action": "ACTION_PRIVATE_INTERVIEW"
+      },
+      "explanation": "Un patró agressiu observable i la reacció de temor justifiquen exploració privada."
+    },
+    {
+      "id": "R009",
+      "when": {
+        "all_indicators": [
+          "password_control",
+          "banking_app_control"
+        ],
+        "support_revocable": false
+      },
+      "then": {
+        "attention_level": "priority",
+        "action": "ACTION_LEGAL_REVIEW"
+      },
+      "explanation": "El control no revocable de credencials i banca pot afectar autonomia i patrimoni."
+    },
+    {
+      "id": "R010",
+      "when": {
+        "unexplored_critical_domains": true
+      },
+      "then": {
+        "report_flag": "incomplete_assessment"
+      },
+      "explanation": "L'informe ha d'explicitar que no s'ha pogut completar l'exploració."
+    },
+    {
+      "id": "R011",
+      "when": {
+        "all_indicators": [
+          "self_neglect_due_to_partner_care",
+          "missed_preventive_care"
+        ]
+      },
+      "then": {
+        "attention_level": "priority",
+        "action": "ACTION_HEALTH_REVIEW"
+      },
+      "explanation": "La renúncia repetida a revisions per obligacions de cura pot comprometre la prevenció i el seguiment."
+    },
+    {
+      "id": "R012",
+      "when": {
+        "all_indicators": [
+          "missed_preventive_care",
+          "delayed_diagnosis_risk"
+        ]
+      },
+      "then": {
+        "attention_level": "priority",
+        "action": "ACTION_HEALTH_PRIORITY"
+      },
+      "explanation": "Cal recuperar atenció sanitària pendent segons criteri clínic."
+    },
+    {
+      "id": "R013",
+      "when": {
+        "all_indicators": [
+          "caregiving_asymmetry",
+          "health_priority_displacement"
+        ]
+      },
+      "then": {
+        "attention_level": "scheduled",
+        "action": "ACTION_HEALTH_REVIEW"
+      },
+      "explanation": "Una asimetria sostinguda de cures pot invisibilitzar necessitats de salut pròpies."
+    },
+    {
+      "id": "R014",
+      "when": {
+        "all_indicators": [
+          "permission_for_everyday_actions",
+          "initiative_loss"
+        ]
+      },
+      "then": {
+        "attention_level": "scheduled",
+        "action": "ACTION_AUTONOMY_SUPPORT"
+      },
+      "explanation": "La combinació suggereix una possible erosió de l'autonomia que convé abordar gradualment."
+    },
+    {
+      "id": "R015",
+      "when": {
+        "all_indicators": [
+          "internalized_dependency",
+          "learned_compliance"
+        ]
+      },
+      "then": {
+        "attention_level": "priority",
+        "action": "ACTION_AUTONOMY_SUPPORT"
+      },
+      "explanation": "Anys de control poden haver reduït la capacitat percebuda per decidir, sense implicar incapacitat jurídica o cognitiva."
+    },
+    {
+      "id": "R016",
+      "when": {
+        "all_indicators": [
+          "self_deprioritization",
+          "economic_self_denial",
+          "health_priority_displacement"
+        ]
+      },
+      "then": {
+        "attention_level": "priority",
+        "action": "ACTION_AUTONOMY_SUPPORT"
+      },
+      "explanation": "La renúncia sistemàtica a necessitats pròpies pot afectar salut, autonomia i benestar."
+    }
+  ]
+}

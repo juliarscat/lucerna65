@@ -1,0 +1,451 @@
+{
+  "_meta": {
+    "project": "LUCERNA 65",
+    "version": "0.2.0-draft",
+    "language": "ca",
+    "generated_at": "2026-07-30",
+    "status": "prototip_no_validat",
+    "disclaimer": "Contingut de prototip per al desenvolupament i la validació de LUCERNA 65. No és un instrument clínic, social, jurídic ni policial validat. No diagnostica, no determina l'existència de violència i no substitueix el criteri professional, els protocols vigents ni l'actuació d'emergència."
+  },
+  "domains": [
+    {
+      "id": "urgent_safety",
+      "label": "Seguretat immediata",
+      "description": "Indicadors que poden requerir una valoració urgent o actuació segons el protocol aplicable.",
+      "indicators": [
+        {
+          "id": "immediate_danger",
+          "label": "Perill immediat"
+        },
+        {
+          "id": "serious_injury",
+          "label": "Lesió greu o necessitat mèdica urgent"
+        },
+        {
+          "id": "weapon_or_object",
+          "label": "Ús o amenaça amb arma o objecte"
+        },
+        {
+          "id": "unsafe_discharge",
+          "label": "Retorn potencialment insegur"
+        },
+        {
+          "id": "suicidal_or_homicidal_statement",
+          "label": "Expressió de risc autolesiu o envers tercers"
+        }
+      ]
+    },
+    {
+      "id": "normalization",
+      "label": "Normalització i justificació",
+      "description": "Expressions que poden mostrar acceptació cultural, biogràfica o relacional de fets potencialment violents.",
+      "indicators": [
+        {
+          "id": "duty_language",
+          "label": "Llenguatge de deure",
+          "examples": [
+            "era el meu deure",
+            "com a esposa ho havia de fer"
+          ]
+        },
+        {
+          "id": "historical_normalization",
+          "label": "Normalització generacional",
+          "examples": [
+            "abans era així",
+            "totes ho aguantaven",
+            "era una altra època"
+          ]
+        },
+        {
+          "id": "excusing_perpetrator",
+          "label": "Justificació de la conducta",
+          "examples": [
+            "treballava molt",
+            "arribava cansat",
+            "havia begut",
+            "tenia mal caràcter"
+          ]
+        },
+        {
+          "id": "marital_entitlement",
+          "label": "Dret conjugal assumit",
+          "examples": [
+            "era el meu marit",
+            "no podia negar-m'hi"
+          ]
+        },
+        {
+          "id": "minimization",
+          "label": "Minimització",
+          "examples": [
+            "només passava de vegades",
+            "no era per tant"
+          ]
+        },
+        {
+          "id": "self_blame",
+          "label": "Autoculpabilització",
+          "examples": [
+            "jo el provocava",
+            "jo era massa sensible"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sexual",
+      "label": "Violència sexual i coerció",
+      "description": "Situacions en què no hi ha consentiment lliure, informat, específic i revocable.",
+      "indicators": [
+        {
+          "id": "unable_to_refuse_sex",
+          "label": "Impossibilitat percebuda de dir que no"
+        },
+        {
+          "id": "sex_despite_refusal",
+          "label": "Relacions malgrat negativa"
+        },
+        {
+          "id": "sex_during_illness_or_pain",
+          "label": "Relacions durant malaltia, dolor o indisposició"
+        },
+        {
+          "id": "sex_during_pregnancy_without_consent",
+          "label": "Relacions durant embaràs sense consentiment"
+        },
+        {
+          "id": "reproductive_control",
+          "label": "Control reproductiu"
+        },
+        {
+          "id": "coercive_consequences",
+          "label": "Por de conseqüències en negar-s'hi"
+        }
+      ]
+    },
+    {
+      "id": "economic",
+      "label": "Violència econòmica i patrimonial",
+      "description": "Control, apropiació o limitació injustificada de recursos econòmics, ingressos, béns o capacitat de decisió.",
+      "indicators": [
+        {
+          "id": "permission_for_small_purchases",
+          "label": "Necessitat de permís per a compres bàsiques"
+        },
+        {
+          "id": "forced_domesticity",
+          "label": "Impediment o prohibició de treballar"
+        },
+        {
+          "id": "income_appropriation",
+          "label": "Apropiació dels ingressos"
+        },
+        {
+          "id": "unilateral_spending",
+          "label": "Despesa unilateral de diners comuns o d'ella"
+        },
+        {
+          "id": "bank_access_restriction",
+          "label": "Restricció d'accés al banc o comptes"
+        },
+        {
+          "id": "unknown_financial_state",
+          "label": "Desconeixement imposat de la situació econòmica"
+        },
+        {
+          "id": "coerced_signature",
+          "label": "Signatures o poders sota pressió"
+        },
+        {
+          "id": "property_pressure",
+          "label": "Pressió sobre habitatge, herència o propietats"
+        }
+      ]
+    },
+    {
+      "id": "psychological",
+      "label": "Violència psicològica i control coercitiu",
+      "description": "Conductes que provoquen por, submissió, desautorització o pèrdua d'autonomia.",
+      "indicators": [
+        {
+          "id": "fearful_behavior",
+          "label": "Temor evident"
+        },
+        {
+          "id": "humiliation",
+          "label": "Humiliació o menyspreu"
+        },
+        {
+          "id": "threats",
+          "label": "Amenaces"
+        },
+        {
+          "id": "infantilization",
+          "label": "Infantilització"
+        },
+        {
+          "id": "gaslighting_ageism",
+          "label": "Descrèdit basat en edat o salut"
+        },
+        {
+          "id": "permission_seeking",
+          "label": "Necessitat de demanar permís"
+        },
+        {
+          "id": "emotional_lability_contextual",
+          "label": "Labilitat emocional contextual"
+        },
+        {
+          "id": "retaliation_fear",
+          "label": "Por de represàlies"
+        }
+      ]
+    },
+    {
+      "id": "physical",
+      "label": "Violència física",
+      "description": "Ús de força, objectes o restriccions que poden causar dany físic.",
+      "indicators": [
+        {
+          "id": "hitting",
+          "label": "Cops"
+        },
+        {
+          "id": "pushing_or_grabbing",
+          "label": "Empentes o subjeccions"
+        },
+        {
+          "id": "restraint",
+          "label": "Restricció física injustificada"
+        },
+        {
+          "id": "unexplained_injuries",
+          "label": "Lesions no explicades o explicacions inconsistents"
+        },
+        {
+          "id": "violence_toward_staff",
+          "label": "Violència envers personal femení"
+        },
+        {
+          "id": "object_assault",
+          "label": "Agressió amb objecte"
+        }
+      ]
+    },
+    {
+      "id": "care_and_health",
+      "label": "Cures, salut i medicació",
+      "description": "Negligència, control o ús coercitiu de necessitats de salut i dependència.",
+      "indicators": [
+        {
+          "id": "medication_control",
+          "label": "Control injustificat de medicació"
+        },
+        {
+          "id": "medical_visit_control",
+          "label": "Control de visites o informació sanitària"
+        },
+        {
+          "id": "neglect_basic_needs",
+          "label": "Desatenció de necessitats bàsiques"
+        },
+        {
+          "id": "caregiver_retaliation",
+          "label": "Amenaces de retirar cures"
+        },
+        {
+          "id": "induced_dependency",
+          "label": "Dependència induïda"
+        },
+        {
+          "id": "symptom_dismissal",
+          "label": "Desatenció o banalització de símptomes"
+        },
+        {
+          "id": "caregiving_asymmetry",
+          "label": "Asimetria sostinguda de cures",
+          "examples": [
+            "ella acompanya i cuida; ell no correspon"
+          ]
+        },
+        {
+          "id": "self_neglect_due_to_partner_care",
+          "label": "Autodesatenció vinculada a la cura de la parella",
+          "examples": [
+            "falta a revisions",
+            "ajorna proves",
+            "no recull medicació"
+          ]
+        },
+        {
+          "id": "missed_preventive_care",
+          "label": "Pèrdua de seguiment preventiu",
+          "examples": [
+            "mamografies",
+            "citologies",
+            "controls crònics",
+            "analítiques"
+          ]
+        },
+        {
+          "id": "delayed_diagnosis_risk",
+          "label": "Risc de diagnòstic tardà per absència de seguiment",
+          "examples": []
+        },
+        {
+          "id": "health_priority_displacement",
+          "label": "Desplaçament sistemàtic de la pròpia salut",
+          "examples": [
+            "primer ell",
+            "jo no tinc temps",
+            "no el puc deixar sol"
+          ]
+        },
+        {
+          "id": "care_obligation_coercion",
+          "label": "Obligació coercitiva de cuidar",
+          "examples": [
+            "culpa",
+            "por",
+            "exigència",
+            "deure imposat"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "social_isolation",
+      "label": "Aïllament i control relacional",
+      "description": "Limitació de contactes, mobilitat, activitats o comunicacions.",
+      "indicators": [
+        {
+          "id": "visit_restriction",
+          "label": "Restricció de visites"
+        },
+        {
+          "id": "phone_control",
+          "label": "Control del telèfon"
+        },
+        {
+          "id": "mobility_control",
+          "label": "Control de sortides o transport"
+        },
+        {
+          "id": "community_withdrawal",
+          "label": "Abandonament d'activitats comunitàries"
+        },
+        {
+          "id": "speaking_for_her",
+          "label": "Una altra persona respon sistemàticament per ella"
+        }
+      ]
+    },
+    {
+      "id": "institutional",
+      "label": "Violència institucional",
+      "description": "Pèrdua de drets, autonomia o dignitat en serveis, institucions o dispositius de cura.",
+      "indicators": [
+        {
+          "id": "privacy_denied",
+          "label": "Negació de privacitat"
+        },
+        {
+          "id": "consent_bypassed",
+          "label": "Decisions sense consentiment"
+        },
+        {
+          "id": "complaint_dismissal",
+          "label": "Queixa desatesa o atribuïda a l'edat"
+        },
+        {
+          "id": "unnecessary_restriction",
+          "label": "Restricció injustificada"
+        },
+        {
+          "id": "dignity_loss",
+          "label": "Tracte indigne o despersonalitzat"
+        }
+      ]
+    },
+    {
+      "id": "digital",
+      "label": "Violència i control digital",
+      "description": "Control, vigilància, suplantació o explotació mitjançant dispositius i serveis digitals.",
+      "indicators": [
+        {
+          "id": "password_control",
+          "label": "Control de contrasenyes"
+        },
+        {
+          "id": "banking_app_control",
+          "label": "Control de banca digital"
+        },
+        {
+          "id": "device_surveillance",
+          "label": "Vigilància del dispositiu"
+        },
+        {
+          "id": "identity_impersonation",
+          "label": "Suplantació"
+        },
+        {
+          "id": "digital_exclusion_dependency",
+          "label": "Dependència digital utilitzada per controlar"
+        },
+        {
+          "id": "online_fraud_by_known_person",
+          "label": "Frau o operacions per persona coneguda"
+        }
+      ]
+    },
+    {
+      "id": "autonomy_erosion",
+      "label": "Erosió de l'autonomia i dependència apresa",
+      "description": "Pèrdua progressiva de capacitat percebuda per decidir, iniciar accions o gestionar necessitats pròpies després d'anys de control.",
+      "indicators": [
+        {
+          "id": "permission_for_everyday_actions",
+          "label": "Demana permís per accions quotidianes"
+        },
+        {
+          "id": "initiative_loss",
+          "label": "Manca d'iniciativa"
+        },
+        {
+          "id": "decision_paralysis",
+          "label": "Bloqueig davant decisions senzilles"
+        },
+        {
+          "id": "internalized_dependency",
+          "label": "Dependència interioritzada"
+        },
+        {
+          "id": "self_deprioritization",
+          "label": "Despriorització sistemàtica de necessitats pròpies"
+        },
+        {
+          "id": "economic_self_denial",
+          "label": "Renúncia a despesa pròpia"
+        },
+        {
+          "id": "learned_compliance",
+          "label": "Compliment après"
+        }
+      ]
+    }
+  ],
+  "cross_cutting_factors": [
+    "edat",
+    "deteriorament_cognitiu",
+    "discapacitat",
+    "dependencia_funcional",
+    "baix_nivell_educatiu",
+    "pobresa",
+    "soledat_no_volguda",
+    "migracio_i_llengua",
+    "institucionalitzacio",
+    "orientacio_sexual_i_identitat",
+    "dependencia_de_la_persona_controladora"
+  ]
+}

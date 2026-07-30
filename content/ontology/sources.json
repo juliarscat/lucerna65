@@ -1,0 +1,82 @@
+[
+  {
+    "id": "SRC_CAT_PROTOCOL_MARC_2022",
+    "organism": "Generalitat de Catalunya",
+    "title_ca": "Protocol marc per a una intervenció amb diligència deguda en situacions de violències masclistes",
+    "title_es": "Protocolo marco para una intervención con diligencia debida en situaciones de violencias machistas",
+    "version": "2022",
+    "status": "pendent_ingestio_i_verificacio",
+    "url": "",
+    "title_en": "Framework protocol for due-diligence intervention in situations of gender-based violence"
+  },
+  {
+    "id": "SRC_CAT_SALUT_VM",
+    "organism": "Departament de Salut",
+    "title_ca": "Protocol per a l'abordatge de la violència masclista en l'àmbit de la salut a Catalunya",
+    "title_es": "Protocolo para el abordaje de la violencia machista en el ámbito de la salud en Cataluña",
+    "version": "pendent_identificar_versio_vigent",
+    "status": "pendent_identificar_versio_vigent",
+    "url": "",
+    "title_en": "Protocol for addressing gender-based violence in the health field in Catalonia"
+  },
+  {
+    "id": "SRC_CAT_DONES_GRANS",
+    "organism": "Generalitat de Catalunya / organisme competent",
+    "title_ca": "Les violències masclistes vers les dones grans: aproximació feminista i interseccional",
+    "title_es": "Las violencias machistas hacia las mujeres mayores: aproximación feminista e interseccional",
+    "version": "pendent_verificacio",
+    "status": "pendent_verificacio",
+    "url": "",
+    "title_en": "Gender-based violence against older women: feminist and intersectional approach"
+  },
+  {
+    "id": "SRC_CAT_COMUNITARI",
+    "organism": "",
+    "title_ca": "Dones grans i violències masclistes des de l'àmbit comunitari",
+    "title_es": "Mujeres mayores y violencias machistas desde el ámbito comunitario",
+    "version": "pendent_verificacio",
+    "status": "pendent_verificacio",
+    "url": "",
+    "title_en": "Older women and gender-based violence from the community field"
+  },
+  {
+    "id": "SRC_BCN_RESOURCES",
+    "organism": "Ajuntament de Barcelona",
+    "title_ca": "Directori de recursos municipals i especialitzats",
+    "title_es": "Directorio de recursos municipales y especializados",
+    "version": "actualitzacio_continua",
+    "status": "actualitzacio_continua",
+    "url": "",
+    "title_en": "Directory of municipal and specialized resources"
+  },
+  {
+    "id": "SRC_WHO_ELDER_ABUSE",
+    "organism": "World Health Organization",
+    "title_ca": "Abuse of older people",
+    "title_es": "Maltrato de las personas mayores",
+    "version": "pendent_ingestio",
+    "status": "pendent_ingestio",
+    "url": "",
+    "title_en": "Abuse of older people"
+  },
+  {
+    "id": "SRC_GDPR",
+    "organism": "European Union",
+    "title_ca": "Reglament (UE) 2016/679, General Data Protection Regulation",
+    "title_es": "Reglamento (UE) 2016/679, Reglamento General de Protección de Datos",
+    "version": "vigent_a_verificar",
+    "status": "vigent_a_verificar",
+    "url": "",
+    "title_en": "Regulation (EU) 2016/679, General Data Protection Regulation"
+  },
+  {
+    "id": "SRC_AI_ACT",
+    "organism": "European Union",
+    "title_ca": "Reglament (UE) 2024/1689, Artificial Intelligence Act",
+    "title_es": "Reglamento (UE) 2024/1689, Ley de Inteligencia Artificial",
+    "version": "aplicacio_esglaonada_a_verificar",
+    "status": "aplicacio_esglaonada_a_verificar",
+    "url": "",
+    "title_en": "Regulation (EU) 2024/1689, Artificial Intelligence Act"
+  }
+]

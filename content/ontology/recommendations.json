@@ -1,0 +1,76 @@
+[
+  {
+    "id": "urgent_protocol",
+    "priority": "urgent",
+    "trigger_indicators": ["immediate_danger", "medication_control", "sexual_coercion"],
+    "attention_levels": ["urgent"],
+    "text_ca": "Prioritzar el protocol urgent del servei i interrompre les preguntes no essencials.",
+    "text_es": "Priorizar el protocolo urgente del servicio e interrumpir las preguntas no esenciales.",
+    "rationale_ca": "Quan hi ha risc actual, el sistema no ha de continuar com si fos una entrevista ordinaria.",
+    "rationale_es": "Cuando hay riesgo actual, el sistema no debe continuar como si fuera una entrevista ordinaria.",
+    "source_ids": ["gencat_protocol_marc_vm"]
+  },
+  {
+    "id": "private_interview",
+    "priority": "high",
+    "trigger_indicators": ["no_private_setting", "fear_coercion", "social_isolation"],
+    "text_ca": "Reprendre l'exploracio en un espai segur, privat i amb una via de contacte prudent.",
+    "text_es": "Retomar la exploracion en un espacio seguro, privado y con una via de contacto prudente.",
+    "rationale_ca": "La manca de privacitat pot augmentar el risc i alterar les respostes.",
+    "rationale_es": "La falta de privacidad puede aumentar el riesgo y alterar las respuestas.",
+    "source_ids": ["gencat_protocol_marc_vm"]
+  },
+  {
+    "id": "economic_review",
+    "priority": "high",
+    "trigger_indicators": ["economic_access_lost", "pension_control", "payment_card_control", "pressured_signatures", "property_pressure", "digital_banking_control"],
+    "text_ca": "Documentar fets economics separant control, gestio consentida, poders i possibles pressions.",
+    "text_es": "Documentar hechos economicos separando control, gestion consentida, poderes y posibles presiones.",
+    "rationale_ca": "Els indicadors economics necessiten precisio per no confondre ajuda acordada amb explotacio o coaccio.",
+    "rationale_es": "Los indicadores economicos necesitan precision para no confundir ayuda acordada con explotacion o coaccion.",
+    "source_ids": ["dones_grans_vm_context"]
+  },
+  {
+    "id": "health_review",
+    "priority": "high",
+    "trigger_indicators": ["health_control", "medication_control", "basic_care_neglect"],
+    "profiles": ["health", "care", "social"],
+    "text_ca": "Contrastar pauta de salut, cures i autonomia amb criteri professional i registre de fets observables.",
+    "text_es": "Contrastar pauta de salud, cuidados y autonomia con criterio profesional y registro de hechos observables.",
+    "rationale_ca": "La violencia pot aparèixer com a mala adherencia, dependencia o conflicte de cures.",
+    "rationale_es": "La violencia puede aparecer como mala adherencia, dependencia o conflicto de cuidados.",
+    "source_ids": ["gencat_protocol_marc_vm", "dones_grans_vm_context"]
+  },
+  {
+    "id": "digital_safety",
+    "priority": "medium",
+    "trigger_indicators": ["digital_control", "digital_banking_control"],
+    "text_ca": "Explorar dispositius i banca digital sense provocar canvis visibles que puguin incrementar el risc.",
+    "text_es": "Explorar dispositivos y banca digital sin provocar cambios visibles que puedan incrementar el riesgo.",
+    "rationale_ca": "Canviar claus o dispositius pot ser necessari, pero cal valorar seguretat i control de tercers.",
+    "rationale_es": "Cambiar claves o dispositivos puede ser necesario, pero hay que valorar seguridad y control de terceros.",
+    "source_ids": ["dones_grans_vm_context"]
+  },
+  {
+    "id": "legal_safeguard",
+    "priority": "high",
+    "trigger_indicators": ["pressured_signatures", "property_pressure", "legal_power_pressure"],
+    "profiles": ["legal", "social", "community"],
+    "text_ca": "Derivar o consultar revisio juridica especialitzada quan hi hagi documents, poders o patrimoni afectat.",
+    "text_es": "Derivar o consultar revision juridica especializada cuando haya documentos, poderes o patrimonio afectado.",
+    "rationale_ca": "El sistema orienta preguntes, pero no substitueix valoracio juridica ni pericial.",
+    "rationale_es": "El sistema orienta preguntas, pero no sustituye valoracion juridica ni pericial.",
+    "source_ids": ["dones_grans_vm_context"]
+  },
+  {
+    "id": "human_review_required",
+    "priority": "medium",
+    "attention_levels": ["medium", "high", "urgent", "exploratory"],
+    "text_ca": "Revisar l'informe abans de compartir-lo i eliminar qualsevol inferencia que no estigui confirmada.",
+    "text_es": "Revisar el informe antes de compartirlo y eliminar cualquier inferencia que no este confirmada.",
+    "rationale_ca": "LUCERNA 65 assisteix la professional, no decideix ni certifica violencia.",
+    "rationale_es": "LUCERNA 65 asiste a la profesional, no decide ni certifica violencia.",
+    "source_ids": ["privacy_ai_safeguards"]
+  }
+]
+

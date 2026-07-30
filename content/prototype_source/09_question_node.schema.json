@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lucerna65.local/schemas/question-node.schema.json",
+  "title": "LUCERNA 65 Question Node",
+  "type": "object",
+  "required": [
+    "id",
+    "domain",
+    "question",
+    "answer_options",
+    "routing",
+    "purpose"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^Q[0-9]{3}$"
+    },
+    "domain": {
+      "type": "string"
+    },
+    "question": {
+      "type": "object",
+      "required": [
+        "professional",
+        "plain_language",
+        "direct_to_woman"
+      ],
+      "properties": {
+        "professional": {
+          "type": "string",
+          "minLength": 5
+        },
+        "plain_language": {
+          "type": "string",
+          "minLength": 5
+        },
+        "direct_to_woman": {
+          "type": "string",
+          "minLength": 5
+        }
+      },
+      "additionalProperties": false
+    },
+    "answer_options": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "routing": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "purpose": {
+      "type": "string",
+      "minLength": 10
+    },
+    "activates_indicators": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "priority": {
+      "enum": [
+        "normal",
+        "high",
+        "critical"
+      ]
+    },
+    "sensitive": {
+      "type": "boolean"
+    }
+  },
+  "additionalProperties": false
+}

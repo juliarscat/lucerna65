@@ -1,0 +1,143 @@
+{
+  "_meta": {
+    "project": "LUCERNA 65",
+    "version": "0.2.0-draft",
+    "language": "ca",
+    "generated_at": "2026-07-30",
+    "status": "prototip_no_validat",
+    "disclaimer": "Contingut de prototip per al desenvolupament i la validació de LUCERNA 65. No és un instrument clínic, social, jurídic ni policial validat. No diagnostica, no determina l'existència de violència i no substitueix el criteri professional, els protocols vigents ni l'actuació d'emergència."
+  },
+  "actions": [
+    {
+      "id": "ACTION_URGENT_SAFE",
+      "label": "Activar protocol urgent amb la dona en espai segur",
+      "category": "urgent",
+      "instructions": [
+        "Aplicar el protocol d'emergència o risc imminent de l'organització.",
+        "Prioritzar atenció sanitària i seguretat.",
+        "No contactar ni confrontar la persona potencialment agressora des de l'eina.",
+        "Registrar només les dades imprescindibles.",
+        "No basar la decisió únicament en LUCERNA 65."
+      ]
+    },
+    {
+      "id": "ACTION_URGENT_UNSAFE",
+      "label": "Risc urgent i espai no segur",
+      "category": "urgent",
+      "instructions": [
+        "Evitar preguntes que puguin augmentar el risc en presència d'una tercera persona.",
+        "Buscar una via segura de separació o atenció segons protocol.",
+        "Aplicar les instruccions del servei i els recursos d'emergència pertinents."
+      ]
+    },
+    {
+      "id": "ACTION_URGENT_ASSESS",
+      "label": "Valoració urgent professional",
+      "category": "urgent",
+      "instructions": [
+        "Fer valoració clínica o social immediata segons competència.",
+        "Consultar protocol vigent.",
+        "No continuar l'arbre com si fos una entrevista rutinària."
+      ]
+    },
+    {
+      "id": "ACTION_PRIVATE_INTERVIEW",
+      "label": "Programar entrevista privada",
+      "category": "priority",
+      "instructions": [
+        "Crear una oportunitat de conversa privada i segura.",
+        "Explicar la privacitat com una pràctica habitual del servei.",
+        "No assenyalar davant tercers que existeix sospita de violència."
+      ]
+    },
+    {
+      "id": "ACTION_LEGAL_REVIEW",
+      "label": "Revisió jurídica independent",
+      "category": "priority",
+      "instructions": [
+        "Oferir informació sobre assessorament jurídic independent.",
+        "Conservar documents només amb base jurídica i consentiment adequats.",
+        "No declarar la invalidesa d'un document des del sistema."
+      ]
+    },
+    {
+      "id": "ACTION_SOCIAL_PRIORITY",
+      "label": "Valoració prioritària de suport social i cures",
+      "category": "priority",
+      "instructions": [
+        "Explorar alternatives reals de cura, habitatge, suport i teleassistència.",
+        "Valorar dependència de la persona controladora.",
+        "Coordinar segons el circuit territorial vigent."
+      ]
+    },
+    {
+      "id": "ACTION_RESOURCE_SUPPORT",
+      "label": "Orientació de recursos i accessibilitat",
+      "category": "support",
+      "instructions": [
+        "Diferenciar barreres materials d'una limitació coercitiva.",
+        "Facilitar recursos de mobilitat, accessibilitat, comunitat o suport econòmic."
+      ]
+    },
+    {
+      "id": "ACTION_SPECIALIST_SUPPORT",
+      "label": "Oferir suport especialitzat",
+      "category": "priority",
+      "instructions": [
+        "Oferir derivació o consulta especialitzada adequada al context.",
+        "Respectar el ritme, les decisions i el consentiment de la dona.",
+        "Evitar exigir una narració completa com a condició per oferir suport."
+      ]
+    },
+    {
+      "id": "ACTION_GENERATE_REPORT",
+      "label": "Generar informe revisable",
+      "category": "system",
+      "instructions": [
+        "Generar un esborrany amb fets, fonts, indicadors, incerteses i recomanacions.",
+        "Exigir revisió i confirmació professional abans d'exportar el PDF."
+      ]
+    },
+    {
+      "id": "ACTION_SAVE_DRAFT",
+      "label": "Desar com a esborrany no validat",
+      "category": "system",
+      "instructions": [
+        "No generar un informe final.",
+        "Marcar clarament que el cas no ha estat revisat per la professional."
+      ]
+    },
+    {
+      "id": "ACTION_HEALTH_PRIORITY",
+      "label": "Recuperació prioritària del seguiment sanitari",
+      "category": "priority",
+      "instructions": [
+        "Facilitar valoració sanitària segons criteri clínic i protocol del servei.",
+        "Explorar barreres de cura, transport, substitució i dependència de la parella.",
+        "Evitar responsabilitzar la dona per les absències.",
+        "No inferir diagnòstic des de LUCERNA 65."
+      ]
+    },
+    {
+      "id": "ACTION_HEALTH_REVIEW",
+      "label": "Revisió sanitària del seguiment pendent",
+      "category": "scheduled",
+      "instructions": [
+        "Revisar proves, controls i tractaments pendents.",
+        "Distingir absència voluntària, barrera estructural i obligació de cures.",
+        "Planificar una via realista perquè pugui assistir."
+      ]
+    },
+    {
+      "id": "ACTION_AUTONOMY_SUPPORT",
+      "label": "Pla gradual de recuperació d'autonomia",
+      "category": "support",
+      "instructions": [
+        "Identificar una decisió petita, segura i escollida per la dona.",
+        "Oferir suport sense substituir novament la seva decisió.",
+        "No confondre manca d'experiència o dependència apresa amb incapacitat.",
+        "Registrar preferències, límits i ritme de la dona."
+      ]
+    }
+  ]
+}

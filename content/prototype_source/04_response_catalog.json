@@ -1,0 +1,169 @@
+{
+  "_meta": {
+    "project": "LUCERNA 65",
+    "version": "0.1.0-draft",
+    "language": "ca",
+    "generated_at": "2026-07-30",
+    "status": "prototip_no_validat",
+    "disclaimer": "Contingut de prototip per al desenvolupament i la validació de LUCERNA 65. No és un instrument clínic, social, jurídic ni policial validat. No diagnostica, no determina l'existència de violència i no substitueix el criteri professional, els protocols vigents ni l'actuació d'emergència."
+  },
+  "normalization_phrases": [
+    {
+      "text": "era normal",
+      "indicator_ids": [
+        "historical_normalization"
+      ],
+      "weight": 1
+    },
+    {
+      "text": "abans era així",
+      "indicator_ids": [
+        "historical_normalization"
+      ],
+      "weight": 1
+    },
+    {
+      "text": "totes ho aguantaven",
+      "indicator_ids": [
+        "historical_normalization"
+      ],
+      "weight": 1
+    },
+    {
+      "text": "era el meu deure",
+      "indicator_ids": [
+        "duty_language"
+      ],
+      "weight": 2
+    },
+    {
+      "text": "era el meu marit",
+      "indicator_ids": [
+        "marital_entitlement"
+      ],
+      "weight": 2
+    },
+    {
+      "text": "no podia dir que no",
+      "indicator_ids": [
+        "unable_to_refuse_sex"
+      ],
+      "weight": 3
+    },
+    {
+      "text": "ell treballava molt",
+      "indicator_ids": [
+        "excusing_perpetrator"
+      ],
+      "weight": 1
+    },
+    {
+      "text": "arribava cansat",
+      "indicator_ids": [
+        "excusing_perpetrator"
+      ],
+      "weight": 1
+    },
+    {
+      "text": "havia begut",
+      "indicator_ids": [
+        "excusing_perpetrator"
+      ],
+      "weight": 1
+    },
+    {
+      "text": "tenia mal caràcter",
+      "indicator_ids": [
+        "excusing_perpetrator"
+      ],
+      "weight": 1
+    },
+    {
+      "text": "no era per tant",
+      "indicator_ids": [
+        "minimization"
+      ],
+      "weight": 1
+    },
+    {
+      "text": "jo el provocava",
+      "indicator_ids": [
+        "self_blame"
+      ],
+      "weight": 1
+    }
+  ],
+  "professional_observations": [
+    {
+      "id": "looks_before_answering",
+      "label": "Mira una altra persona abans de respondre",
+      "indicator_ids": [
+        "fearful_behavior"
+      ]
+    },
+    {
+      "id": "speech_changes",
+      "label": "Canvia el discurs quan entra una persona",
+      "indicator_ids": [
+        "fearful_behavior"
+      ]
+    },
+    {
+      "id": "careful_wording",
+      "label": "Mesura especialment les paraules",
+      "indicator_ids": [
+        "fearful_behavior"
+      ]
+    },
+    {
+      "id": "visible_fear",
+      "label": "Mostra temor evident",
+      "indicator_ids": [
+        "fearful_behavior"
+      ]
+    },
+    {
+      "id": "contextual_crying",
+      "label": "Plora o es desregula en parlar d'una persona",
+      "indicator_ids": [
+        "emotional_lability_contextual"
+      ]
+    },
+    {
+      "id": "rigidity",
+      "label": "Rigidesa corporal o hipervigilància",
+      "indicator_ids": [
+        "fearful_behavior"
+      ]
+    },
+    {
+      "id": "third_party_answers",
+      "label": "Una altra persona respon sistemàticament per ella",
+      "indicator_ids": [
+        "speaking_for_her"
+      ]
+    },
+    {
+      "id": "third_party_corrects",
+      "label": "Una altra persona la corregeix o desacredita",
+      "indicator_ids": [
+        "gaslighting_ageism",
+        "infantilization"
+      ]
+    },
+    {
+      "id": "aggression_toward_female_staff",
+      "label": "La persona mostra agressivitat envers personal femení",
+      "indicator_ids": [
+        "violence_toward_staff"
+      ]
+    }
+  ],
+  "behavior_rules": [
+    "No mostrar una etiqueta de violència a partir d'una frase sola.",
+    "Suggerir una pregunta factual de seguiment.",
+    "Conservar la frase literal només si la professional ho confirma.",
+    "Separar observació, relat, document i inferència.",
+    "No assignar intencionalitat."
+  ]
+}

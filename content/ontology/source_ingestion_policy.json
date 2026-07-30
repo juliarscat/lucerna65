@@ -1,0 +1,25 @@
+{
+  "allow_domains": [
+    "gencat.cat",
+    "barcelona.cat",
+    "who.int",
+    "europa.eu",
+    "aepd.es",
+    "edpb.europa.eu"
+  ],
+  "deny_by_default": true,
+  "human_approval_required": true,
+  "chunk_metadata": [
+    "source_id",
+    "title",
+    "organization",
+    "version",
+    "page",
+    "section",
+    "url",
+    "sha256",
+    "valid_from",
+    "valid_until"
+  ],
+  "review_cycle_days": 180
+}

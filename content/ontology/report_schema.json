@@ -1,0 +1,117 @@
+{
+  "_meta": {
+    "project": "LUCERNA 65",
+    "version": "0.1.0-draft",
+    "language": "ca",
+    "generated_at": "2026-07-30",
+    "status": "prototip_no_validat",
+    "disclaimer": "Contingut de prototip per al desenvolupament i la validació de LUCERNA 65. No és un instrument clínic, social, jurídic ni policial validat. No diagnostica, no determina l'existència de violència i no substitueix el criteri professional, els protocols vigents ni l'actuació d'emergència."
+  },
+  "title": "Informe orientatiu LUCERNA 65",
+  "mandatory_disclaimer": "Aquest document és una guia de suport generada a partir de les dades introduïdes i revisada per una professional. No constitueix diagnòstic, peritatge, denúncia, resolució administrativa ni acreditació de violència.",
+  "sections": [
+    {
+      "id": "context",
+      "title": "Context de l'entrevista",
+      "fields": [
+        "case_id",
+        "date",
+        "professional_role",
+        "usage_mode",
+        "privacy_conditions",
+        "consent_recorded"
+      ]
+    },
+    {
+      "id": "reason",
+      "title": "Motiu i informació inicial",
+      "fields": [
+        "reason_for_consultation",
+        "presenting_signs"
+      ]
+    },
+    {
+      "id": "facts",
+      "title": "Fets i respostes registrades"
+    },
+    {
+      "id": "quotes",
+      "title": "Frases textuals rellevants"
+    },
+    {
+      "id": "observations",
+      "title": "Observacions professionals"
+    },
+    {
+      "id": "areas",
+      "title": "Àrees explorades i pendents",
+      "fields": [
+        "explored_domains",
+        "unexplored_domains",
+        "limitations"
+      ]
+    },
+    {
+      "id": "indicators",
+      "title": "Indicadors que convé considerar"
+    },
+    {
+      "id": "attention",
+      "title": "Nivell d'atenció orientatiu",
+      "fields": [
+        "level",
+        "rationale",
+        "human_override"
+      ]
+    },
+    {
+      "id": "recommendations",
+      "title": "Recomanacions de suport"
+    },
+    {
+      "id": "resources",
+      "title": "Recursos i circuits"
+    },
+    {
+      "id": "sources",
+      "title": "Fonts consultades",
+      "fields": [
+        "source_id",
+        "title",
+        "organization",
+        "version",
+        "page_or_section",
+        "url",
+        "retrieved_at"
+      ]
+    },
+    {
+      "id": "review",
+      "title": "Revisió professional",
+      "fields": [
+        "reviewed_by_role",
+        "reviewed_at",
+        "corrections",
+        "final_confirmation"
+      ]
+    }
+  ],
+  "safe_phrasing": {
+    "use": [
+      "Les respostes justifiquen explorar...",
+      "S'han registrat elements compatibles amb...",
+      "Convé contrastar...",
+      "No s'ha pogut determinar...",
+      "La informació disponible és parcial...",
+      "Segons el protocol consultat..."
+    ],
+    "avoid": [
+      "La dona és víctima de...",
+      "El marit és un maltractador.",
+      "El sistema confirma...",
+      "La puntuació demostra...",
+      "Cal denunciar obligatòriament...",
+      "No hi ha risc."
+    ]
+  }
+}

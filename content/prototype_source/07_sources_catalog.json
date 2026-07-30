@@ -1,0 +1,102 @@
+{
+  "_meta": {
+    "project": "LUCERNA 65",
+    "version": "0.1.0-draft",
+    "language": "ca",
+    "generated_at": "2026-07-30",
+    "status": "prototip_no_validat",
+    "disclaimer": "Contingut de prototip per al desenvolupament i la validació de LUCERNA 65. No és un instrument clínic, social, jurídic ni policial validat. No diagnostica, no determina l'existència de violència i no substitueix el criteri professional, els protocols vigents ni l'actuació d'emergència."
+  },
+  "sources": [
+    {
+      "id": "SRC_CAT_PROTOCOL_MARC_2022",
+      "category": "protocol",
+      "jurisdiction": "Catalunya",
+      "title": "Protocol marc per a una intervenció amb diligència deguda en situacions de violències masclistes",
+      "organization": "Generalitat de Catalunya",
+      "year": 2022,
+      "status": "pendent_ingestio_i_verificacio"
+    },
+    {
+      "id": "SRC_CAT_SALUT_VM",
+      "category": "health_protocol",
+      "jurisdiction": "Catalunya",
+      "title": "Protocol per a l'abordatge de la violència masclista en l'àmbit de la salut a Catalunya",
+      "organization": "Departament de Salut",
+      "status": "pendent_identificar_versio_vigent"
+    },
+    {
+      "id": "SRC_CAT_DONES_GRANS",
+      "category": "guide",
+      "jurisdiction": "Catalunya",
+      "title": "Les violències masclistes vers les dones grans: aproximació feminista i interseccional",
+      "organization": "Generalitat de Catalunya / organisme competent",
+      "status": "pendent_verificacio"
+    },
+    {
+      "id": "SRC_CAT_COMUNITARI",
+      "category": "guide",
+      "jurisdiction": "Catalunya",
+      "title": "Dones grans i violències masclistes des de l'àmbit comunitari",
+      "status": "pendent_verificacio"
+    },
+    {
+      "id": "SRC_BCN_RESOURCES",
+      "category": "resource_directory",
+      "jurisdiction": "Barcelona",
+      "title": "Directori de recursos municipals i especialitzats",
+      "organization": "Ajuntament de Barcelona",
+      "status": "actualitzacio_continua",
+      "refresh_days": 30
+    },
+    {
+      "id": "SRC_WHO_ELDER_ABUSE",
+      "category": "international_evidence",
+      "jurisdiction": "international",
+      "title": "Abuse of older people",
+      "organization": "World Health Organization",
+      "status": "pendent_ingestio"
+    },
+    {
+      "id": "SRC_GDPR",
+      "category": "law",
+      "jurisdiction": "EU",
+      "title": "Reglament (UE) 2016/679, General Data Protection Regulation",
+      "organization": "European Union",
+      "status": "vigent_a_verificar"
+    },
+    {
+      "id": "SRC_AI_ACT",
+      "category": "law",
+      "jurisdiction": "EU",
+      "title": "Reglament (UE) 2024/1689, Artificial Intelligence Act",
+      "organization": "European Union",
+      "status": "aplicacio_esglaonada_a_verificar"
+    }
+  ],
+  "ingestion_policy": {
+    "allow_domains": [
+      "gencat.cat",
+      "barcelona.cat",
+      "who.int",
+      "europa.eu",
+      "aepd.es",
+      "edpb.europa.eu"
+    ],
+    "deny_by_default": true,
+    "human_approval_required": true,
+    "chunk_metadata": [
+      "source_id",
+      "title",
+      "organization",
+      "version",
+      "page",
+      "section",
+      "url",
+      "sha256",
+      "valid_from",
+      "valid_until"
+    ],
+    "review_cycle_days": 180
+  }
+}

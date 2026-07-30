@@ -1,0 +1,4209 @@
+{
+  "version": "0.2.0-draft",
+  "source_tree_id": "lucerna65_core_v0_1",
+  "start": "Q000",
+  "entry_nodes": [
+    "Q000"
+  ],
+  "domains": [
+    "autonomy_erosion",
+    "care_and_health",
+    "digital",
+    "economic",
+    "institutional",
+    "normalization",
+    "physical",
+    "psychological",
+    "sexual",
+    "social_isolation",
+    "urgent_safety"
+  ],
+  "nodes": [
+    {
+      "id": "Q000",
+      "domain": "urgent_safety",
+      "priority": "urgent",
+      "question_ca": "Hi ha algun indici de perill immediat, agressió recent o necessitat mèdica urgent?",
+      "question_es": "¿Hay algún indicio de peligro inmediato, agresión reciente o necesidad médica urgente?",
+      "plain_ca": "Hi ha perill ara mateix o una necessitat mèdica urgent?",
+      "direct_to_woman_ca": "Se sent en perill ara mateix o necessita atenció mèdica urgent?",
+      "help_ca": "Prioritzar seguretat i evitar que l'entrevista retardï una actuació urgent.",
+      "help_es": "Priorizar la seguridad y evitar que la entrevista retrase una actuación urgente.",
+      "why_ca": "Prioritzar seguretat i evitar que l'entrevista retardï una actuació urgent.",
+      "why_es": "Priorizar la seguridad y evitar que la entrevista retrase una actuación urgente.",
+      "sources": [],
+      "allows_note": true,
+      "sensitive": false,
+      "answers": [
+        {
+          "id": "yes",
+          "label_ca": "Sí",
+          "label_es": "Sí",
+          "tone": "danger",
+          "activate_indicators": [
+            "immediate_danger",
+            "serious_injury"
+          ],
+          "next": "Q001",
+          "label_en": "Yes"
+        },
+        {
+          "id": "no",
+          "label_ca": "No",
+          "label_es": "No",
+          "tone": "neutral",
+          "next": "Q010",
+          "label_en": "No"
+        },
+        {
+          "id": "unknown",
+          "label_ca": "No consta",
+          "label_es": "No consta",
+          "tone": "neutral",
+          "next": "Q001",
+          "route_note": "Ruta original Q002 absent; continuacio prudent a Q001.",
+          "label_en": "Not known"
+        }
+      ],
+      "question_en": "Is there any indication of immediate danger, recent assault or urgent medical need?",
+      "help_en": "Prioritize safety and avoid delaying urgent action because of the interview.",
+      "why_en": "Prioritize safety and avoid delaying urgent action because of the interview."
+    },
+    {
+      "id": "Q001",
+      "domain": "urgent_safety",
+      "priority": "urgent",
+      "question_ca": "La dona pot romandre ara en un espai segur mentre s'activa el protocol aplicable?",
+      "question_es": "¿La mujer puede permanecer ahora en un espacio seguro mientras se activa el protocolo aplicable?",
+      "plain_ca": "Pot estar ara en un espai segur?",
+      "direct_to_woman_ca": "Pot quedar-se ara en un lloc on se senti segura?",
+      "help_ca": "Determinar si cal protecció immediata.",
+      "help_es": "Determinar si hace falta protección inmediata.",
+      "why_ca": "Determinar si cal protecció immediata.",
+      "why_es": "Determinar si hace falta protección inmediata.",
+      "sources": [],
+      "allows_note": true,
+      "sensitive": false,
+      "answers": [
+        {
+          "id": "yes",
+          "label_ca": "Sí",
+          "label_es": "Sí",
+          "tone": "danger",
+          "actions": [
+            "ACTION_URGENT_SAFE"
+          ],
+          "label_en": "Yes"
+        },
+        {
+          "id": "no",
+          "label_ca": "No",
+          "label_es": "No",
+          "tone": "warning",
+          "activate_indicators": [
+            "unsafe_discharge"
+          ],
+          "actions": [
+            "ACTION_URGENT_UNSAFE"
+          ],
+          "label_en": "No"
+        },
+        {
+          "id": "unknown",
+          "label_ca": "No consta",
+          "label_es": "No consta",
+          "tone": "warning",
+          "activate_indicators": [
+            "unsafe_discharge"
+          ],
+          "actions": [
+            "ACTION_URGENT_ASSESS"
+          ],
+          "label_en": "Not known"
+        }
+      ],
+      "question_en": "Can the woman remain in a safe place now while the applicable protocol is activated?",
+      "help_en": "Determine whether immediate protection is needed.",
+      "why_en": "Determine whether immediate protection is needed."
+    },
+    {
+      "id": "Q010",
+      "domain": "psychological",
+      "priority": "high",
+      "question_ca": "La dona pot parlar en privat, sense familiars, parella ni persona cuidadora presents?",
+      "question_es": "¿La mujer puede hablar en privado, sin familiares, pareja ni persona cuidadora presentes?",
+      "plain_ca": "Pot parlar sola amb la professional?",
+      "direct_to_woman_ca": "Podem parlar una estona en privat?",
+      "help_ca": "Reduir condicionament i risc de represàlies.",
+      "help_es": "Reducir condicionamiento y riesgo de represalias.",
+      "why_ca": "Reduir condicionament i risc de represàlies.",
+      "why_es": "Reducir condicionamiento y riesgo de represalias.",
+      "sources": [],
+      "allows_note": true,
+      "sensitive": false,
+      "answers": [
+        {
+          "id": "yes",
+          "label_ca": "Sí",
+          "label_es": "Sí",
+          "tone": "neutral",
+          "next": "Q020",
+          "label_en": "Yes"
+        },
+        {
+          "id": "no",
+          "label_ca": "No",
+          "label_es": "No",
+          "tone": "warning",
+          "activate_indicators": [
+            "privacy_denied"
+          ],
+          "next": "Q011",
+          "label_en": "No"
+        },
+        {
+          "id": "unknown",
+          "label_ca": "No consta",
+          "label_es": "No consta",
+          "tone": "warning",
+          "activate_indicators": [
+            "privacy_denied"
+          ],
+          "next": "Q011",
+          "label_en": "Not known"
+        }
+      ],
+      "question_en": "Can the woman speak in private, without relatives, partner or caregiver present?",
+      "help_en": "Reduce conditioning and risk of retaliation.",
+      "why_en": "Reduce conditioning and risk of retaliation."
+    },
+    {
+      "id": "Q011",
+      "domain": "psychological",
+      "priority": "high",
+      "question_ca": "La persona present respon per ella, interromp, corregeix o vigila les seves respostes?",
+      "question_es": "¿La persona presente responde por ella, interrumpe, corrige o vigila sus respuestas?",
+      "plain_ca": "Algú parla per ella o controla què diu?",
+      "direct_to_woman_ca": "Prefereix respondre vostè mateixa?",
+      "help_ca": "Explorar control comunicatiu observable.",
+      "help_es": "Explorar control comunicativo observable.",
+      "why_ca": "Explorar control comunicatiu observable.",
+      "why_es": "Explorar control comunicativo observable.",
+      "sources": [],
+      "allows_note": true,
+      "sensitive": false,
+      "answers": [
+        {
+          "id": "yes",
+          "label_ca": "Sí",
+          "label_es": "Sí",
+          "tone": "warning",
+          "activate_indicators": [
+            "speaking_for_her",
+            "fearful_behavior"
+          ],
+          "next": "Q012",
+          "label_en": "Yes"
+        },
+        {
+          "id": "no",
+          "label_ca": "No",
+          "label_es": "No",
+          "tone": "neutral",
+          "next": "Q020",
+          "label_en": "No"
+        },
+        {
+          "id": "unknown",
+          "label_ca": "No consta",
+          "label_es": "No consta",
+          "tone": "neutral",
+          "next": "Q020",
+          "label_en": "Not known"
+        }
+      ],
+      "question_en": "Does the person present answer for her, interrupt, correct or monitor her responses?",
+      "help_en": "Explore observable communication control.",
+      "why_en": "Explore observable communication control."
+    },
+    {
+      "id": "Q012",
+      "domain": "psychological",
+      "priority": "high",
+      "question_ca": "És possible programar o crear una conversa privada sense augmentar el risc?",
+      "question_es": "¿Es posible programar o crear una conversación privada sin aumentar el riesgo?",
+      "plain_ca": "Es pot parlar en privat més endavant amb seguretat?",
+      "direct_to_woman_ca": "Podem trobar un altre moment per parlar amb calma i en privat?",
+      "help_ca": "Promoure entrevista segura sense confrontar.",
+      "help_es": "Promover una entrevista segura sin confrontar.",
+      "why_ca": "Promoure entrevista segura sense confrontar.",
+      "why_es": "Promover una entrevista segura sin confrontar.",
+      "sources": [],
+      "allows_note": true,
+      "sensitive": false,
+      "answers": [
+        {
+          "id": "yes",
+          "label_ca": "Sí",
+          "label_es": "Sí",
+          "tone": "neutral",
+          "actions": [
+            "ACTION_PRIVATE_INTERVIEW"
+          ],
+          "label_en": "Yes"
+        },
+        {
+          "id": "no",
+          "label_ca": "No",
+          "label_es": "No",
+          "tone": "warning",
+          "activate_indicators": [
+            "privacy_denied"
+          ],
+          "next": "Q020",
+          "label_en": "No"
+        },
+        {
+          "id": "unknown",
+          "label_ca": "No consta",
+          "label_es": "No consta",
+          "tone": "warning",
+          "activate_indicators": [
+            "privacy_denied"
+          ],
+          "next": "Q020",
+          "label_en": "Not known"
+        }
+      ],
+      "question_en": "Is it possible to arrange or create a private conversation without increasing risk?",
+      "help_en": "Promote a safe interview without confrontation.",
+      "why_en": "Promote a safe interview without confrontation."
+    },
+    {
+      "id": "Q020",
+      "domain": "normalization",
+      "priority": "medium",
+      "question_ca": "Utilitza expressions com «era normal», «era el meu deure», «totes ho aguantaven» o «ell treballava molt»?",
+      "question_es": "¿Utiliza expresiones como «era normal», «era mi deber», «todas lo aguantaban» o «él trabajaba mucho»?",
+      "plain_ca": "Justifica o normalitza el que passava?",
+      "direct_to_woman_ca": "Quan diu que era normal, què passava exactament?",
+      "help_ca": "Detectar normalització sense invalidar el relat.",
+      "help_es": "Detectar normalización sin invalidar el relato.",
+      "why_ca": "Detectar normalització sense invalidar el relat.",
+      "why_es": "Detectar normalización sin invalidar el relato.",
+      "sources": [],
+      "allows_note": true,
+      "sensitive": true,
+      "answers": [
+        {
+          "id": "yes",
+          "label_ca": "Sí",
+          "label_es": "Sí",
+          "tone": "warning",
+          "activate_indicators": [
+            "historical_normalization",
+            "duty_language",
+            "excusing_perpetrator"
+          ],
+          "next": "Q021",
+          "label_en": "Yes"
+        },
+        {
+          "id": "no",
+          "label_ca": "No",
+          "label_es": "No",
+          "tone": "neutral",
+          "next": "Q030",
+          "label_en": "No"
+        },
+        {
+          "id": "unknown",
+          "label_ca": "No consta",
+          "label_es": "No consta",
+          "tone": "neutral",
+          "next": "Q030",
+          "label_en": "Not known"
+        }
+      ],
+      "question_en": "Does she use expressions such as “it was normal”, “it was my duty”, “everyone put up with it” or “he worked hard”?",
+      "help_en": "Detect normalization without invalidating the account.",
+      "why_en": "Detect normalization without invalidating the account."
+    },
+    {
+      "id": "Q021",
+      "domain": "normalization",
+      "priority": "medium",
+      "question_ca": "Pot descriure què passava concretament, sense posar-hi encara una etiqueta?",
+      "question_es": "¿Puede describir qué pasaba concretamente, sin ponerle todavía una etiqueta?",
+      "plain_ca": "Què passava exactament?",
+      "direct_to_woman_ca": "Em pot explicar què passava, amb les seves paraules?",
+      "help_ca": "Passar de justificacions a fets observables.",
+      "help_es": "Pasar de justificaciones a hechos observables.",
+      "why_ca": "Passar de justificacions a fets observables.",
+      "why_es": "Pasar de justificaciones a hechos observables.",
+      "sources": [],
+      "allows_note": true,
+      "sensitive": true,
+      "answers": [
+        {
+          "id": "yes",
+          "label_ca": "Sí",
+          "label_es": "Sí",
+          "tone": "warning",
+          "activate_indicators": [
+            "minimization"
+          ],
+          "next": "Q022",
+          "label_en": "Yes"
+        },
+        {
+          "id": "no",
+          "label_ca": "No",
+          "label_es": "No",
+          "tone": "neutral",
+          "next": "Q030",
+          "label_en": "No"
+        },
+        {
+          "id": "unknown",
+          "label_ca": "No consta",
+          "label_es": "No consta",
+          "tone": "neutral",
+          "next": "Q030",
+          "label_en": "Not known"
+        },
+        {
+          "id": "free_text",
+          "label_ca": "Text lliure",
+          "label_es": "Texto libre",
+          "tone": "warning",
+          "activate_indicators": [
+            "minimization"
+          ],
+          "next": "Q022",
+          "label_en": "Free text"
+        }
+      ],
+      "question_en": "Can she describe what happened specifically, without applying a label yet?",
+      "help_en": "Move from justifications to observable facts.",
+      "why_en": "Move from justifications to observable facts."
+    },
+    {
+      "id": "Q022",
+      "domain": "normalization",
+      "priority": "high",
+      "question_ca": "Quan això passava, podia negar-s'hi o prendre una decisió diferent sense por, càstig ni conseqüències?",
+      "question_es": "Cuando eso pasaba, ¿podía negarse o tomar una decisión diferente sin miedo, castigo ni consecuencias?",
+      "plain_ca": "Podia dir que no sense conseqüències?",
+      "direct_to_woman_ca": "Podia dir que no sense por que passés res dolent?",
+      "help_ca": "Explorar llibertat real de decisió.",
+      "help_es": "Explorar libertad real de decisión.",
+      "why_ca": "Explorar llibertat real de decisió.",
+      "why_es": "Explorar libertad real de decisión.",
+      "sources": [],
+      "allows_note": true,
+      "sensitive": true,
+      "answers": [
+        {
+          "id": "yes",
+          "label_ca": "Sí",
+          "label_es": "Sí",
+          "tone": "neutral",
+          "next": "Q030",
+          "label_en": "Yes"
+        },
+        {
+          "id": "no",
+          "label_ca": "No",
+          "label_es": "No",
+          "tone": "warning",
+          "activate_indicators": [
+            "retaliation_fear",
+            "permission_seeking"
+          ],
+          "next": "Q040",
+          "label_en": "No"
+        },
+        {
+          "id": "unknown",
+          "label_ca": "No consta",
+          "label_es": "No consta",
+          "tone": "warning",
+          "activate_indicators": [
+            "retaliation_fear",
+            "permission_seeking"
+          ],
+          "next": "Q030",
+          "label_en": "Not known"
+        }
+      ],
+      "question_en": "When this happened, could she refuse or make a different decision without fear, punishment or consequences?",
+      "help_en": "Explore real freedom of decision.",
+      "why_en": "Explore real freedom of decision."
+    },
+    {
+      "id": "Q030",
+      "domain": "psychological",
+      "priority": "medium",
+      "question_ca": "Algú decideix habitualment per ella aspectes que voldria decidir personalment?",
+      "question_es": "¿Alguien decide habitualmente por ella aspectos que querría decidir personalmente?",
+      "plain_ca": "Algú pren decisions per ella?",
+      "direct_to_woman_ca": "Hi ha coses que voldria decidir vostè però decideix una altra persona?",
+      "help_ca": "Cribratge transversal d'autonomia.",
+      "help_es": "Cribado transversal de autonomía.",
+      "why_ca": "Cribratge transversal d'autonomia.",
+      "why_es": "Cribado transversal de autonomía.",
+      "sources": [],
+      "allows_note": true,
+      "sensitive": false,
+      "answers": [
+        {
+          "id": "yes",
+          "label_ca": "Sí",
+          "label_es": "Sí",
+          "tone": "warning",
+          "activate_indicators": [
+            "infantilization",
+            "permission_seeking"
+          ],
+          "next": "Q031",
+          "label_en": "Yes"
+        },
+        {
+          "id": "no",
+          "label_ca": "No",
+          "label_es": "No",
+          "tone": "neutral",
+          "next": "Q040",
+          "label_en": "No"
+        },
+        {
+          "id": "unknown",
+          "label_ca": "No consta",
+          "label_es": "No consta",
+          "tone": "neutral",
+          "next": "Q040",
+          "label_en": "Not known"
+        }
+      ],
+      "question_en": "Does someone usually decide for her on matters she would like to decide personally?",
+      "help_en": "Cross-cutting screening of autonomy.",
+      "why_en": "Cross-cutting screening of autonomy."
+    },
+    {
+      "id": "Q031",
+      "domain": "psychological",
+      "priority": "medium",
+      "question_ca": "En quins àmbits passa?",
+      "question_es": "¿En qué ámbitos ocurre?",
+      "plain_ca": "En quines coses decideixen per ella?",
+      "direct_to_woman_ca": "En quines coses decideix una altra persona per vostè?",
+      "help_ca": "Obrir la branca temàtica adequada.",
+      "help_es": "Abrir la rama temática adecuada.",
+      "why_ca": "Obrir la branca temàtica adequada.",
+      "why_es": "Abrir la rama temática adecuada.",
+      "sources": [],
+      "allows_note": true,
+      "sensitive": false,
+      "answers": [
+        {
+          "id": "money",
+          "label_ca": "Diners",
+          "label_es": "Dinero",
+          "tone": "neutral",
+          "next": "Q100",
+          "label_en": "Money"
+        },
+        {
+          "id": "health",
+          "label_ca": "Salut",
+          "label_es": "Salud",
+          "tone": "neutral",
+          "next": "Q200",
+          "label_en": "Health"
+        },
+        {
+          "id": "medication",
+          "label_ca": "Medicaci?",
+          "label_es": "Medicación",
+          "tone": "neutral",
+          "next": "Q200",
+          "label_en": "Medication"
+        },
+        {
+          "id": "mobility",
+          "label_ca": "Mobilitat",
+          "label_es": "Movilidad",
+          "tone": "neutral",
+          "next": "Q300",
+          "label_en": "Mobility"
+        },
+        {
+          "id": "housing",
+          "label_ca": "Habitatge",
+          "label_es": "Vivienda",
+          "tone": "neutral",
+          "next": "Q120",
+          "label_en": "Housing"
+        },
+        {
+          "id": "phone",
+          "label_ca": "Tel?fon",
+          "label_es": "Teléfono",
+          "tone": "neutral",
+          "next": "Q310",
+          "label_en": "Phone"
+        },
+        {
+          "id": "visits",
+          "label_ca": "Visites",
+          "label_es": "Visitas",
+          "tone": "neutral",
+          "next": "Q300",
+          "label_en": "Visits"
+        },
+        {
+          "id": "sex",
+          "label_ca": "Sexualitat",
+          "label_es": "Sexualidad",
+          "tone": "neutral",
+          "next": "Q400",
+          "label_en": "Sexuality"
+        },
+        {
+          "id": "other",
+          "label_ca": "Altres",
+          "label_es": "Otros",
+          "tone": "neutral",
+          "next": "Q040",
+          "route_note": "Ruta original Q032 absent; continuacio prudent a Q040.",
+          "label_en": "Other"
+        },
+        {
+          "id": "unknown",
+          "label_ca": "No consta",
+          "label_es": "No consta",
+          "tone": "neutral",
+          "next": "Q040",
+          "label_en": "Not known"
+        }
+      ],
+      "question_en": "In which areas does this happen?",
+      "help_en": "Open the appropriate thematic branch.",
+      "why_en": "Open the appropriate thematic branch."
+    },
+    {
+      "id": "Q040",
+      "domain": "psychological",
+      "priority": "high",
+      "question_ca": "S'observa por, hipervigilància, plor, rigidesa, canvi de discurs o necessitat de mirar una altra persona abans de respondre?",
+      "question_es": "¿Se observa miedo, hipervigilancia, llanto, rigidez, cambio de discurso o necesidad de mirar a otra persona antes de responder?",
+      "plain_ca": "S'observen signes de por o control?",
+      "direct_to_woman_ca": "Se sent còmoda parlant d'això ara?",
+      "help_ca": "Incorporar observació professional sense convertir-la en conclusió.",
+      "help_es": "Incorporar observación profesional sin convertirla en conclusión.",
+      "why_ca": "Incorporar observació professional sense convertir-la en conclusió.",
+      "why_es": "Incorporar observación profesional sin convertirla en conclusión.",
+      "sources": [],
+      "allows_note": true,
+      "sensitive": false,
+      "answers": [
+        {
+          "id": "yes",
+          "label_ca": "Sí",
+          "label_es": "Sí",
+          "tone": "warning",
+          "activate_indicators": [
+            "fearful_behavior",
+            "emotional_lability_contextual"
+          ],
+          "next": "Q041",
+          "label_en": "Yes"
+        },
+        {
+          "id": "no",
+          "label_ca": "No",
+          "label_es": "No",
+          "tone": "neutral",
+          "next": "Q050",
+          "label_en": "No"
+        },
+        {
+          "id": "unknown",
+          "label_ca": "No consta",
+          "label_es": "No consta",
+          "tone": "neutral",
+          "next": "Q050",
+          "label_en": "Not known"
+        }
+      ],
+      "question_en": "Is there fear, hypervigilance, crying, rigidity, a change in discourse or a need to look at another person before answering?",
+      "help_en": "Include professional observation without turning it into a conclusion.",
+      "why_en": "Include professional observation without turning it into a conclusion."
+    },
+    {
+      "id": "Q041",
+      "domain": "psychological",
+      "priority": "high",
+      "question_ca": "Aquests signes apareixen o augmenten quan es parla d'una persona concreta?",
+      "question_es": "¿Estos signos aparecen o aumentan cuando se habla de una persona concreta?",
+      "plain_ca": "La por apareix amb una persona concreta?",
+      "direct_to_woman_ca": "Hi ha alguna persona de qui li costi parlar?",
+      "help_ca": "Relacionar context i reacció observada.",
+      "help_es": "Relacionar contexto y reacción observada.",
+      "why_ca": "Relacionar context i reacció observada.",
+      "why_es": "Relacionar contexto y reacción observada.",
+      "sources": [],
+      "allows_note": true,
+      "sensitive": true,
+      "answers": [
+        {
+          "id": "yes",
+          "label_ca": "Sí",
+          "label_es": "Sí",
+          "tone": "warning",
+          "activate_indicators": [
+            "fearful_behavior"
+          ],
+          "next": "Q042",
+          "label_en": "Yes"
+        },
+        {
+          "id": "no",
+          "label_ca": "No",
+          "label_es": "No",
+          "tone": "neutral",
+          "next": "Q050",
+          "label_en": "No"
+        },
+        {
+          "id": "unknown",
+          "label_ca": "No consta",
+          "label_es": "No consta",
+          "tone": "neutral",
+          "next": "Q050",
+          "label_en": "Not known"
+        }
+      ],
+      "question_en": "Do these signs appear or increase when a specific person is discussed?",
+      "help_en": "Relate context and observed reaction.",
+      "why_en": "Relate context and observed reaction."
+    },
+    {
+      "id": "Q042",
+      "domain": "psychological",
+      "priority": "urgent",
+      "question_ca": "La dona ha expressat por de les conseqüències de parlar o que aquella persona s'assabenti?",
+      "question_es": "¿La mujer ha expresado miedo a las consecuencias de hablar o a que esa persona se entere?",
+      "plain_ca": "Té por que algú s'assabenti que ha parlat?",
+      "direct_to_woman_ca": "Li preocupa què podria passar si aquesta persona sap que n'hem parlat?",
+      "help_ca": "Valorar represàlies i seguretat.",
+      "help_es": "Valorar represalias y seguridad.",
+      "why_ca": "Valorar represàlies i seguretat.",
+      "why_es": "Valorar represalias y seguridad.",
+      "sources": [],
+      "allows_note": true,
+      "sensitive": true,
+      "answers": [
+        {
+          "id": "yes",
+          "label_ca": "Sí",
+          "label_es": "Sí",
+          "tone": "danger",
+          "activate_indicators": [
+            "retaliation_fear"
+          ],
+          "next": "Q001",
+          "label_en": "Yes"
+        },
+        {
+          "id": "no",
+          "label_ca": "No",
+          "label_es": "No",
+          "tone": "neutral",
+          "next": "Q050",
+          "label_en": "No"
+        },
+        {
+          "id": "unknown",
+          "label_ca": "No consta",
+          "label_es": "No consta",
+          "tone": "neutral",
+          "next": "Q050",
+          "label_en": "Not known"
+        }
+      ],
+      "question_en": "Has the woman expressed fear of the consequences of speaking or of that person finding out?",
+      "help_en": "Assess retaliation and safety.",
+      "why_en": "Assess retaliation and safety."
+    },
+    {
+      "id": "Q050",
+      "domain": "social_isolation",
+      "priority": "medium",
+      "question_ca": "Ha deixat de veure persones, sortir, participar en activitats o utilitzar el telèfon com abans?",
+      "question_es": "¿Ha dejado de ver personas, salir, participar en actividades o utilizar el teléfono como antes?",
+      "plain_ca": "Ha perdut contacte o llibertat de moviment?",
+      "direct_to_woman_ca": "Pot veure qui vol, sortir i utilitzar el telèfon com abans?",
+      "help_ca": "Explorar aïllament o canvis no voluntaris.",
+      "help_es": "Explorar aislamiento o cambios no voluntarios.",
+      "why_ca": "Explorar aïllament o canvis no voluntaris.",
+      "why_es": "Explorar aislamiento o cambios no voluntarios.",
+      "sources": [],
+      "allows_note": true,
+      "sensitive": false,
+      "answers": [
+        {
+          "id": "yes",
+          "label_ca": "Sí",
+          "label_es": "Sí",
+          "tone": "warning",
+          "activate_indicators": [
+            "community_withdrawal",
+            "phone_control",
+            "mobility_control"
+          ],
+          "next": "Q060",
+          "route_note": "Ruta original Q051 absent; continuacio prudent a Q060.",
+          "label_en": "Yes"
+        },
+        {
+          "id": "no",
+          "label_ca": "No",
+          "label_es": "No",
+          "tone": "neutral",
+          "next": "Q060",
+          "label_en": "No"
+        },
+        {
+          "id": "unknown",
+          "label_ca": "No consta",
+          "label_es": "No consta",
+          "tone": "neutral",
+          "next": "Q060",
+          "label_en": "Not known"
+        }
+      ],
+      "question_en": "Has she stopped seeing people, going out, taking part in activities or using the phone as before?",
+      "help_en": "Explore isolation or non-voluntary changes.",
+      "why_en": "Explore isolation or non-voluntary changes."
+    },
+    {
+      "id": "Q060",
+      "domain": "physical",
+      "priority": "urgent",
+      "question_ca": "Hi ha cops, empentes, subjeccions, llançament d'objectes o ús de bastó o altres objectes contra ella?",
+      "question_es": "¿Hay golpes, empujones, sujeciones, lanzamiento de objetos o uso de bastón u otros objetos contra ella?",
+      "plain_ca": "Hi ha hagut agressions físiques?",
+      "direct_to_woman_ca": "Algú l'ha colpejada, empesa, agafada fort o li ha llançat algun objecte?",
+      "help_ca": "Explorar violència física amb llenguatge factual.",
+      "help_es": "Explorar violencia física con lenguaje factual.",
+      "why_ca": "Explorar violència física amb llenguatge factual.",
+      "why_es": "Explorar violencia física con lenguaje factual.",
+      "sources": [],
+      "allows_note": true,
+      "sensitive": true,
+      "answers": [
+        {
+          "id": "yes",
+          "label_ca": "Sí",
+          "label_es": "Sí",
+          "tone": "danger",
+          "activate_indicators": [
+            "hitting",
+            "pushing_or_grabbing",
+            "object_assault"
+          ],
+          "next": "Q061",
+          "label_en": "Yes"
+        },
+        {
+          "id": "no",
+          "label_ca": "No",
+          "label_es": "No",
+          "tone": "neutral",
+          "next": "Q070",
+          "label_en": "No"
+        },
+        {
+          "id": "unknown",
+          "label_ca": "No consta",
+          "label_es": "No consta",
+          "tone": "neutral",
+          "next": "Q070",
+          "label_en": "Not known"
+        }
+      ],
+      "question_en": "Are there blows, pushes, restraints, objects thrown, or use of a cane or other objects against her?",
+      "help_en": "Explore physical violence using factual language.",
+      "why_en": "Explore physical violence using factual language."
+    },
+    {
+      "id": "Q061",
+      "domain": "physical",
+      "priority": "urgent",
+      "question_ca": "Ha passat recentment, hi ha lesions o creu que podria tornar a passar aviat?",
+      "question_es": "¿Ha ocurrido recientemente, hay lesiones o cree que podría volver a ocurrir pronto?",
+      "plain_ca": "Hi ha risc actual o lesions?",
+      "direct_to_woman_ca": "Ha passat fa poc, té alguna lesió o creu que podria tornar a passar aviat?",
+      "help_ca": "Valorar urgència.",
+      "help_es": "Valorar urgencia.",
+      "why_ca": "Valorar urgència.",
+      "why_es": "Valorar urgencia.",
+      "sources": [],
+      "allows_note": true,
+      "sensitive": true,
+      "answers": [
+        {
+          "id": "yes",
+          "label_ca": "Sí",
+          "label_es": "Sí",
+          "tone": "danger",
+          "activate_indicators": [
+            "immediate_danger",
+            "unexplained_injuries"
+          ],
+          "next": "Q001",
+          "label_en": "Yes"
+        },
+        {
+          "id": "no",
+          "label_ca": "No",
+          "label_es": "No",
+          "tone": "neutral",
+          "next": "Q070",
+          "label_en": "No"
+        },
+        {
+          "id": "unknown",
+          "label_ca": "No consta",
+          "label_es": "No consta",
+          "tone": "neutral",
+          "next": "Q001",
+          "label_en": "Not known"
+        }
+      ],
+      "question_en": "Has it happened recently, are there injuries, or does she think it could happen again soon?",
+      "help_en": "Assess urgency.",
+      "why_en": "Assess urgency."
+    },
+    {
+      "id": "Q070",
+      "domain": "physical",
+      "priority": "high",
+      "question_ca": "La mateixa persona insulta, amenaça o agredeix personal femení, familiars o altres dones?",
+      "question_es": "¿La misma persona insulta, amenaza o agrede a personal femenino, familiares u otras mujeres?",
+      "plain_ca": "Mostra agressivitat amb altres dones?",
+      "direct_to_woman_ca": "Aquesta persona també tracta malament o agredeix altres dones?",
+      "help_ca": "Registrar un patró observable de conducta, no com a prova única.",
+      "help_es": "Registrar un patrón observable de conducta, no como prueba única.",
+      "why_ca": "Registrar un patró observable de conducta, no com a prova única.",
+      "why_es": "Registrar un patrón observable de conducta, no como prueba única.",
+      "sources": [],
+      "allows_note": true,
+      "sensitive": false,
+      "answers": [
+        {
+          "id": "yes",
+          "label_ca": "Sí",
+          "label_es": "Sí",
+          "tone": "warning",
+          "activate_indicators": [
+            "violence_toward_staff"
+          ],
+          "next": "Q071",
+          "label_en": "Yes"
+        },
+        {
+          "id": "no",
+          "label_ca": "No",
+          "label_es": "No",
+          "tone": "neutral",
+          "next": "Q080",
+          "label_en": "No"
+        },
+        {
+          "id": "unknown",
+          "label_ca": "No consta",
+          "label_es": "No consta",
+          "tone": "neutral",
+          "next": "Q080",
+          "label_en": "Not known"
+        }
+      ],
+      "question_en": "Does the same person insult, threaten or assault female staff, relatives or other women?",
+      "help_en": "Record an observable pattern of conduct, not as sole evidence.",
+      "why_en": "Record an observable pattern of conduct, not as sole evidence."
+    },
+    {
+      "id": "Q071",
+      "domain": "physical",
+      "priority": "high",
+      "question_ca": "La dona modifica el comportament, guarda silenci o mostra patiment quan presencia aquestes conductes?",
+      "question_es": "¿La mujer modifica el comportamiento, guarda silencio o muestra sufrimiento cuando presencia esas conductas?",
+      "plain_ca": "Ella mostra por quan això passa?",
+      "direct_to_woman_ca": "Quan aquesta persona es comporta així, vostè se sent espantada o prefereix callar?",
+      "help_ca": "Relacionar patró extern i reacció de la dona.",
+      "help_es": "Relacionar patrón externo y reacción de la mujer.",
+      "why_ca": "Relacionar patró extern i reacció de la dona.",
+      "why_es": "Relacionar patrón externo y reacción de la mujer.",
+      "sources": [],
+      "allows_note": true,
+      "sensitive": true,
+      "answers": [
+        {
+          "id": "yes",
+          "label_ca": "Sí",
+          "label_es": "Sí",
+          "tone": "warning",
+          "activate_indicators": [
+            "fearful_behavior",
+            "emotional_lability_contextual"
+          ],
+          "next": "Q041",
+          "label_en": "Yes"
+        },
+        {
+          "id": "no",
+          "label_ca": "No",
+          "label_es": "No",
+          "tone": "neutral",
+          "next": "Q080",
+          "label_en": "No"
+        },
+        {
+          "id": "unknown",
+          "label_ca": "No consta",
+          "label_es": "No consta",
+          "tone": "neutral",
+          "next": "Q080",
+          "label_en": "Not known"
+        }
+      ],
+      "question_en": "Does the woman change her behavior, remain silent or show distress when witnessing these behaviors?",
+      "help_en": "Relate external pattern and the woman’s reaction.",
+      "why_en": "Relate external pattern and the woman’s reaction."
+    },
+    {
+      "id": "Q080",
+      "domain": "institutional",
+      "priority": "medium",
+      "question_ca": "En algun servei o institució s'han pres decisions sobre ella sense explicar-les ni demanar-li opinió quan podia participar?",
+      "question_es": "¿En algún servicio o institución se han tomado decisiones sobre ella sin explicarlas ni pedirle opinión cuando podía participar?",
+      "plain_ca": "S'han pres decisions sense comptar amb ella?",
+      "direct_to_woman_ca": "Alguna vegada han decidit coses importants sobre vostè sense explicar-les-hi o preguntar-li?",
+      "help_ca": "Explorar pèrdua d'autonomia institucional.",
+      "help_es": "Explorar pérdida de autonomía institucional.",
+      "why_ca": "Explorar pèrdua d'autonomia institucional.",
+      "why_es": "Explorar pérdida de autonomía institucional.",
+      "sources": [],
+      "allows_note": true,
+      "sensitive": false,
+      "answers": [
+        {
+          "id": "yes",
+          "label_ca": "Sí",
+          "label_es": "Sí",
+          "tone": "warning",
+          "activate_indicators": [
+            "consent_bypassed",
+            "infantilization"
+          ],
+          "next": "Q090",
+          "route_note": "Ruta original Q081 absent; continuacio prudent a Q090.",
+          "label_en": "Yes"
+        },
+        {
+          "id": "no",
+          "label_ca": "No",
+          "label_es": "No",
+          "tone": "neutral",
+          "next": "Q090",
+          "label_en": "No"
+        },
+        {
+          "id": "unknown",
+          "label_ca": "No consta",
+          "label_es": "No consta",
+          "tone": "neutral",
+          "next": "Q090",
+          "label_en": "Not known"
+        }
+      ],
+      "question_en": "Has any service or institution made decisions about her without explaining them or asking her opinion when she could participate?",
+      "help_en": "Explore loss of institutional autonomy.",
+      "why_en": "Explore loss of institutional autonomy."
+    },
+    {
+      "id": "Q090",
+      "domain": "digital",
+      "priority": "medium",
+      "question_ca": "Algú controla el seu telèfon, contrasenyes, missatges, banca digital o tràmits en línia?",
+      "question_es": "¿Alguien controla su teléfono, contraseñas, mensajes, banca digital o trámites en línea?",
+      "plain_ca": "Algú controla els seus dispositius o comptes?",
+      "direct_to_woman_ca": "Algú té les seves contrasenyes, llegeix els seus missatges o controla la seva banca?",
+      "help_ca": "Explorar control digital.",
+      "help_es": "Explorar control digital.",
+      "why_ca": "Explorar control digital.",
+      "why_es": "Explorar control digital.",
+      "sources": [],
+      "allows_note": true,
+      "sensitive": true,
+      "answers": [
+        {
+          "id": "yes",
+          "label_ca": "Sí",
+          "label_es": "Sí",
+          "tone": "warning",
+          "activate_indicators": [
+            "phone_control",
+            "password_control",
+            "banking_app_control"
+          ],
+          "next": "Q091",
+          "label_en": "Yes"
+        },
+        {
+          "id": "no",
+          "label_ca": "No",
+          "label_es": "No",
+          "tone": "neutral",
+          "next": "Q100",
+          "label_en": "No"
+        },
+        {
+          "id": "unknown",
+          "label_ca": "No consta",
+          "label_es": "No consta",
+          "tone": "neutral",
+          "next": "Q100",
+          "label_en": "Not known"
+        }
+      ],
+      "question_en": "Does someone control her phone, passwords, messages, digital banking or online procedures?",
+      "help_en": "Explore digital control.",
+      "why_en": "Explore digital control."
+    },
+    {
+      "id": "Q091",
+      "domain": "digital",
+      "priority": "high",
+      "question_ca": "Aquest suport digital és voluntari i pot revocar-lo o accedir als comptes quan vulgui?",
+      "question_es": "¿Ese apoyo digital es voluntario y puede revocarlo o acceder a las cuentas cuando quiera?",
+      "plain_ca": "Pot recuperar el control quan vulgui?",
+      "direct_to_woman_ca": "Pot canviar les contrasenyes o recuperar el control dels comptes quan vulgui?",
+      "help_ca": "Diferenciar ajuda acordada de dependència coercitiva.",
+      "help_es": "Diferenciar ayuda acordada de dependencia coercitiva.",
+      "why_ca": "Diferenciar ajuda acordada de dependència coercitiva.",
+      "why_es": "Diferenciar ayuda acordada de dependencia coercitiva.",
+      "sources": [],
+      "allows_note": true,
+      "sensitive": true,
+      "answers": [
+        {
+          "id": "yes",
+          "label_ca": "Sí",
+          "label_es": "Sí",
+          "tone": "warning",
+          "activate_indicators": [
+            "digital_exclusion_dependency"
+          ],
+          "next": "Q100",
+          "label_en": "Yes"
+        },
+        {
+          "id": "no",
+          "label_ca": "No",
+          "label_es": "No",
+          "tone": "neutral",
+          "next": "Q092",
+          "label_en": "No"
+        },
+        {
+          "id": "unknown",
+          "label_ca": "No consta",
+          "label_es": "No consta",
+          "tone": "neutral",
+          "next": "Q092",
+          "label_en": "Not known"
+        }
+      ],
+      "question_en": "Is this digital support voluntary, and can she revoke it or access the accounts whenever she wants?",
+      "help_en": "Differentiate agreed support from coercive dependence.",
+      "why_en": "Differentiate agreed support from coercive dependence."
+    },
+    {
+      "id": "Q092",
+      "domain": "digital",
+      "priority": "high",
+      "question_ca": "S'han fet operacions, canvis de contrasenya, missatges o tràmits sense que ella ho autoritzés o entengués?",
+      "question_es": "¿Se han hecho operaciones, cambios de contraseña, mensajes o trámites sin que ella lo autorizara o entendiera?",
+      "plain_ca": "S'han fet coses en el seu nom sense permís?",
+      "direct_to_woman_ca": "Algú ha fet operacions o tràmits en el seu nom sense que vostè ho autoritzés o ho entengués?",
+      "help_ca": "Explorar explotació o suplantació.",
+      "help_es": "Explorar explotación o suplantación.",
+      "why_ca": "Explorar explotació o suplantació.",
+      "why_es": "Explorar explotación o suplantación.",
+      "sources": [],
+      "allows_note": true,
+      "sensitive": true,
+      "answers": [
+        {
+          "id": "yes",
+          "label_ca": "Sí",
+          "label_es": "Sí",
+          "tone": "warning",
+          "activate_indicators": [
+            "identity_impersonation",
+            "online_fraud_by_known_person"
+          ],
+          "next": "Q120",
+          "label_en": "Yes"
+        },
+        {
+          "id": "no",
+          "label_ca": "No",
+          "label_es": "No",
+          "tone": "neutral",
+          "next": "Q100",
+          "label_en": "No"
+        },
+        {
+          "id": "unknown",
+          "label_ca": "No consta",
+          "label_es": "No consta",
+          "tone": "neutral",
+          "next": "Q100",
+          "label_en": "Not known"
+        }
+      ],
+      "question_en": "Have transactions, password changes, messages or procedures been carried out without her authorization or understanding?",
+      "help_en": "Explore exploitation or impersonation.",
+      "why_en": "Explore exploitation or impersonation."
+    },
+    {
+      "id": "Q100",
+      "domain": "economic",
+      "priority": "medium",
+      "question_ca": "Pot utilitzar els seus ingressos o estalvis per a necessitats i petites compres sense demanar permís?",
+      "question_es": "¿Puede utilizar sus ingresos o ahorros para necesidades y pequeñas compras sin pedir permiso?",
+      "plain_ca": "Pot gastar els seus diners sense demanar permís?",
+      "direct_to_woman_ca": "Pot comprar el que necessita, fins i tot coses petites, sense demanar permís?",
+      "help_ca": "Explorar autonomia econòmica quotidiana.",
+      "help_es": "Explorar autonomía económica cotidiana.",
+      "why_ca": "Explorar autonomia econòmica quotidiana.",
+      "why_es": "Explorar autonomía económica cotidiana.",
+      "sources": [],
+      "allows_note": true,
+      "sensitive": true,
+      "answers": [
+        {
+          "id": "yes",
+          "label_ca": "Sí",
+          "label_es": "Sí",
+          "tone": "warning",
+          "activate_indicators": [
+            "permission_for_small_purchases"
+          ],
+          "next": "Q101",
+          "label_en": "Yes"
+        },
+        {
+          "id": "no",
+          "label_ca": "No",
+          "label_es": "No",
+          "tone": "neutral",
+          "next": "Q102",
+          "label_en": "No"
+        },
+        {
+          "id": "unknown",
+          "label_ca": "No consta",
+          "label_es": "No consta",
+          "tone": "neutral",
+          "next": "Q101",
+          "label_en": "Not known"
+        }
+      ],
+      "question_en": "Can she use her income or savings for needs and small purchases without asking permission?",
+      "help_en": "Explore everyday economic autonomy.",
+      "why_en": "Explore everyday economic autonomy."
+    },
+    {
+      "id": "Q101",
+      "domain": "economic",
+      "priority": "medium",
+      "question_ca": "Sap quins ingressos té, on són els seus diners i quines operacions es fan?",
+      "question_es": "¿Sabe qué ingresos tiene, dónde está su dinero y qué operaciones se hacen?",
+      "plain_ca": "Coneix i pot consultar els seus diners?",
+      "direct_to_woman_ca": "Sap quins diners té i pot consultar els comptes quan vulgui?",
+      "help_ca": "Explorar accés a informació financera.",
+      "help_es": "Explorar acceso a información financiera.",
+      "why_ca": "Explorar accés a informació financera.",
+      "why_es": "Explorar acceso a información financiera.",
+      "sources": [],
+      "allows_note": true,
+      "sensitive": true,
+      "answers": [
+        {
+          "id": "yes",
+          "label_ca": "Sí",
+          "label_es": "Sí",
+          "tone": "warning",
+          "activate_indicators": [
+            "unknown_financial_state"
+          ],
+          "next": "Q110",
+          "label_en": "Yes"
+        },
+        {
+          "id": "no",
+          "label_ca": "No",
+          "label_es": "No",
+          "tone": "neutral",
+          "next": "Q103",
+          "label_en": "No"
+        },
+        {
+          "id": "partial",
+          "label_ca": "Parcialment",
+          "label_es": "Parcialmente",
+          "tone": "warning",
+          "activate_indicators": [
+            "unknown_financial_state"
+          ],
+          "next": "Q103",
+          "label_en": "Partially"
+        },
+        {
+          "id": "unknown",
+          "label_ca": "No consta",
+          "label_es": "No consta",
+          "tone": "neutral",
+          "next": "Q110",
+          "label_en": "Not known"
+        }
+      ],
+      "question_en": "Does she know what income she has, where her money is and what transactions are made?",
+      "help_en": "Explore access to financial information.",
+      "why_en": "Explore access to financial information."
+    },
+    {
+      "id": "Q102",
+      "domain": "economic",
+      "priority": "high",
+      "question_ca": "Què passa si compra alguna cosa o gasta diners sense permís?",
+      "question_es": "¿Qué pasa si compra algo o gasta dinero sin permiso?",
+      "plain_ca": "Hi ha conseqüències si gasta diners?",
+      "direct_to_woman_ca": "Què passa si compra alguna cosa sense demanar permís?",
+      "help_ca": "Explorar conseqüències coercitives.",
+      "help_es": "Explorar consecuencias coercitivas.",
+      "why_ca": "Explorar conseqüències coercitives.",
+      "why_es": "Explorar consecuencias coercitivas.",
+      "sources": [],
+      "allows_note": true,
+      "sensitive": true,
+      "answers": [
+        {
+          "id": "nothing",
+          "label_ca": "Res",
+          "label_es": "Nada",
+          "tone": "neutral",
+          "next": "Q101",
+          "label_en": "Nothing"
+        },
+        {
+          "id": "questions",
+          "label_ca": "Preguntes",
+          "label_es": "Preguntas",
+          "tone": "warning",
+          "activate_indicators": [
+            "permission_for_small_purchases",
+            "retaliation_fear"
+          ],
+          "next": "Q103",
+          "label_en": "Questions"
+        },
+        {
+          "id": "argument",
+          "label_ca": "Discussi?",
+          "label_es": "Discusión",
+          "tone": "neutral",
+          "next": "Q103",
+          "label_en": "Argument"
+        },
+        {
+          "id": "insults",
+          "label_ca": "Insults",
+          "label_es": "Insultos",
+          "tone": "warning",
+          "activate_indicators": [
+            "permission_for_small_purchases",
+            "retaliation_fear"
+          ],
+          "next": "Q103",
+          "label_en": "Insults"
+        },
+        {
+          "id": "threats",
+          "label_ca": "Amenaces",
+          "label_es": "Amenazas",
+          "tone": "warning",
+          "activate_indicators": [
+            "permission_for_small_purchases",
+            "retaliation_fear"
+          ],
+          "next": "Q001",
+          "label_en": "Threats"
+        },
+        {
+          "id": "money_removed",
+          "label_ca": "Money removed",
+          "label_es": "Retirada de dinero",
+          "tone": "warning",
+          "activate_indicators": [
+            "permission_for_small_purchases",
+            "retaliation_fear"
+          ],
+          "next": "Q103",
+          "label_en": "Money removed"
+        },
+        {
+          "id": "physical_aggression",
+          "label_ca": "Agressi? f?sica",
+          "label_es": "Agresión física",
+          "tone": "warning",
+          "activate_indicators": [
+            "permission_for_small_purchases",
+            "retaliation_fear"
+          ],
+          "next": "Q001",
+          "label_en": "Physical aggression"
+        },
+        {
+          "id": "unknown",
+          "label_ca": "No consta",
+          "label_es": "No consta",
+          "tone": "neutral",
+          "next": "Q101",
+          "label_en": "Not known"
+        },
+        {
+          "id": "free_text",
+          "label_ca": "Text lliure",
+          "label_es": "Texto libre",
+          "tone": "warning",
+          "activate_indicators": [
+            "permission_for_small_purchases",
+            "retaliation_fear"
+          ],
+          "next": "Q103",
+          "label_en": "Free text"
+        }
+      ],
+      "question_en": "What happens if she buys something or spends money without permission?",
+      "help_en": "Explore coercive consequences.",
+      "why_en": "Explore coercive consequences."
+    },
+    {
+      "id": "Q103",
+      "domain": "economic",
+      "priority": "medium",
+      "question_ca": "Algú administra els seus diners, pensió, targetes o comptes?",
+      "question_es": "¿Alguien administra su dinero, pensión, tarjetas o cuentas?",
+      "plain_ca": "Qui controla els seus diners?",
+      "direct_to_woman_ca": "Algú administra la seva pensió, targetes o comptes?",
+      "help_ca": "Identificar qui controla els recursos.",
+      "help_es": "Identificar quién controla los recursos.",
+      "why_ca": "Identificar qui controla els recursos.",
+      "why_es": "Identificar quién controla los recursos.",
+      "sources": [],
+      "allows_note": true,
+      "sensitive": true,
+      "answers": [
+        {
+          "id": "yes_with_consent",
+          "label_ca": "S?, amb consentiment",
+          "label_es": "Sí, con consentimiento",
+          "tone": "neutral",
+          "next": "Q104",
+          "label_en": "Yes, with consent"
+        },
+        {
+          "id": "yes_without_clear_consent",
+          "label_ca": "S?, sense consentiment clar",
+          "label_es": "Sí, sin consentimiento claro",
+          "tone": "warning",
+          "activate_indicators": [
+            "bank_access_restriction",
+            "income_appropriation"
+          ],
+          "next": "Q105",
+          "label_en": "Yes, without clear consent"
+        },
+        {
+          "id": "no",
+          "label_ca": "No",
+          "label_es": "No",
+          "tone": "neutral",
+          "next": "Q110",
+          "label_en": "No"
+        },
+        {
+          "id": "unknown",
+          "label_ca": "No consta",
+          "label_es": "No consta",
+          "tone": "neutral",
+          "next": "Q110",
+          "label_en": "Not known"
+        }
+      ],
+      "question_en": "Does someone administer her money, pension, cards or accounts?",
+      "help_en": "Identify who controls the resources.",
+      "why_en": "Identify who controls the resources."
+    },
+    {
+      "id": "Q104",
+      "domain": "economic",
+      "priority": "high",
+      "question_ca": "Pot consultar els moviments, recuperar el control o canviar aquesta ajuda quan vulgui?",
+      "question_es": "¿Puede consultar los movimientos, recuperar el control o cambiar esa ayuda cuando quiera?",
+      "plain_ca": "L'ajuda és revocable?",
+      "direct_to_woman_ca": "Pot revisar els moviments i recuperar el control dels diners quan vulgui?",
+      "help_ca": "Comprovar que el suport és revocable.",
+      "help_es": "Comprobar que el apoyo es revocable.",
+      "why_ca": "Comprovar que el suport és revocable.",
+      "why_es": "Comprobar que el apoyo es revocable.",
+      "sources": [],
+      "allows_note": true,
+      "sensitive": true,
+      "answers": [
+        {
+          "id": "yes",
+          "label_ca": "Sí",
+          "label_es": "Sí",
+          "tone": "warning",
+          "activate_indicators": [
+            "bank_access_restriction"
+          ],
+          "next": "Q110",
+          "label_en": "Yes"
+        },
+        {
+          "id": "no",
+          "label_ca": "No",
+          "label_es": "No",
+          "tone": "neutral",
+          "next": "Q105",
+          "label_en": "No"
+        },
+        {
+          "id": "unknown",
+          "label_ca": "No consta",
+          "label_es": "No consta",
+          "tone": "neutral",
+          "next": "Q105",
+          "label_en": "Not known"
+        }
+      ],
+      "question_en": "Can she check transactions, regain control or change this support whenever she wants?",
+      "help_en": "Check that the support is revocable.",
+      "why_en": "Check that the support is revocable."
+    },
+    {
+      "id": "Q105",
+      "domain": "economic",
+      "priority": "high",
+      "question_ca": "Hi ha diners gastats, retirats o compromesos sense que ella ho decidís o ho entengués?",
+      "question_es": "¿Hay dinero gastado, retirado o comprometido sin que ella lo decidiera o lo entendiera?",
+      "plain_ca": "S'han utilitzat els seus diners sense permís?",
+      "direct_to_woman_ca": "Algú ha gastat, retirat o compromès diners seus sense que vostè ho decidís o ho entengués?",
+      "help_ca": "Explorar apropiació o explotació.",
+      "help_es": "Explorar apropiación o explotación.",
+      "why_ca": "Explorar apropiació o explotació.",
+      "why_es": "Explorar apropiación o explotación.",
+      "sources": [],
+      "allows_note": true,
+      "sensitive": true,
+      "answers": [
+        {
+          "id": "yes",
+          "label_ca": "Sí",
+          "label_es": "Sí",
+          "tone": "warning",
+          "activate_indicators": [
+            "income_appropriation",
+            "unilateral_spending"
+          ],
+          "next": "Q106",
+          "label_en": "Yes"
+        },
+        {
+          "id": "no",
+          "label_ca": "No",
+          "label_es": "No",
+          "tone": "neutral",
+          "next": "Q110",
+          "label_en": "No"
+        },
+        {
+          "id": "unknown",
+          "label_ca": "No consta",
+          "label_es": "No consta",
+          "tone": "neutral",
+          "next": "Q110",
+          "label_en": "Not known"
+        }
+      ],
+      "question_en": "Has money been spent, withdrawn or committed without her deciding or understanding it?",
+      "help_en": "Explore appropriation or exploitation.",
+      "why_en": "Explore appropriation or exploitation."
+    },
+    {
+      "id": "Q106",
+      "domain": "economic",
+      "priority": "urgent",
+      "question_ca": "Això afecta necessitats bàsiques, habitatge, medicació o seguretat econòmica?",
+      "question_es": "¿Eso afecta a necesidades básicas, vivienda, medicación o seguridad económica?",
+      "plain_ca": "Això posa en risc necessitats bàsiques?",
+      "direct_to_woman_ca": "Això li dificulta pagar menjar, habitatge, medicació o altres necessitats?",
+      "help_ca": "Valorar impacte i urgència.",
+      "help_es": "Valorar impacto y urgencia.",
+      "why_ca": "Valorar impacte i urgència.",
+      "why_es": "Valorar impacto y urgencia.",
+      "sources": [],
+      "allows_note": true,
+      "sensitive": true,
+      "answers": [
+        {
+          "id": "yes",
+          "label_ca": "Sí",
+          "label_es": "Sí",
+          "tone": "danger",
+          "activate_indicators": [
+            "income_appropriation"
+          ],
+          "next": "Q001",
+          "label_en": "Yes"
+        },
+        {
+          "id": "no",
+          "label_ca": "No",
+          "label_es": "No",
+          "tone": "neutral",
+          "next": "Q110",
+          "label_en": "No"
+        },
+        {
+          "id": "unknown",
+          "label_ca": "No consta",
+          "label_es": "No consta",
+          "tone": "neutral",
+          "next": "Q110",
+          "label_en": "Not known"
+        }
+      ],
+      "question_en": "Does this affect basic needs, housing, medication or financial security?",
+      "help_en": "Assess impact and urgency.",
+      "why_en": "Assess impact and urgency."
+    },
+    {
+      "id": "Q110",
+      "domain": "economic",
+      "priority": "medium",
+      "question_ca": "Va poder treballar o estudiar si ho desitjava, o algú li ho va impedir?",
+      "question_es": "¿Pudo trabajar o estudiar si lo deseaba, o alguien se lo impidió?",
+      "plain_ca": "Va poder triar treballar o estudiar?",
+      "direct_to_woman_ca": "Quan era més jove, va poder treballar o estudiar si ho volia?",
+      "help_ca": "Explorar dependència econòmica històrica.",
+      "help_es": "Explorar dependencia económica histórica.",
+      "why_ca": "Explorar dependència econòmica històrica.",
+      "why_es": "Explorar dependencia económica histórica.",
+      "sources": [],
+      "allows_note": true,
+      "sensitive": true,
+      "answers": [
+        {
+          "id": "could_choose",
+          "label_ca": "Podia escollir",
+          "label_es": "Podía elegir",
+          "tone": "neutral",
+          "next": "Q120",
+          "label_en": "She could choose"
+        },
+        {
+          "id": "was_prevented",
+          "label_ca": "Li ho van impedir",
+          "label_es": "Se lo impidieron",
+          "tone": "warning",
+          "activate_indicators": [
+            "forced_domesticity"
+          ],
+          "next": "Q111",
+          "label_en": "She was prevented"
+        },
+        {
+          "id": "never_considered",
+          "label_ca": "No s'ho havia plantejat",
+          "label_es": "No se lo había planteado",
+          "tone": "neutral",
+          "next": "Q120",
+          "label_en": "She had not considered it"
+        },
+        {
+          "id": "unknown",
+          "label_ca": "No consta",
+          "label_es": "No consta",
+          "tone": "neutral",
+          "next": "Q120",
+          "label_en": "Not known"
+        }
+      ],
+      "question_en": "Could she work or study if she wished, or did someone prevent her from doing so?",
+      "help_en": "Explore historical economic dependence.",
+      "why_en": "Explore historical economic dependence."
+    },
+    {
+      "id": "Q111",
+      "domain": "economic",
+      "priority": "medium",
+      "question_ca": "La prohibició o pressió per no treballar va generar dependència econòmica o necessitat de demanar permís?",
+      "question_es": "¿La prohibición o presión para no trabajar generó dependencia económica o necesidad de pedir permiso?",
+      "plain_ca": "Això la va fer dependre econòmicament?",
+      "direct_to_woman_ca": "No poder treballar va fer que hagués de demanar diners o permís per comprar coses?",
+      "help_ca": "Connectar control laboral i econòmic.",
+      "help_es": "Conectar control laboral y económico.",
+      "why_ca": "Connectar control laboral i econòmic.",
+      "why_es": "Conectar control laboral y económico.",
+      "sources": [],
+      "allows_note": true,
+      "sensitive": true,
+      "answers": [
+        {
+          "id": "yes",
+          "label_ca": "Sí",
+          "label_es": "Sí",
+          "tone": "warning",
+          "activate_indicators": [
+            "forced_domesticity",
+            "permission_for_small_purchases"
+          ],
+          "next": "Q120",
+          "label_en": "Yes"
+        },
+        {
+          "id": "no",
+          "label_ca": "No",
+          "label_es": "No",
+          "tone": "neutral",
+          "next": "Q120",
+          "label_en": "No"
+        },
+        {
+          "id": "unknown",
+          "label_ca": "No consta",
+          "label_es": "No consta",
+          "tone": "neutral",
+          "next": "Q120",
+          "label_en": "Not known"
+        }
+      ],
+      "question_en": "Did the prohibition or pressure not to work create economic dependence or the need to ask permission?",
+      "help_en": "Connect work-related and economic control.",
+      "why_en": "Connect work-related and economic control."
+    },
+    {
+      "id": "Q120",
+      "domain": "economic",
+      "priority": "high",
+      "question_ca": "Algú l'ha pressionat perquè signi documents, cedeixi propietats, canviï testament, doni poders o abandoni l'habitatge?",
+      "question_es": "¿Alguien la ha presionado para firmar documentos, ceder propiedades, cambiar testamento, dar poderes o abandonar la vivienda?",
+      "plain_ca": "L'han pressionada per signar o cedir béns?",
+      "direct_to_woman_ca": "Algú l'ha pressionada perquè signi papers, cedeixi propietats o canviï el testament?",
+      "help_ca": "Explorar control patrimonial.",
+      "help_es": "Explorar control patrimonial.",
+      "why_ca": "Explorar control patrimonial.",
+      "why_es": "Explorar control patrimonial.",
+      "sources": [],
+      "allows_note": true,
+      "sensitive": true,
+      "answers": [
+        {
+          "id": "yes",
+          "label_ca": "Sí",
+          "label_es": "Sí",
+          "tone": "warning",
+          "activate_indicators": [
+            "coerced_signature",
+            "property_pressure"
+          ],
+          "next": "Q121",
+          "label_en": "Yes"
+        },
+        {
+          "id": "no",
+          "label_ca": "No",
+          "label_es": "No",
+          "tone": "neutral",
+          "next": "Q200",
+          "label_en": "No"
+        },
+        {
+          "id": "unknown",
+          "label_ca": "No consta",
+          "label_es": "No consta",
+          "tone": "neutral",
+          "next": "Q200",
+          "label_en": "Not known"
+        }
+      ],
+      "question_en": "Has someone pressured her to sign documents, transfer property, change a will, grant powers of attorney or leave her home?",
+      "help_en": "Explore patrimonial control.",
+      "why_en": "Explore patrimonial control."
+    },
+    {
+      "id": "Q121",
+      "domain": "economic",
+      "priority": "high",
+      "question_ca": "Va entendre el document, va poder rebre assessorament independent i podia negar-s'hi sense conseqüències?",
+      "question_es": "¿Entendió el documento, pudo recibir asesoramiento independiente y podía negarse sin consecuencias?",
+      "plain_ca": "Va poder decidir lliurement i amb assessorament?",
+      "direct_to_woman_ca": "Va entendre què signava, va tenir assessorament propi i podia dir que no?",
+      "help_ca": "Recomanar revisió jurídica sense invalidar automàticament l'acte.",
+      "help_es": "Recomendar revisión jurídica sin invalidar automáticamente el acto.",
+      "why_ca": "Recomanar revisió jurídica sense invalidar automàticament l'acte.",
+      "why_es": "Recomendar revisión jurídica sin invalidar automáticamente el acto.",
+      "sources": [],
+      "allows_note": true,
+      "sensitive": true,
+      "answers": [
+        {
+          "id": "yes",
+          "label_ca": "Sí",
+          "label_es": "Sí",
+          "tone": "neutral",
+          "next": "Q200",
+          "label_en": "Yes"
+        },
+        {
+          "id": "no",
+          "label_ca": "No",
+          "label_es": "No",
+          "tone": "warning",
+          "activate_indicators": [
+            "coerced_signature",
+            "property_pressure"
+          ],
+          "actions": [
+            "ACTION_LEGAL_REVIEW"
+          ],
+          "label_en": "No"
+        },
+        {
+          "id": "unknown",
+          "label_ca": "No consta",
+          "label_es": "No consta",
+          "tone": "warning",
+          "activate_indicators": [
+            "coerced_signature",
+            "property_pressure"
+          ],
+          "actions": [
+            "ACTION_LEGAL_REVIEW"
+          ],
+          "label_en": "Not known"
+        }
+      ],
+      "question_en": "Did she understand the document, have access to independent advice and could she refuse without consequences?",
+      "help_en": "Recommend legal review without automatically invalidating the act.",
+      "why_en": "Recommend legal review without automatically invalidating the act."
+    },
+    {
+      "id": "Q200",
+      "domain": "care_and_health",
+      "priority": "medium",
+      "question_ca": "Pot decidir sobre visites mèdiques, tractaments i qui rep informació de salut?",
+      "question_es": "¿Puede decidir sobre visitas médicas, tratamientos y quién recibe información de salud?",
+      "plain_ca": "Pot decidir sobre la seva salut?",
+      "direct_to_woman_ca": "Pot decidir sobre les visites, els tractaments i qui rep informació de la seva salut?",
+      "help_ca": "Explorar autonomia sanitària.",
+      "help_es": "Explorar autonomía sanitaria.",
+      "why_ca": "Explorar autonomia sanitària.",
+      "why_es": "Explorar autonomía sanitaria.",
+      "sources": [],
+      "allows_note": true,
+      "sensitive": true,
+      "answers": [
+        {
+          "id": "yes",
+          "label_ca": "Sí",
+          "label_es": "Sí",
+          "tone": "neutral",
+          "next": "Q201",
+          "label_en": "Yes"
+        },
+        {
+          "id": "no",
+          "label_ca": "No",
+          "label_es": "No",
+          "tone": "warning",
+          "activate_indicators": [
+            "medical_visit_control",
+            "consent_bypassed"
+          ],
+          "next": "Q201",
+          "route_note": "Ruta original Q202 absent; continuacio prudent a Q201.",
+          "label_en": "No"
+        },
+        {
+          "id": "unknown",
+          "label_ca": "No consta",
+          "label_es": "No consta",
+          "tone": "warning",
+          "activate_indicators": [
+            "medical_visit_control",
+            "consent_bypassed"
+          ],
+          "next": "Q201",
+          "label_en": "Not known"
+        }
+      ],
+      "question_en": "Can she decide about medical visits, treatments and who receives health information?",
+      "help_en": "Explore health-care autonomy.",
+      "why_en": "Explore health-care autonomy."
+    },
+    {
+      "id": "Q201",
+      "domain": "care_and_health",
+      "priority": "high",
+      "question_ca": "Sap quina medicació pren i pot accedir-hi segons la pauta professional?",
+      "question_es": "¿Sabe qué medicación toma y puede acceder a ella según la pauta profesional?",
+      "plain_ca": "Coneix i pot accedir a la seva medicació?",
+      "direct_to_woman_ca": "Sap quina medicació pren i pot accedir-hi quan toca?",
+      "help_ca": "Explorar control o desorganització de medicació.",
+      "help_es": "Explorar control o desorganización de medicación.",
+      "why_ca": "Explorar control o desorganització de medicació.",
+      "why_es": "Explorar control o desorganización de medicación.",
+      "sources": [],
+      "allows_note": true,
+      "sensitive": true,
+      "answers": [
+        {
+          "id": "yes",
+          "label_ca": "Sí",
+          "label_es": "Sí",
+          "tone": "neutral",
+          "next": "Q210",
+          "label_en": "Yes"
+        },
+        {
+          "id": "no",
+          "label_ca": "No",
+          "label_es": "No",
+          "tone": "warning",
+          "activate_indicators": [
+            "medication_control"
+          ],
+          "next": "Q203",
+          "label_en": "No"
+        },
+        {
+          "id": "partial",
+          "label_ca": "Parcialment",
+          "label_es": "Parcialmente",
+          "tone": "warning",
+          "activate_indicators": [
+            "medication_control"
+          ],
+          "next": "Q203",
+          "label_en": "Partially"
+        },
+        {
+          "id": "unknown",
+          "label_ca": "No consta",
+          "label_es": "No consta",
+          "tone": "warning",
+          "activate_indicators": [
+            "medication_control"
+          ],
+          "next": "Q210",
+          "label_en": "Not known"
+        }
+      ],
+      "question_en": "Does she know what medication she takes and can she access it according to the professional plan?",
+      "help_en": "Explore medication control or disorganization.",
+      "why_en": "Explore medication control or disorganization."
+    },
+    {
+      "id": "Q203",
+      "domain": "care_and_health",
+      "priority": "urgent",
+      "question_ca": "La manca de control de medicació o visites ha causat descompensacions, dolor, sedació, omissions o risc físic?",
+      "question_es": "¿La falta de control de medicación o visitas ha causado descompensaciones, dolor, sedación, omisiones o riesgo físico?",
+      "plain_ca": "Això ha causat un problema de salut?",
+      "direct_to_woman_ca": "Això li ha causat dolor, descompensacions o altres problemes de salut?",
+      "help_ca": "Valorar dany o urgència.",
+      "help_es": "Valorar daño o urgencia.",
+      "why_ca": "Valorar dany o urgència.",
+      "why_es": "Valorar daño o urgencia.",
+      "sources": [],
+      "allows_note": true,
+      "sensitive": true,
+      "answers": [
+        {
+          "id": "yes",
+          "label_ca": "Sí",
+          "label_es": "Sí",
+          "tone": "danger",
+          "activate_indicators": [
+            "medication_control",
+            "symptom_dismissal"
+          ],
+          "next": "Q001",
+          "label_en": "Yes"
+        },
+        {
+          "id": "no",
+          "label_ca": "No",
+          "label_es": "No",
+          "tone": "neutral",
+          "next": "Q210",
+          "label_en": "No"
+        },
+        {
+          "id": "unknown",
+          "label_ca": "No consta",
+          "label_es": "No consta",
+          "tone": "neutral",
+          "next": "Q210",
+          "label_en": "Not known"
+        }
+      ],
+      "question_en": "Has lack of control over medication or visits caused decompensation, pain, sedation, omissions or physical risk?",
+      "help_en": "Assess harm or urgency.",
+      "why_en": "Assess harm or urgency."
+    },
+    {
+      "id": "Q210",
+      "domain": "care_and_health",
+      "priority": "high",
+      "question_ca": "Algú amenaça de retirar cures, ajuda, habitatge o companyia si ella no obeeix?",
+      "question_es": "¿Alguien amenaza con retirar cuidados, ayuda, vivienda o compañía si ella no obedece?",
+      "plain_ca": "Algú utilitza les cures com a amenaça?",
+      "direct_to_woman_ca": "Algú li diu que deixarà d'ajudar-la o cuidar-la si no fa el que vol?",
+      "help_ca": "Explorar ús coercitiu de la dependència.",
+      "help_es": "Explorar uso coercitivo de la dependencia.",
+      "why_ca": "Explorar ús coercitiu de la dependència.",
+      "why_es": "Explorar uso coercitivo de la dependencia.",
+      "sources": [],
+      "allows_note": true,
+      "sensitive": true,
+      "answers": [
+        {
+          "id": "yes",
+          "label_ca": "Sí",
+          "label_es": "Sí",
+          "tone": "warning",
+          "activate_indicators": [
+            "caregiver_retaliation",
+            "retaliation_fear"
+          ],
+          "next": "Q211",
+          "label_en": "Yes"
+        },
+        {
+          "id": "no",
+          "label_ca": "No",
+          "label_es": "No",
+          "tone": "neutral",
+          "next": "Q220",
+          "label_en": "No"
+        },
+        {
+          "id": "unknown",
+          "label_ca": "No consta",
+          "label_es": "No consta",
+          "tone": "neutral",
+          "next": "Q220",
+          "label_en": "Not known"
+        }
+      ],
+      "question_en": "Does someone threaten to withdraw care, help, housing or company if she does not obey?",
+      "help_en": "Explore coercive use of dependency.",
+      "why_en": "Explore coercive use of dependency."
+    },
+    {
+      "id": "Q211",
+      "domain": "care_and_health",
+      "priority": "high",
+      "question_ca": "Té alternatives reals de cura o depèn principalment d'aquesta persona?",
+      "question_es": "¿Tiene alternativas reales de cuidado o depende principalmente de esa persona?",
+      "plain_ca": "Té alternatives de cura?",
+      "direct_to_woman_ca": "Hi ha altres persones o serveis que la puguin ajudar si aquesta persona no ho fa?",
+      "help_ca": "Valorar dependència i necessitat de suport social.",
+      "help_es": "Valorar dependencia y necesidad de apoyo social.",
+      "why_ca": "Valorar dependència i necessitat de suport social.",
+      "why_es": "Valorar dependencia y necesidad de apoyo social.",
+      "sources": [],
+      "allows_note": true,
+      "sensitive": true,
+      "answers": [
+        {
+          "id": "has_alternatives",
+          "label_ca": "T? alternatives",
+          "label_es": "Tiene alternativas",
+          "tone": "neutral",
+          "next": "Q220",
+          "label_en": "Has alternatives"
+        },
+        {
+          "id": "limited_alternatives",
+          "label_ca": "Alternatives limitades",
+          "label_es": "Alternativas limitadas",
+          "tone": "warning",
+          "activate_indicators": [
+            "caregiver_retaliation"
+          ],
+          "actions": [
+            "ACTION_SOCIAL_PRIORITY"
+          ],
+          "label_en": "Limited alternatives"
+        },
+        {
+          "id": "no_alternatives",
+          "label_ca": "Sense alternatives",
+          "label_es": "Sin alternativas",
+          "tone": "warning",
+          "activate_indicators": [
+            "caregiver_retaliation"
+          ],
+          "actions": [
+            "ACTION_SOCIAL_PRIORITY"
+          ],
+          "label_en": "No alternatives"
+        },
+        {
+          "id": "unknown",
+          "label_ca": "No consta",
+          "label_es": "No consta",
+          "tone": "neutral",
+          "next": "Q220",
+          "label_en": "Not known"
+        }
+      ],
+      "question_en": "Does she have real care alternatives or does she mainly depend on that person?",
+      "help_en": "Assess dependence and need for social support.",
+      "why_en": "Assess dependence and need for social support."
+    },
+    {
+      "id": "Q220",
+      "domain": "care_and_health",
+      "priority": "high",
+      "question_ca": "Rep ajuda adequada per higiene, alimentació, mobilitat, descans i necessitats bàsiques?",
+      "question_es": "¿Recibe ayuda adecuada para higiene, alimentación, movilidad, descanso y necesidades básicas?",
+      "plain_ca": "Rep les cures bàsiques que necessita?",
+      "direct_to_woman_ca": "Rep l'ajuda que necessita per menjar, higiene, moure's i descansar?",
+      "help_ca": "Explorar negligència.",
+      "help_es": "Explorar negligencia.",
+      "why_ca": "Explorar negligència.",
+      "why_es": "Explorar negligencia.",
+      "sources": [],
+      "allows_note": true,
+      "sensitive": true,
+      "answers": [
+        {
+          "id": "yes",
+          "label_ca": "Sí",
+          "label_es": "Sí",
+          "tone": "neutral",
+          "next": "Q300",
+          "label_en": "Yes"
+        },
+        {
+          "id": "no",
+          "label_ca": "No",
+          "label_es": "No",
+          "tone": "warning",
+          "activate_indicators": [
+            "neglect_basic_needs"
+          ],
+          "next": "Q300",
+          "route_note": "Ruta original Q221 absent; continuacio prudent a Q300.",
+          "label_en": "No"
+        },
+        {
+          "id": "partial",
+          "label_ca": "Parcialment",
+          "label_es": "Parcialmente",
+          "tone": "warning",
+          "activate_indicators": [
+            "neglect_basic_needs"
+          ],
+          "next": "Q300",
+          "route_note": "Ruta original Q221 absent; continuacio prudent a Q300.",
+          "label_en": "Partially"
+        },
+        {
+          "id": "unknown",
+          "label_ca": "No consta",
+          "label_es": "No consta",
+          "tone": "warning",
+          "activate_indicators": [
+            "neglect_basic_needs"
+          ],
+          "next": "Q300",
+          "label_en": "Not known"
+        }
+      ],
+      "question_en": "Does she receive adequate help with hygiene, food, mobility, rest and basic needs?",
+      "help_en": "Explore neglect.",
+      "why_en": "Explore neglect."
+    },
+    {
+      "id": "Q300",
+      "domain": "social_isolation",
+      "priority": "medium",
+      "question_ca": "Pot sortir, rebre visites i mantenir les relacions que desitja?",
+      "question_es": "¿Puede salir, recibir visitas y mantener las relaciones que desea?",
+      "plain_ca": "Pot relacionar-se lliurement?",
+      "direct_to_woman_ca": "Pot sortir, rebre visites i veure les persones que vol?",
+      "help_ca": "Explorar autonomia social.",
+      "help_es": "Explorar autonomía social.",
+      "why_ca": "Explorar autonomia social.",
+      "why_es": "Explorar autonomía social.",
+      "sources": [],
+      "allows_note": true,
+      "sensitive": false,
+      "answers": [
+        {
+          "id": "yes",
+          "label_ca": "Sí",
+          "label_es": "Sí",
+          "tone": "warning",
+          "activate_indicators": [
+            "visit_restriction",
+            "mobility_control"
+          ],
+          "next": "Q310",
+          "label_en": "Yes"
+        },
+        {
+          "id": "no",
+          "label_ca": "No",
+          "label_es": "No",
+          "tone": "neutral",
+          "next": "Q301",
+          "label_en": "No"
+        },
+        {
+          "id": "partial",
+          "label_ca": "Parcialment",
+          "label_es": "Parcialmente",
+          "tone": "warning",
+          "activate_indicators": [
+            "visit_restriction",
+            "mobility_control"
+          ],
+          "next": "Q301",
+          "label_en": "Partially"
+        },
+        {
+          "id": "unknown",
+          "label_ca": "No consta",
+          "label_es": "No consta",
+          "tone": "neutral",
+          "next": "Q310",
+          "label_en": "Not known"
+        }
+      ],
+      "question_en": "Can she go out, receive visits and maintain the relationships she wants?",
+      "help_en": "Explore social autonomy.",
+      "why_en": "Explore social autonomy."
+    },
+    {
+      "id": "Q301",
+      "domain": "social_isolation",
+      "priority": "medium",
+      "question_ca": "La limitació prové de salut, accessibilitat, manca de recursos o decisió d'una altra persona?",
+      "question_es": "¿La limitación proviene de salud, accesibilidad, falta de recursos o decisión de otra persona?",
+      "plain_ca": "Per què no pot sortir o relacionar-se?",
+      "direct_to_woman_ca": "Què li impedeix sortir o veure persones?",
+      "help_ca": "Diferenciar barrera estructural i control.",
+      "help_es": "Diferenciar barrera estructural y control.",
+      "why_ca": "Diferenciar barrera estructural i control.",
+      "why_es": "Diferenciar barrera estructural y control.",
+      "sources": [],
+      "allows_note": true,
+      "sensitive": false,
+      "answers": [
+        {
+          "id": "health",
+          "label_ca": "Salut",
+          "label_es": "Salud",
+          "tone": "neutral",
+          "next": "Q310",
+          "label_en": "Health"
+        },
+        {
+          "id": "accessibility",
+          "label_ca": "Accessibilitat",
+          "label_es": "Accesibilidad",
+          "tone": "neutral",
+          "actions": [
+            "ACTION_RESOURCE_SUPPORT"
+          ],
+          "label_en": "Accessibility"
+        },
+        {
+          "id": "resources",
+          "label_ca": "Recursos",
+          "label_es": "Recursos",
+          "tone": "neutral",
+          "actions": [
+            "ACTION_RESOURCE_SUPPORT"
+          ],
+          "label_en": "Resources"
+        },
+        {
+          "id": "other_person",
+          "label_ca": "Other person",
+          "label_es": "Decisión de otra persona",
+          "tone": "neutral",
+          "next": "Q302",
+          "label_en": "Decision by another person"
+        },
+        {
+          "id": "mixed",
+          "label_ca": "Mixt",
+          "label_es": "Mixto",
+          "tone": "neutral",
+          "next": "Q302",
+          "label_en": "Mixed"
+        },
+        {
+          "id": "unknown",
+          "label_ca": "No consta",
+          "label_es": "No consta",
+          "tone": "neutral",
+          "next": "Q310",
+          "label_en": "Not known"
+        }
+      ],
+      "question_en": "Does the limitation come from health, accessibility, lack of resources or another person’s decision?",
+      "help_en": "Differentiate structural barrier and control.",
+      "why_en": "Differentiate structural barrier and control."
+    },
+    {
+      "id": "Q302",
+      "domain": "social_isolation",
+      "priority": "high",
+      "question_ca": "Què passa quan intenta contactar o sortir sense permís?",
+      "question_es": "¿Qué pasa cuando intenta contactar o salir sin permiso?",
+      "plain_ca": "Hi ha conseqüències si surt o contacta?",
+      "direct_to_woman_ca": "Què passa si surt o truca a algú sense demanar permís?",
+      "help_ca": "Explorar represàlies.",
+      "help_es": "Explorar represalias.",
+      "why_ca": "Explorar represàlies.",
+      "why_es": "Explorar represalias.",
+      "sources": [],
+      "allows_note": true,
+      "sensitive": true,
+      "answers": [
+        {
+          "id": "nothing",
+          "label_ca": "Res",
+          "label_es": "Nada",
+          "tone": "neutral",
+          "next": "Q310",
+          "label_en": "Nothing"
+        },
+        {
+          "id": "discouraged",
+          "label_ca": "Des?nim o pressi?",
+          "label_es": "Desánimo o presión",
+          "tone": "warning",
+          "activate_indicators": [
+            "retaliation_fear",
+            "mobility_control",
+            "visit_restriction"
+          ],
+          "next": "Q041",
+          "label_en": "Discouragement or pressure"
+        },
+        {
+          "id": "insults",
+          "label_ca": "Insults",
+          "label_es": "Insultos",
+          "tone": "warning",
+          "activate_indicators": [
+            "retaliation_fear",
+            "mobility_control",
+            "visit_restriction"
+          ],
+          "next": "Q041",
+          "label_en": "Insults"
+        },
+        {
+          "id": "threats",
+          "label_ca": "Amenaces",
+          "label_es": "Amenazas",
+          "tone": "warning",
+          "activate_indicators": [
+            "retaliation_fear",
+            "mobility_control",
+            "visit_restriction"
+          ],
+          "next": "Q001",
+          "label_en": "Threats"
+        },
+        {
+          "id": "prevented",
+          "label_ca": "Impedida",
+          "label_es": "Impedida",
+          "tone": "warning",
+          "activate_indicators": [
+            "retaliation_fear",
+            "mobility_control",
+            "visit_restriction"
+          ],
+          "next": "Q041",
+          "label_en": "Prevented"
+        },
+        {
+          "id": "punished",
+          "label_ca": "C?stig",
+          "label_es": "Castigo",
+          "tone": "warning",
+          "activate_indicators": [
+            "retaliation_fear",
+            "mobility_control",
+            "visit_restriction"
+          ],
+          "next": "Q001",
+          "label_en": "Punishment"
+        },
+        {
+          "id": "unknown",
+          "label_ca": "No consta",
+          "label_es": "No consta",
+          "tone": "neutral",
+          "next": "Q310",
+          "label_en": "Not known"
+        },
+        {
+          "id": "free_text",
+          "label_ca": "Text lliure",
+          "label_es": "Texto libre",
+          "tone": "warning",
+          "activate_indicators": [
+            "retaliation_fear",
+            "mobility_control",
+            "visit_restriction"
+          ],
+          "next": "Q041",
+          "label_en": "Free text"
+        }
+      ],
+      "question_en": "What happens when she tries to contact someone or go out without permission?",
+      "help_en": "Explore retaliation.",
+      "why_en": "Explore retaliation."
+    },
+    {
+      "id": "Q310",
+      "domain": "digital",
+      "priority": "medium",
+      "question_ca": "Pot utilitzar el telèfon i comunicar-se en privat?",
+      "question_es": "¿Puede utilizar el teléfono y comunicarse en privado?",
+      "plain_ca": "Pot usar el telèfon en privat?",
+      "direct_to_woman_ca": "Pot fer trucades i enviar missatges en privat?",
+      "help_ca": "Explorar privacitat digital.",
+      "help_es": "Explorar privacidad digital.",
+      "why_ca": "Explorar privacitat digital.",
+      "why_es": "Explorar privacidad digital.",
+      "sources": [],
+      "allows_note": true,
+      "sensitive": true,
+      "answers": [
+        {
+          "id": "yes",
+          "label_ca": "Sí",
+          "label_es": "Sí",
+          "tone": "warning",
+          "activate_indicators": [
+            "phone_control",
+            "device_surveillance"
+          ],
+          "next": "Q400",
+          "label_en": "Yes"
+        },
+        {
+          "id": "no",
+          "label_ca": "No",
+          "label_es": "No",
+          "tone": "neutral",
+          "next": "Q311",
+          "label_en": "No"
+        },
+        {
+          "id": "partial",
+          "label_ca": "Parcialment",
+          "label_es": "Parcialmente",
+          "tone": "warning",
+          "activate_indicators": [
+            "phone_control",
+            "device_surveillance"
+          ],
+          "next": "Q311",
+          "label_en": "Partially"
+        },
+        {
+          "id": "does_not_use",
+          "label_ca": "No ho utilitza",
+          "label_es": "No lo utiliza",
+          "tone": "warning",
+          "activate_indicators": [
+            "phone_control",
+            "device_surveillance"
+          ],
+          "next": "Q400",
+          "label_en": "Does not use it"
+        },
+        {
+          "id": "unknown",
+          "label_ca": "No consta",
+          "label_es": "No consta",
+          "tone": "neutral",
+          "next": "Q400",
+          "label_en": "Not known"
+        }
+      ],
+      "question_en": "Can she use the phone and communicate in private?",
+      "help_en": "Explore digital privacy.",
+      "why_en": "Explore digital privacy."
+    },
+    {
+      "id": "Q311",
+      "domain": "digital",
+      "priority": "high",
+      "question_ca": "Una altra persona llegeix missatges, decideix a qui pot trucar o conserva el dispositiu?",
+      "question_es": "¿Otra persona lee mensajes, decide a quién puede llamar o conserva el dispositivo?",
+      "plain_ca": "Algú controla el telèfon?",
+      "direct_to_woman_ca": "Algú llegeix els seus missatges, decideix a qui pot trucar o guarda el telèfon?",
+      "help_ca": "Concretar el control digital.",
+      "help_es": "Concretar el control digital.",
+      "why_ca": "Concretar el control digital.",
+      "why_es": "Concretar el control digital.",
+      "sources": [],
+      "allows_note": true,
+      "sensitive": true,
+      "answers": [
+        {
+          "id": "yes",
+          "label_ca": "Sí",
+          "label_es": "Sí",
+          "tone": "neutral",
+          "next": "Q312",
+          "label_en": "Yes"
+        },
+        {
+          "id": "no",
+          "label_ca": "No",
+          "label_es": "No",
+          "tone": "warning",
+          "activate_indicators": [
+            "phone_control",
+            "device_surveillance"
+          ],
+          "next": "Q400",
+          "label_en": "No"
+        },
+        {
+          "id": "unknown",
+          "label_ca": "No consta",
+          "label_es": "No consta",
+          "tone": "warning",
+          "activate_indicators": [
+            "phone_control",
+            "device_surveillance"
+          ],
+          "next": "Q400",
+          "label_en": "Not known"
+        }
+      ],
+      "question_en": "Does another person read messages, decide whom she can call or keep the device?",
+      "help_en": "Specify digital control.",
+      "why_en": "Specify digital control."
+    },
+    {
+      "id": "Q312",
+      "domain": "digital",
+      "priority": "high",
+      "question_ca": "Pot canviar aquesta situació o recuperar el dispositiu sense por ni conseqüències?",
+      "question_es": "¿Puede cambiar esta situación o recuperar el dispositivo sin miedo ni consecuencias?",
+      "plain_ca": "Pot recuperar el control sense por?",
+      "direct_to_woman_ca": "Pot recuperar el telèfon o canviar aquesta situació sense por?",
+      "help_ca": "Explorar caràcter coercitiu.",
+      "help_es": "Explorar carácter coercitivo.",
+      "why_ca": "Explorar caràcter coercitiu.",
+      "why_es": "Explorar carácter coercitivo.",
+      "sources": [],
+      "allows_note": true,
+      "sensitive": true,
+      "answers": [
+        {
+          "id": "yes",
+          "label_ca": "Sí",
+          "label_es": "Sí",
+          "tone": "warning",
+          "activate_indicators": [
+            "retaliation_fear",
+            "phone_control"
+          ],
+          "next": "Q400",
+          "label_en": "Yes"
+        },
+        {
+          "id": "no",
+          "label_ca": "No",
+          "label_es": "No",
+          "tone": "neutral",
+          "next": "Q041",
+          "label_en": "No"
+        },
+        {
+          "id": "unknown",
+          "label_ca": "No consta",
+          "label_es": "No consta",
+          "tone": "neutral",
+          "next": "Q400",
+          "label_en": "Not known"
+        }
+      ],
+      "question_en": "Can she change this situation or recover the device without fear or consequences?",
+      "help_en": "Explore whether it is coercive.",
+      "why_en": "Explore whether it is coercive."
+    },
+    {
+      "id": "Q400",
+      "domain": "sexual",
+      "priority": "high",
+      "question_ca": "En les relacions íntimes, podia dir que no i que la seva decisió fos respectada?",
+      "question_es": "En las relaciones íntimas, ¿podía decir que no y que su decisión fuera respetada?",
+      "plain_ca": "Podia dir que no a relacions íntimes?",
+      "direct_to_woman_ca": "Quan no volia tenir relacions íntimes, podia dir que no i es respectava?",
+      "help_ca": "Explorar consentiment mitjançant una pregunta factual.",
+      "help_es": "Explorar consentimiento mediante una pregunta factual.",
+      "why_ca": "Explorar consentiment mitjançant una pregunta factual.",
+      "why_es": "Explorar consentimiento mediante una pregunta factual.",
+      "sources": [],
+      "allows_note": true,
+      "sensitive": true,
+      "answers": [
+        {
+          "id": "yes",
+          "label_ca": "Sí",
+          "label_es": "Sí",
+          "tone": "warning",
+          "activate_indicators": [
+            "unable_to_refuse_sex"
+          ],
+          "next": "Q410",
+          "label_en": "Yes"
+        },
+        {
+          "id": "no",
+          "label_ca": "No",
+          "label_es": "No",
+          "tone": "neutral",
+          "next": "Q401",
+          "label_en": "No"
+        },
+        {
+          "id": "unknown",
+          "label_ca": "No consta",
+          "label_es": "No consta",
+          "tone": "neutral",
+          "next": "Q410",
+          "label_en": "Not known"
+        },
+        {
+          "id": "not_applicable",
+          "label_ca": "No aplicable",
+          "label_es": "No aplicable",
+          "tone": "neutral",
+          "next": "Q410",
+          "label_en": "Not applicable"
+        }
+      ],
+      "question_en": "In intimate relationships, could she say no and have her decision respected?",
+      "help_en": "Explore consent through a factual question.",
+      "why_en": "Explore consent through a factual question."
+    },
+    {
+      "id": "Q401",
+      "domain": "sexual",
+      "priority": "high",
+      "question_ca": "Va mantenir relacions perquè sentia que no podia negar-s'hi, encara que no volgués, tingués dolor, estigués malalta o embarassada?",
+      "question_es": "¿Mantuvo relaciones porque sentía que no podía negarse, aunque no quisiera, tuviera dolor, estuviera enferma o embarazada?",
+      "plain_ca": "Va tenir relacions sense voler perquè no podia negar-s'hi?",
+      "direct_to_woman_ca": "Alguna vegada va tenir relacions perquè sentia que no podia dir que no, encara que no volgués o es trobés malament?",
+      "help_ca": "Explorar coerció i violència sexual normalitzada.",
+      "help_es": "Explorar coerción y violencia sexual normalizada.",
+      "why_ca": "Explorar coerció i violència sexual normalitzada.",
+      "why_es": "Explorar coerción y violencia sexual normalizada.",
+      "sources": [],
+      "allows_note": true,
+      "sensitive": true,
+      "answers": [
+        {
+          "id": "yes",
+          "label_ca": "Sí",
+          "label_es": "Sí",
+          "tone": "neutral",
+          "next": "Q402",
+          "label_en": "Yes"
+        },
+        {
+          "id": "no",
+          "label_ca": "No",
+          "label_es": "No",
+          "tone": "warning",
+          "activate_indicators": [
+            "sex_despite_refusal",
+            "sex_during_illness_or_pain",
+            "sex_during_pregnancy_without_consent"
+          ],
+          "next": "Q410",
+          "label_en": "No"
+        },
+        {
+          "id": "unknown",
+          "label_ca": "No consta",
+          "label_es": "No consta",
+          "tone": "warning",
+          "activate_indicators": [
+            "sex_despite_refusal",
+            "sex_during_illness_or_pain",
+            "sex_during_pregnancy_without_consent"
+          ],
+          "next": "Q410",
+          "label_en": "Not known"
+        }
+      ],
+      "question_en": "Did she have sex because she felt she could not refuse, even if she did not want to, was in pain, ill or pregnant?",
+      "help_en": "Explore coercion and normalized sexual violence.",
+      "why_en": "Explore coercion and normalized sexual violence."
+    },
+    {
+      "id": "Q402",
+      "domain": "sexual",
+      "priority": "high",
+      "question_ca": "Què creia que podia passar si s'hi negava?",
+      "question_es": "¿Qué creía que podía pasar si se negaba?",
+      "plain_ca": "Quines conseqüències temia?",
+      "direct_to_woman_ca": "Què pensava que podia passar si deia que no?",
+      "help_ca": "Explorar les condicions que anul·laven la llibertat de consentiment.",
+      "help_es": "Explorar las condiciones que anulaban la libertad de consentimiento.",
+      "why_ca": "Explorar les condicions que anul·laven la llibertat de consentiment.",
+      "why_es": "Explorar las condiciones que anulaban la libertad de consentimiento.",
+      "sources": [],
+      "allows_note": true,
+      "sensitive": true,
+      "answers": [
+        {
+          "id": "nothing",
+          "label_ca": "Res",
+          "label_es": "Nada",
+          "tone": "neutral",
+          "next": "Q403",
+          "label_en": "Nothing"
+        },
+        {
+          "id": "argument",
+          "label_ca": "Discussi?",
+          "label_es": "Discusión",
+          "tone": "neutral",
+          "next": "Q403",
+          "label_en": "Argument"
+        },
+        {
+          "id": "insults",
+          "label_ca": "Insults",
+          "label_es": "Insultos",
+          "tone": "warning",
+          "activate_indicators": [
+            "coercive_consequences",
+            "retaliation_fear"
+          ],
+          "next": "Q403",
+          "label_en": "Insults"
+        },
+        {
+          "id": "threats",
+          "label_ca": "Amenaces",
+          "label_es": "Amenazas",
+          "tone": "warning",
+          "activate_indicators": [
+            "coercive_consequences",
+            "retaliation_fear"
+          ],
+          "next": "Q001",
+          "label_en": "Threats"
+        },
+        {
+          "id": "financial_consequence",
+          "label_ca": "Conseq??ncia econ?mica",
+          "label_es": "Consecuencia económica",
+          "tone": "neutral",
+          "next": "Q403",
+          "label_en": "Financial consequence"
+        },
+        {
+          "id": "physical_aggression",
+          "label_ca": "Agressi? f?sica",
+          "label_es": "Agresión física",
+          "tone": "warning",
+          "activate_indicators": [
+            "coercive_consequences",
+            "retaliation_fear"
+          ],
+          "next": "Q001",
+          "label_en": "Physical aggression"
+        },
+        {
+          "id": "abandonment",
+          "label_ca": "Abandonament",
+          "label_es": "Abandono",
+          "tone": "neutral",
+          "next": "Q403",
+          "label_en": "Abandonment"
+        },
+        {
+          "id": "unknown",
+          "label_ca": "No consta",
+          "label_es": "No consta",
+          "tone": "neutral",
+          "next": "Q403",
+          "label_en": "Not known"
+        },
+        {
+          "id": "free_text",
+          "label_ca": "Text lliure",
+          "label_es": "Texto libre",
+          "tone": "warning",
+          "activate_indicators": [
+            "coercive_consequences",
+            "retaliation_fear"
+          ],
+          "next": "Q403",
+          "label_en": "Free text"
+        }
+      ],
+      "question_en": "What did she think could happen if she refused?",
+      "help_en": "Explore the conditions that removed freedom of consent.",
+      "why_en": "Explore the conditions that removed freedom of consent."
+    },
+    {
+      "id": "Q403",
+      "domain": "sexual",
+      "priority": "high",
+      "question_ca": "Aquesta experiència continua actualment o genera por, dolor o necessitat de suport?",
+      "question_es": "¿Esta experiencia continúa actualmente o genera miedo, dolor o necesidad de apoyo?",
+      "plain_ca": "Té impacte actual?",
+      "direct_to_woman_ca": "Això continua passant o encara li provoca por, dolor o necessitat d'ajuda?",
+      "help_ca": "Orientar suport actual sense forçar una revelació.",
+      "help_es": "Orientar apoyo actual sin forzar una revelación.",
+      "why_ca": "Orientar suport actual sense forçar una revelació.",
+      "why_es": "Orientar apoyo actual sin forzar una revelación.",
+      "sources": [],
+      "allows_note": true,
+      "sensitive": true,
+      "answers": [
+        {
+          "id": "current",
+          "label_ca": "Actual",
+          "label_es": "Actual",
+          "tone": "warning",
+          "activate_indicators": [
+            "sex_despite_refusal"
+          ],
+          "next": "Q001",
+          "label_en": "Current"
+        },
+        {
+          "id": "past_with_current_impact",
+          "label_ca": "Fet passat amb impacte actual",
+          "label_es": "Hecho pasado con impacto actual",
+          "tone": "warning",
+          "activate_indicators": [
+            "sex_despite_refusal"
+          ],
+          "actions": [
+            "ACTION_SPECIALIST_SUPPORT"
+          ],
+          "label_en": "Past event with current impact"
+        },
+        {
+          "id": "past_no_current_impact",
+          "label_ca": "Fet passat sense impacte actual",
+          "label_es": "Hecho pasado sin impacto actual",
+          "tone": "neutral",
+          "next": "Q410",
+          "label_en": "Past event without current impact"
+        },
+        {
+          "id": "unknown",
+          "label_ca": "No consta",
+          "label_es": "No consta",
+          "tone": "neutral",
+          "next": "Q410",
+          "label_en": "Not known"
+        }
+      ],
+      "question_en": "Does this experience continue now, or does it cause fear, pain or need for support?",
+      "help_en": "Guide current support without forcing disclosure.",
+      "why_en": "Guide current support without forcing disclosure."
+    },
+    {
+      "id": "Q410",
+      "domain": "normalization",
+      "priority": "medium",
+      "question_ca": "Hi ha alguna frase textual de la dona que sigui important conservar exactament?",
+      "question_es": "¿Hay alguna frase textual de la mujer que sea importante conservar exactamente?",
+      "plain_ca": "Cal conservar alguna frase literal?",
+      "direct_to_woman_ca": "Hi ha alguna frase seva que vulgui que quedi recollida exactament?",
+      "help_ca": "Preservar la veu de la dona separada de la interpretació professional.",
+      "help_es": "Preservar la voz de la mujer separada de la interpretación profesional.",
+      "why_ca": "Preservar la veu de la dona separada de la interpretació professional.",
+      "why_es": "Preservar la voz de la mujer separada de la interpretación profesional.",
+      "sources": [],
+      "allows_note": true,
+      "sensitive": false,
+      "answers": [
+        {
+          "id": "yes",
+          "label_ca": "Sí",
+          "label_es": "Sí",
+          "tone": "neutral",
+          "next": "Q411",
+          "label_en": "Yes"
+        },
+        {
+          "id": "no",
+          "label_ca": "No",
+          "label_es": "No",
+          "tone": "neutral",
+          "next": "Q420",
+          "label_en": "No"
+        }
+      ],
+      "question_en": "Is there any exact phrase from the woman that is important to preserve?",
+      "help_en": "Preserve the woman’s voice separately from professional interpretation.",
+      "why_en": "Preserve the woman’s voice separately from professional interpretation."
+    },
+    {
+      "id": "Q411",
+      "domain": "normalization",
+      "priority": "medium",
+      "question_ca": "Registra la frase literal, evitant dades identificatives innecessàries.",
+      "question_es": "Registra la frase literal, evitando datos identificativos innecesarios.",
+      "plain_ca": "Escriu la frase literal.",
+      "direct_to_woman_ca": "Pot repetir la frase tal com voldria que constés?",
+      "help_ca": "Incloure una cita textual revisable en l'informe.",
+      "help_es": "Incluir una cita textual revisable en el informe.",
+      "why_ca": "Incloure una cita textual revisable en l'informe.",
+      "why_es": "Incluir una cita textual revisable en el informe.",
+      "sources": [],
+      "allows_note": true,
+      "sensitive": true,
+      "answers": [
+        {
+          "id": "free_text",
+          "label_ca": "Text lliure",
+          "label_es": "Texto libre",
+          "tone": "neutral",
+          "next": "Q420",
+          "label_en": "Free text"
+        }
+      ],
+      "question_en": "Record the literal phrase, avoiding unnecessary identifying data.",
+      "help_en": "Include a reviewable quotation in the report.",
+      "why_en": "Include a reviewable quotation in the report."
+    },
+    {
+      "id": "Q420",
+      "domain": "psychological",
+      "priority": "medium",
+      "question_ca": "Quines fonts sustenten la informació recollida?",
+      "question_es": "¿Qué fuentes sustentan la información recogida?",
+      "plain_ca": "D'on surt la informació?",
+      "direct_to_woman_ca": "La informació és del seu relat, d'una observació o d'un document?",
+      "help_ca": "Diferenciar relat, observació i informació indirecta.",
+      "help_es": "Diferenciar relato, observación e información indirecta.",
+      "why_ca": "Diferenciar relat, observació i informació indirecta.",
+      "why_es": "Diferenciar relato, observación e información indirecta.",
+      "sources": [],
+      "allows_note": true,
+      "sensitive": false,
+      "answers": [
+        {
+          "id": "direct_statement",
+          "label_ca": "Ho expressa directament",
+          "label_es": "Lo expresa directamente",
+          "tone": "neutral",
+          "next": "Q430",
+          "label_en": "Direct statement"
+        },
+        {
+          "id": "professional_observation",
+          "label_ca": "Observaci? professional",
+          "label_es": "Observación profesional",
+          "tone": "neutral",
+          "next": "Q430",
+          "label_en": "Professional observation"
+        },
+        {
+          "id": "third_party_report",
+          "label_ca": "Ho relata una tercera persona",
+          "label_es": "Lo relata una tercera persona",
+          "tone": "neutral",
+          "next": "Q430",
+          "label_en": "Third-party account"
+        },
+        {
+          "id": "document",
+          "label_ca": "Document",
+          "label_es": "Documento",
+          "tone": "neutral",
+          "next": "Q430",
+          "label_en": "Document"
+        },
+        {
+          "id": "mixed",
+          "label_ca": "Mixt",
+          "label_es": "Mixto",
+          "tone": "neutral",
+          "next": "Q430",
+          "label_en": "Mixed"
+        },
+        {
+          "id": "unknown",
+          "label_ca": "No consta",
+          "label_es": "No consta",
+          "tone": "neutral",
+          "next": "Q430",
+          "label_en": "Not known"
+        }
+      ],
+      "question_en": "What sources support the information collected?",
+      "help_en": "Differentiate account, observation and indirect information.",
+      "why_en": "Differentiate account, observation and indirect information."
+    },
+    {
+      "id": "Q430",
+      "domain": "psychological",
+      "priority": "medium",
+      "question_ca": "Hi ha àrees rellevants que no s'han pogut explorar o respostes incertes?",
+      "question_es": "¿Hay áreas relevantes que no se han podido explorar o respuestas inciertas?",
+      "plain_ca": "Ha quedat informació important pendent?",
+      "direct_to_woman_ca": "Hi ha alguna cosa que prefereixi deixar per a un altre moment?",
+      "help_ca": "Evitar que l'absència de dades es presenti com a absència d'indicadors.",
+      "help_es": "Evitar que la ausencia de datos se presente como ausencia de indicadores.",
+      "why_ca": "Evitar que l'absència de dades es presenti com a absència d'indicadors.",
+      "why_es": "Evitar que la ausencia de datos se presente como ausencia de indicadores.",
+      "sources": [],
+      "allows_note": true,
+      "sensitive": false,
+      "answers": [
+        {
+          "id": "yes",
+          "label_ca": "Sí",
+          "label_es": "Sí",
+          "tone": "neutral",
+          "next": "Q431",
+          "label_en": "Yes"
+        },
+        {
+          "id": "no",
+          "label_ca": "No",
+          "label_es": "No",
+          "tone": "neutral",
+          "next": "Q440",
+          "label_en": "No"
+        }
+      ],
+      "question_en": "Are there relevant areas that could not be explored or uncertain answers?",
+      "help_en": "Avoid presenting lack of data as lack of indicators.",
+      "why_en": "Avoid presenting lack of data as lack of indicators."
+    },
+    {
+      "id": "Q431",
+      "domain": "psychological",
+      "priority": "medium",
+      "question_ca": "Indica les àrees pendents i el motiu.",
+      "question_es": "Indica las áreas pendientes y el motivo.",
+      "plain_ca": "Per què ha quedat pendent?",
+      "direct_to_woman_ca": "Prefereix no respondre, falta temps o no hi ha prou privacitat?",
+      "help_ca": "Documentar limitacions de l'entrevista.",
+      "help_es": "Documentar limitaciones de la entrevista.",
+      "why_ca": "Documentar limitacions de l'entrevista.",
+      "why_es": "Documentar limitaciones de la entrevista.",
+      "sources": [],
+      "allows_note": true,
+      "sensitive": false,
+      "answers": [
+        {
+          "id": "privacy",
+          "label_ca": "Privacitat",
+          "label_es": "Privacidad",
+          "tone": "neutral",
+          "next": "Q440",
+          "label_en": "Privacy"
+        },
+        {
+          "id": "time",
+          "label_ca": "Temps",
+          "label_es": "Tiempo",
+          "tone": "neutral",
+          "next": "Q440",
+          "label_en": "Time"
+        },
+        {
+          "id": "communication",
+          "label_ca": "Comunicaci?",
+          "label_es": "Comunicación",
+          "tone": "neutral",
+          "next": "Q440",
+          "label_en": "Communication"
+        },
+        {
+          "id": "cognitive",
+          "label_ca": "Cognitiu",
+          "label_es": "Cognitivo",
+          "tone": "neutral",
+          "next": "Q440",
+          "label_en": "Cognitive"
+        },
+        {
+          "id": "refusal",
+          "label_ca": "Negativa",
+          "label_es": "Negativa",
+          "tone": "neutral",
+          "next": "Q440",
+          "label_en": "Refusal"
+        },
+        {
+          "id": "third_party_present",
+          "label_ca": "Hi ha una tercera persona",
+          "label_es": "Hay una tercera persona",
+          "tone": "neutral",
+          "next": "Q440",
+          "label_en": "A third person is present"
+        },
+        {
+          "id": "other",
+          "label_ca": "Altres",
+          "label_es": "Otros",
+          "tone": "neutral",
+          "next": "Q440",
+          "label_en": "Other"
+        },
+        {
+          "id": "free_text",
+          "label_ca": "Text lliure",
+          "label_es": "Texto libre",
+          "tone": "neutral",
+          "next": "Q440",
+          "label_en": "Free text"
+        }
+      ],
+      "question_en": "Indicate the pending areas and the reason.",
+      "help_en": "Document interview limitations.",
+      "why_en": "Document interview limitations."
+    },
+    {
+      "id": "Q440",
+      "domain": "psychological",
+      "priority": "high",
+      "question_ca": "Confirma que revisarà el resum, les fonts i les recomanacions abans d'utilitzar l'informe?",
+      "question_es": "¿Confirma que revisará el resumen, las fuentes y las recomendaciones antes de utilizar el informe?",
+      "plain_ca": "La professional revisarà l'informe?",
+      "direct_to_woman_ca": "La professional revisarà el document abans d'utilitzar-lo.",
+      "help_ca": "Garantir supervisió humana abans de generar el document final.",
+      "help_es": "Garantizar supervisión humana antes de generar el documento final.",
+      "why_ca": "Garantir supervisió humana abans de generar el document final.",
+      "why_es": "Garantizar supervisión humana antes de generar el documento final.",
+      "sources": [],
+      "allows_note": true,
+      "sensitive": false,
+      "answers": [
+        {
+          "id": "yes",
+          "label_ca": "Sí",
+          "label_es": "Sí",
+          "tone": "neutral",
+          "actions": [
+            "ACTION_GENERATE_REPORT"
+          ],
+          "label_en": "Yes"
+        },
+        {
+          "id": "no",
+          "label_ca": "No",
+          "label_es": "No",
+          "tone": "neutral",
+          "actions": [
+            "ACTION_SAVE_DRAFT"
+          ],
+          "label_en": "No"
+        }
+      ],
+      "question_en": "Do you confirm that you will review the summary, sources and recommendations before using the report?",
+      "help_en": "Ensure human supervision before generating the final document.",
+      "why_en": "Ensure human supervision before generating the final document."
+    },
+    {
+      "id": "Q230",
+      "domain": "care_and_health",
+      "priority": "medium",
+      "question_ca": "Quan la parella necessita atenció, ella l'acompanya a visites, recull medicació o n'assumeix l'administració?",
+      "question_es": "Cuando la pareja necesita atención, ¿ella lo acompaña a visitas, recoge medicación o asume su administración?",
+      "plain_ca": "Ella s'encarrega habitualment de la salut de la parella?",
+      "direct_to_woman_ca": "Quan la seva parella està malalta, és vostè qui l'acompanya, busca la medicació o se n'ocupa?",
+      "help_ca": "Identificar responsabilitat de cures assumida per ella.",
+      "help_es": "Identificar responsabilidad de cuidados asumida por ella.",
+      "why_ca": "Identificar responsabilitat de cures assumida per ella.",
+      "why_es": "Identificar responsabilidad de cuidados asumida por ella.",
+      "sources": [],
+      "allows_note": true,
+      "sensitive": false,
+      "answers": [
+        {
+          "id": "yes",
+          "label_ca": "Sí",
+          "label_es": "Sí",
+          "tone": "warning",
+          "activate_indicators": [
+            "caregiving_asymmetry"
+          ],
+          "next": "Q231",
+          "label_en": "Yes"
+        },
+        {
+          "id": "no",
+          "label_ca": "No",
+          "label_es": "No",
+          "tone": "neutral",
+          "next": "Q240",
+          "label_en": "No"
+        },
+        {
+          "id": "sometimes",
+          "label_ca": "De vegades",
+          "label_es": "A veces",
+          "tone": "warning",
+          "activate_indicators": [
+            "caregiving_asymmetry"
+          ],
+          "next": "Q231",
+          "label_en": "Sometimes"
+        },
+        {
+          "id": "unknown",
+          "label_ca": "No consta",
+          "label_es": "No consta",
+          "tone": "neutral",
+          "next": "Q240",
+          "label_en": "Not known"
+        }
+      ],
+      "question_en": "When her partner needs care, does she accompany him to visits, collect medication or administer it?",
+      "help_en": "Identify care responsibility assumed by her.",
+      "why_en": "Identify care responsibility assumed by her."
+    },
+    {
+      "id": "Q231",
+      "domain": "care_and_health",
+      "priority": "high",
+      "question_ca": "Quan ella necessita revisions, proves o tractament, rep un suport equivalent?",
+      "question_es": "Cuando ella necesita revisiones, pruebas o tratamiento, ¿recibe un apoyo equivalente?",
+      "plain_ca": "Quan li toca cuidar-se a ella, algú l'ajuda igual?",
+      "direct_to_woman_ca": "Quan és vostè qui té una visita o una revisió, rep la mateixa ajuda?",
+      "help_ca": "Detectar asimetria entre les cures que presta i les que rep.",
+      "help_es": "Detectar asimetría entre los cuidados que presta y los que recibe.",
+      "why_ca": "Detectar asimetria entre les cures que presta i les que rep.",
+      "why_es": "Detectar asimetría entre los cuidados que presta y los que recibe.",
+      "sources": [],
+      "allows_note": true,
+      "sensitive": true,
+      "answers": [
+        {
+          "id": "yes",
+          "label_ca": "Sí",
+          "label_es": "Sí",
+          "tone": "warning",
+          "activate_indicators": [
+            "caregiving_asymmetry"
+          ],
+          "next": "Q240",
+          "label_en": "Yes"
+        },
+        {
+          "id": "no",
+          "label_ca": "No",
+          "label_es": "No",
+          "tone": "neutral",
+          "next": "Q232",
+          "label_en": "No"
+        },
+        {
+          "id": "partial",
+          "label_ca": "Parcialment",
+          "label_es": "Parcialmente",
+          "tone": "warning",
+          "activate_indicators": [
+            "caregiving_asymmetry"
+          ],
+          "next": "Q232",
+          "label_en": "Partially"
+        },
+        {
+          "id": "unknown",
+          "label_ca": "No consta",
+          "label_es": "No consta",
+          "tone": "neutral",
+          "next": "Q240",
+          "label_en": "Not known"
+        }
+      ],
+      "question_en": "When she needs check-ups, tests or treatment, does she receive equivalent support?",
+      "help_en": "Detect asymmetry between the care she gives and the care she receives.",
+      "why_en": "Detect asymmetry between the care she gives and the care she receives."
+    },
+    {
+      "id": "Q232",
+      "domain": "care_and_health",
+      "priority": "high",
+      "question_ca": "Ha faltat o ajornat revisions, proves o tractaments per haver de cuidar la parella?",
+      "question_es": "¿Ha faltado o aplazado revisiones, pruebas o tratamientos por tener que cuidar a la pareja?",
+      "plain_ca": "Ha deixat d'anar al metge per cuidar-lo?",
+      "direct_to_woman_ca": "Ha deixat d'anar a alguna revisió o prova perquè havia de cuidar la seva parella?",
+      "help_ca": "Explorar autodesatenció vinculada a les obligacions de cura.",
+      "help_es": "Explorar autodesatención vinculada a las obligaciones de cuidado.",
+      "why_ca": "Explorar autodesatenció vinculada a les obligacions de cura.",
+      "why_es": "Explorar autodesatención vinculada a las obligaciones de cuidado.",
+      "sources": [],
+      "allows_note": true,
+      "sensitive": true,
+      "answers": [
+        {
+          "id": "yes_once",
+          "label_ca": "S?, una vegada",
+          "label_es": "Sí, una vez",
+          "tone": "warning",
+          "activate_indicators": [
+            "self_neglect_due_to_partner_care",
+            "missed_preventive_care",
+            "health_priority_displacement"
+          ],
+          "next": "Q233",
+          "label_en": "Yes, once"
+        },
+        {
+          "id": "yes_repeatedly",
+          "label_ca": "S?, repetidament",
+          "label_es": "Sí, repetidamente",
+          "tone": "warning",
+          "activate_indicators": [
+            "self_neglect_due_to_partner_care",
+            "missed_preventive_care",
+            "health_priority_displacement"
+          ],
+          "next": "Q233",
+          "label_en": "Yes, repeatedly"
+        },
+        {
+          "id": "no",
+          "label_ca": "No",
+          "label_es": "No",
+          "tone": "neutral",
+          "next": "Q240",
+          "label_en": "No"
+        },
+        {
+          "id": "unknown",
+          "label_ca": "No consta",
+          "label_es": "No consta",
+          "tone": "neutral",
+          "next": "Q240",
+          "label_en": "Not known"
+        }
+      ],
+      "question_en": "Has she missed or postponed check-ups, tests or treatments because she had to care for her partner?",
+      "help_en": "Explore self-neglect linked to care obligations.",
+      "why_en": "Explore self-neglect linked to care obligations."
+    },
+    {
+      "id": "Q233",
+      "domain": "care_and_health",
+      "priority": "high",
+      "question_ca": "Quin tipus d'atenció ha quedat pendent?",
+      "question_es": "¿Qué tipo de atención ha quedado pendiente?",
+      "plain_ca": "Quines visites o cures ha deixat?",
+      "direct_to_woman_ca": "Quines revisions, proves o tractaments ha hagut d'ajornar o deixar?",
+      "help_ca": "Documentar la pèrdua de seguiment preventiu o assistencial.",
+      "help_es": "Documentar la pérdida de seguimiento preventivo o asistencial.",
+      "why_ca": "Documentar la pèrdua de seguiment preventiu o assistencial.",
+      "why_es": "Documentar la pérdida de seguimiento preventivo o asistencial.",
+      "sources": [],
+      "allows_note": true,
+      "sensitive": true,
+      "answers": [
+        {
+          "id": "routine_checkup",
+          "label_ca": "Revisi? rutin?ria",
+          "label_es": "Revisión rutinaria",
+          "tone": "neutral",
+          "next": "Q234",
+          "label_en": "Routine check-up"
+        },
+        {
+          "id": "gynecology",
+          "label_ca": "Ginecologia",
+          "label_es": "Ginecología",
+          "tone": "warning",
+          "activate_indicators": [
+            "missed_preventive_care"
+          ],
+          "next": "Q234",
+          "label_en": "Gynaecology"
+        },
+        {
+          "id": "chronic_followup",
+          "label_ca": "Seguiment cr?nic",
+          "label_es": "Seguimiento crónico",
+          "tone": "warning",
+          "activate_indicators": [
+            "missed_preventive_care"
+          ],
+          "next": "Q234",
+          "label_en": "Chronic follow-up"
+        },
+        {
+          "id": "screening",
+          "label_ca": "Cribratge",
+          "label_es": "Cribado",
+          "tone": "warning",
+          "activate_indicators": [
+            "missed_preventive_care"
+          ],
+          "next": "Q234",
+          "label_en": "Screening"
+        },
+        {
+          "id": "medication",
+          "label_ca": "Medicaci?",
+          "label_es": "Medicación",
+          "tone": "warning",
+          "activate_indicators": [
+            "missed_preventive_care"
+          ],
+          "next": "Q234",
+          "label_en": "Medication"
+        },
+        {
+          "id": "diagnostic_test",
+          "label_ca": "Prova diagn?stica",
+          "label_es": "Prueba diagnóstica",
+          "tone": "warning",
+          "activate_indicators": [
+            "missed_preventive_care"
+          ],
+          "next": "Q234",
+          "label_en": "Diagnostic test"
+        },
+        {
+          "id": "other",
+          "label_ca": "Altres",
+          "label_es": "Otros",
+          "tone": "neutral",
+          "next": "Q234",
+          "label_en": "Other"
+        },
+        {
+          "id": "free_text",
+          "label_ca": "Text lliure",
+          "label_es": "Texto libre",
+          "tone": "warning",
+          "activate_indicators": [
+            "missed_preventive_care"
+          ],
+          "next": "Q234",
+          "label_en": "Free text"
+        },
+        {
+          "id": "unknown",
+          "label_ca": "No consta",
+          "label_es": "No consta",
+          "tone": "neutral",
+          "next": "Q240",
+          "label_en": "Not known"
+        }
+      ],
+      "question_en": "What type of care has been left pending?",
+      "help_en": "Document loss of preventive or health-care follow-up.",
+      "why_en": "Document loss of preventive or health-care follow-up."
+    },
+    {
+      "id": "Q234",
+      "domain": "care_and_health",
+      "priority": "urgent",
+      "question_ca": "Hi ha símptomes persistents, proves pendents o una possible patologia sense seguiment?",
+      "question_es": "¿Hay síntomas persistentes, pruebas pendientes o una posible patología sin seguimiento?",
+      "plain_ca": "Hi ha algun problema de salut que no s'estigui controlant?",
+      "direct_to_woman_ca": "Hi ha algun símptoma, prova o problema de salut que encara no s'hagi pogut revisar?",
+      "help_ca": "Valorar risc de demora diagnòstica o empitjorament.",
+      "help_es": "Valorar riesgo de demora diagnóstica o empeoramiento.",
+      "why_ca": "Valorar risc de demora diagnòstica o empitjorament.",
+      "why_es": "Valorar riesgo de demora diagnóstica o empeoramiento.",
+      "sources": [],
+      "allows_note": true,
+      "sensitive": true,
+      "answers": [
+        {
+          "id": "yes",
+          "label_ca": "Sí",
+          "label_es": "Sí",
+          "tone": "danger",
+          "activate_indicators": [
+            "delayed_diagnosis_risk"
+          ],
+          "next": "Q235",
+          "label_en": "Yes"
+        },
+        {
+          "id": "no",
+          "label_ca": "No",
+          "label_es": "No",
+          "tone": "neutral",
+          "next": "Q240",
+          "label_en": "No"
+        },
+        {
+          "id": "unknown",
+          "label_ca": "No consta",
+          "label_es": "No consta",
+          "tone": "neutral",
+          "next": "Q240",
+          "label_en": "Not known"
+        }
+      ],
+      "question_en": "Are there persistent symptoms, pending tests or a possible condition without follow-up?",
+      "help_en": "Assess risk of diagnostic delay or deterioration.",
+      "why_en": "Assess risk of diagnostic delay or deterioration."
+    },
+    {
+      "id": "Q235",
+      "domain": "care_and_health",
+      "priority": "urgent",
+      "question_ca": "La demora pot requerir una valoració sanitària prioritària segons criteri clínic?",
+      "question_es": "¿La demora puede requerir una valoración sanitaria prioritaria según criterio clínico?",
+      "plain_ca": "Cal recuperar aquesta atenció aviat?",
+      "direct_to_woman_ca": "Creu que necessita recuperar aquesta visita o prova com més aviat millor?",
+      "help_ca": "Orientar recuperació del seguiment sanitari sense fer diagnòstic.",
+      "help_es": "Orientar recuperación del seguimiento sanitario sin hacer diagnóstico.",
+      "why_ca": "Orientar recuperació del seguiment sanitari sense fer diagnòstic.",
+      "why_es": "Orientar recuperación del seguimiento sanitario sin hacer diagnóstico.",
+      "sources": [],
+      "allows_note": true,
+      "sensitive": true,
+      "answers": [
+        {
+          "id": "yes",
+          "label_ca": "Sí",
+          "label_es": "Sí",
+          "tone": "danger",
+          "activate_indicators": [
+            "delayed_diagnosis_risk"
+          ],
+          "actions": [
+            "ACTION_HEALTH_PRIORITY"
+          ],
+          "label_en": "Yes"
+        },
+        {
+          "id": "no",
+          "label_ca": "No",
+          "label_es": "No",
+          "tone": "neutral",
+          "next": "Q240",
+          "label_en": "No"
+        },
+        {
+          "id": "unknown",
+          "label_ca": "No consta",
+          "label_es": "No consta",
+          "tone": "neutral",
+          "actions": [
+            "ACTION_HEALTH_REVIEW"
+          ],
+          "label_en": "Not known"
+        }
+      ],
+      "question_en": "Could the delay require priority health assessment according to clinical criteria?",
+      "help_en": "Guide recovery of health follow-up without making a diagnosis.",
+      "why_en": "Guide recovery of health follow-up without making a diagnosis."
+    },
+    {
+      "id": "Q240",
+      "domain": "autonomy_erosion",
+      "priority": "medium",
+      "question_ca": "Davant decisions quotidianes senzilles, acostuma a demanar permís o validació encara que no sigui necessari?",
+      "question_es": "Ante decisiones cotidianas sencillas, ¿suele pedir permiso o validación aunque no sea necesario?",
+      "plain_ca": "Demana permís per coses petites?",
+      "direct_to_woman_ca": "Per fer coses petites del dia a dia, sent que ha de demanar permís o preguntar abans?",
+      "help_ca": "Explorar dependència interioritzada i control sostingut.",
+      "help_es": "Explorar dependencia interiorizada y control sostenido.",
+      "why_ca": "Explorar dependència interioritzada i control sostingut.",
+      "why_es": "Explorar dependencia interiorizada y control sostenido.",
+      "sources": [],
+      "allows_note": true,
+      "sensitive": true,
+      "answers": [
+        {
+          "id": "often",
+          "label_ca": "Sovint",
+          "label_es": "A menudo",
+          "tone": "warning",
+          "activate_indicators": [
+            "permission_for_everyday_actions",
+            "learned_compliance"
+          ],
+          "next": "Q241",
+          "label_en": "Often"
+        },
+        {
+          "id": "sometimes",
+          "label_ca": "De vegades",
+          "label_es": "A veces",
+          "tone": "warning",
+          "activate_indicators": [
+            "permission_for_everyday_actions",
+            "learned_compliance"
+          ],
+          "next": "Q241",
+          "label_en": "Sometimes"
+        },
+        {
+          "id": "rarely",
+          "label_ca": "Poques vegades",
+          "label_es": "Pocas veces",
+          "tone": "neutral",
+          "next": "Q242",
+          "label_en": "Rarely"
+        },
+        {
+          "id": "never",
+          "label_ca": "Mai",
+          "label_es": "Nunca",
+          "tone": "neutral",
+          "next": "Q242",
+          "label_en": "Never"
+        },
+        {
+          "id": "unknown",
+          "label_ca": "No consta",
+          "label_es": "No consta",
+          "tone": "neutral",
+          "next": "Q242",
+          "label_en": "Not known"
+        }
+      ],
+      "question_en": "In simple everyday decisions, does she tend to ask permission or validation even when it is not necessary?",
+      "help_en": "Explore internalized dependence and sustained control.",
+      "why_en": "Explore internalized dependence and sustained control."
+    },
+    {
+      "id": "Q241",
+      "domain": "autonomy_erosion",
+      "priority": "high",
+      "question_ca": "En quins àmbits demana permís o evita decidir?",
+      "question_es": "¿En qué ámbitos pide permiso o evita decidir?",
+      "plain_ca": "Per a quines coses demana permís?",
+      "direct_to_woman_ca": "Per a quines coses sent que ha de preguntar o demanar permís?",
+      "help_ca": "Concretar els àmbits d'autonomia erosionada.",
+      "help_es": "Concretar los ámbitos de autonomía erosionada.",
+      "why_ca": "Concretar els àmbits d'autonomia erosionada.",
+      "why_es": "Concretar los ámbitos de autonomía erosionada.",
+      "sources": [],
+      "allows_note": true,
+      "sensitive": true,
+      "answers": [
+        {
+          "id": "money",
+          "label_ca": "Diners",
+          "label_es": "Dinero",
+          "tone": "warning",
+          "activate_indicators": [
+            "permission_for_everyday_actions",
+            "economic_self_denial"
+          ],
+          "next": "Q243",
+          "label_en": "Money"
+        },
+        {
+          "id": "health",
+          "label_ca": "Salut",
+          "label_es": "Salud",
+          "tone": "warning",
+          "activate_indicators": [
+            "permission_for_everyday_actions",
+            "economic_self_denial"
+          ],
+          "next": "Q243",
+          "label_en": "Health"
+        },
+        {
+          "id": "mobility",
+          "label_ca": "Mobilitat",
+          "label_es": "Movilidad",
+          "tone": "warning",
+          "activate_indicators": [
+            "permission_for_everyday_actions",
+            "economic_self_denial"
+          ],
+          "next": "Q243",
+          "label_en": "Mobility"
+        },
+        {
+          "id": "phone",
+          "label_ca": "Tel?fon",
+          "label_es": "Teléfono",
+          "tone": "warning",
+          "activate_indicators": [
+            "permission_for_everyday_actions",
+            "economic_self_denial"
+          ],
+          "next": "Q243",
+          "label_en": "Phone"
+        },
+        {
+          "id": "visits",
+          "label_ca": "Visites",
+          "label_es": "Visitas",
+          "tone": "warning",
+          "activate_indicators": [
+            "permission_for_everyday_actions",
+            "economic_self_denial"
+          ],
+          "next": "Q243",
+          "label_en": "Visits"
+        },
+        {
+          "id": "food",
+          "label_ca": "Alimentaci?",
+          "label_es": "Alimentación",
+          "tone": "warning",
+          "activate_indicators": [
+            "permission_for_everyday_actions",
+            "economic_self_denial"
+          ],
+          "next": "Q243",
+          "label_en": "Food"
+        },
+        {
+          "id": "clothing",
+          "label_ca": "Roba",
+          "label_es": "Ropa",
+          "tone": "warning",
+          "activate_indicators": [
+            "permission_for_everyday_actions",
+            "economic_self_denial"
+          ],
+          "next": "Q243",
+          "label_en": "Clothing"
+        },
+        {
+          "id": "leisure",
+          "label_ca": "Oci",
+          "label_es": "Ocio",
+          "tone": "warning",
+          "activate_indicators": [
+            "permission_for_everyday_actions",
+            "economic_self_denial"
+          ],
+          "next": "Q243",
+          "label_en": "Leisure"
+        },
+        {
+          "id": "other",
+          "label_ca": "Altres",
+          "label_es": "Otros",
+          "tone": "neutral",
+          "next": "Q243",
+          "label_en": "Other"
+        },
+        {
+          "id": "free_text",
+          "label_ca": "Text lliure",
+          "label_es": "Texto libre",
+          "tone": "warning",
+          "activate_indicators": [
+            "permission_for_everyday_actions",
+            "economic_self_denial"
+          ],
+          "next": "Q243",
+          "label_en": "Free text"
+        },
+        {
+          "id": "unknown",
+          "label_ca": "No consta",
+          "label_es": "No consta",
+          "tone": "neutral",
+          "next": "Q242",
+          "label_en": "Not known"
+        }
+      ],
+      "question_en": "In which areas does she ask permission or avoid deciding?",
+      "help_en": "Specify the areas of eroded autonomy.",
+      "why_en": "Specify the areas of eroded autonomy."
+    },
+    {
+      "id": "Q242",
+      "domain": "autonomy_erosion",
+      "priority": "medium",
+      "question_ca": "Mostra dificultat per iniciar petites accions per a ella mateixa, fins i tot quan disposa dels recursos?",
+      "question_es": "¿Muestra dificultad para iniciar pequeñas acciones para sí misma, incluso cuando dispone de recursos?",
+      "plain_ca": "Li costa iniciar coses per a ella mateixa?",
+      "direct_to_woman_ca": "Li costa començar alguna cosa per a vostè mateixa, encara que la pugui fer?",
+      "help_ca": "Explorar manca d'iniciativa i dependència apresa.",
+      "help_es": "Explorar falta de iniciativa y dependencia aprendida.",
+      "why_ca": "Explorar manca d'iniciativa i dependència apresa.",
+      "why_es": "Explorar falta de iniciativa y dependencia aprendida.",
+      "sources": [],
+      "allows_note": true,
+      "sensitive": true,
+      "answers": [
+        {
+          "id": "yes",
+          "label_ca": "Sí",
+          "label_es": "Sí",
+          "tone": "warning",
+          "activate_indicators": [
+            "initiative_loss",
+            "decision_paralysis"
+          ],
+          "next": "Q243",
+          "label_en": "Yes"
+        },
+        {
+          "id": "no",
+          "label_ca": "No",
+          "label_es": "No",
+          "tone": "neutral",
+          "next": "Q250",
+          "label_en": "No"
+        },
+        {
+          "id": "sometimes",
+          "label_ca": "De vegades",
+          "label_es": "A veces",
+          "tone": "warning",
+          "activate_indicators": [
+            "initiative_loss",
+            "decision_paralysis"
+          ],
+          "next": "Q243",
+          "label_en": "Sometimes"
+        },
+        {
+          "id": "unknown",
+          "label_ca": "No consta",
+          "label_es": "No consta",
+          "tone": "neutral",
+          "next": "Q250",
+          "label_en": "Not known"
+        }
+      ],
+      "question_en": "Does she show difficulty initiating small actions for herself, even when she has the resources?",
+      "help_en": "Explore lack of initiative and learned dependence.",
+      "why_en": "Explore lack of initiative and learned dependence."
+    },
+    {
+      "id": "Q243",
+      "domain": "autonomy_erosion",
+      "priority": "high",
+      "question_ca": "Quan ha de decidir sola, expressa frases com «jo no sé», «pregunta-li a ell» o «jo sola no puc»?",
+      "question_es": "Cuando tiene que decidir sola, ¿expresa frases como «yo no sé», «pregúntale a él» o «yo sola no puedo»?",
+      "plain_ca": "Expressa que no pot decidir sola?",
+      "direct_to_woman_ca": "Quan ha de decidir, sent que no sap què fer o que necessita que una altra persona ho decideixi?",
+      "help_ca": "Detectar dependència interioritzada sense atribuir-la automàticament a incapacitat.",
+      "help_es": "Detectar dependencia interiorizada sin atribuirla automáticamente a incapacidad.",
+      "why_ca": "Detectar dependència interioritzada sense atribuir-la automàticament a incapacitat.",
+      "why_es": "Detectar dependencia interiorizada sin atribuirla automáticamente a incapacidad.",
+      "sources": [],
+      "allows_note": true,
+      "sensitive": true,
+      "answers": [
+        {
+          "id": "yes",
+          "label_ca": "Sí",
+          "label_es": "Sí",
+          "tone": "warning",
+          "activate_indicators": [
+            "internalized_dependency",
+            "learned_compliance"
+          ],
+          "next": "Q244",
+          "label_en": "Yes"
+        },
+        {
+          "id": "no",
+          "label_ca": "No",
+          "label_es": "No",
+          "tone": "neutral",
+          "next": "Q250",
+          "label_en": "No"
+        },
+        {
+          "id": "sometimes",
+          "label_ca": "De vegades",
+          "label_es": "A veces",
+          "tone": "warning",
+          "activate_indicators": [
+            "internalized_dependency",
+            "learned_compliance"
+          ],
+          "next": "Q244",
+          "label_en": "Sometimes"
+        },
+        {
+          "id": "unknown",
+          "label_ca": "No consta",
+          "label_es": "No consta",
+          "tone": "neutral",
+          "next": "Q250",
+          "label_en": "Not known"
+        }
+      ],
+      "question_en": "When she has to decide alone, does she say things like “I don’t know”, “ask him” or “I can’t do it alone”?",
+      "help_en": "Detect internalized dependence without automatically attributing it to incapacity.",
+      "why_en": "Detect internalized dependence without automatically attributing it to incapacity."
+    },
+    {
+      "id": "Q244",
+      "domain": "autonomy_erosion",
+      "priority": "high",
+      "question_ca": "La dificultat per decidir sembla relacionada amb deteriorament cognitiu, manca d'experiència, por a conseqüències o anys de control?",
+      "question_es": "¿La dificultad para decidir parece relacionada con deterioro cognitivo, falta de experiencia, miedo a consecuencias o años de control?",
+      "plain_ca": "Què pot explicar aquesta dificultat?",
+      "direct_to_woman_ca": "Què fa que li costi decidir: por, no haver-ho pogut fer mai, problemes de memòria o una altra cosa?",
+      "help_ca": "Diferenciar causes potencials i evitar confondre dependència apresa amb incapacitat.",
+      "help_es": "Diferenciar causas potenciales y evitar confundir dependencia aprendida con incapacidad.",
+      "why_ca": "Diferenciar causes potencials i evitar confondre dependència apresa amb incapacitat.",
+      "why_es": "Diferenciar causas potenciales y evitar confundir dependencia aprendida con incapacidad.",
+      "sources": [],
+      "allows_note": true,
+      "sensitive": true,
+      "answers": [
+        {
+          "id": "cognitive",
+          "label_ca": "Cognitiu",
+          "label_es": "Cognitivo",
+          "tone": "neutral",
+          "next": "Q250",
+          "label_en": "Cognitive"
+        },
+        {
+          "id": "lack_of_experience",
+          "label_ca": "Manca d'experi?ncia",
+          "label_es": "Falta de experiencia",
+          "tone": "warning",
+          "activate_indicators": [
+            "internalized_dependency",
+            "decision_paralysis"
+          ],
+          "next": "Q245",
+          "label_en": "Lack of experience"
+        },
+        {
+          "id": "fear",
+          "label_ca": "Por",
+          "label_es": "Miedo",
+          "tone": "warning",
+          "activate_indicators": [
+            "internalized_dependency",
+            "decision_paralysis"
+          ],
+          "next": "Q041",
+          "label_en": "Fear"
+        },
+        {
+          "id": "long_term_control",
+          "label_ca": "Control sostingut",
+          "label_es": "Control sostenido",
+          "tone": "warning",
+          "activate_indicators": [
+            "internalized_dependency",
+            "decision_paralysis"
+          ],
+          "next": "Q245",
+          "label_en": "Sustained control"
+        },
+        {
+          "id": "mixed",
+          "label_ca": "Mixt",
+          "label_es": "Mixto",
+          "tone": "warning",
+          "activate_indicators": [
+            "internalized_dependency",
+            "decision_paralysis"
+          ],
+          "next": "Q245",
+          "label_en": "Mixed"
+        },
+        {
+          "id": "unknown",
+          "label_ca": "No consta",
+          "label_es": "No consta",
+          "tone": "neutral",
+          "next": "Q250",
+          "label_en": "Not known"
+        },
+        {
+          "id": "free_text",
+          "label_ca": "Text lliure",
+          "label_es": "Texto libre",
+          "tone": "warning",
+          "activate_indicators": [
+            "internalized_dependency",
+            "decision_paralysis"
+          ],
+          "next": "Q245",
+          "label_en": "Free text"
+        }
+      ],
+      "question_en": "Does the difficulty deciding seem related to cognitive impairment, lack of experience, fear of consequences or years of control?",
+      "help_en": "Differentiate potential causes and avoid confusing learned dependence with incapacity.",
+      "why_en": "Differentiate potential causes and avoid confusing learned dependence with incapacity."
+    },
+    {
+      "id": "Q245",
+      "domain": "autonomy_erosion",
+      "priority": "medium",
+      "question_ca": "Hi ha alguna decisió petita i segura que ella vulgui recuperar amb suport?",
+      "question_es": "¿Hay alguna decisión pequeña y segura que ella quiera recuperar con apoyo?",
+      "plain_ca": "Quina autonomia voldria recuperar primer?",
+      "direct_to_woman_ca": "Hi ha alguna cosa petita que voldria tornar a decidir o fer per vostè mateixa?",
+      "help_ca": "Orientar suport gradual a l'autonomia respectant el ritme de la dona.",
+      "help_es": "Orientar apoyo gradual a la autonomía respetando el ritmo de la mujer.",
+      "why_ca": "Orientar suport gradual a l'autonomia respectant el ritme de la dona.",
+      "why_es": "Orientar apoyo gradual a la autonomía respetando el ritmo de la mujer.",
+      "sources": [],
+      "allows_note": true,
+      "sensitive": false,
+      "answers": [
+        {
+          "id": "money",
+          "label_ca": "Diners",
+          "label_es": "Dinero",
+          "tone": "warning",
+          "activate_indicators": [
+            "self_deprioritization"
+          ],
+          "actions": [
+            "ACTION_AUTONOMY_SUPPORT"
+          ],
+          "label_en": "Money"
+        },
+        {
+          "id": "health",
+          "label_ca": "Salut",
+          "label_es": "Salud",
+          "tone": "warning",
+          "activate_indicators": [
+            "self_deprioritization"
+          ],
+          "actions": [
+            "ACTION_AUTONOMY_SUPPORT"
+          ],
+          "label_en": "Health"
+        },
+        {
+          "id": "mobility",
+          "label_ca": "Mobilitat",
+          "label_es": "Movilidad",
+          "tone": "warning",
+          "activate_indicators": [
+            "self_deprioritization"
+          ],
+          "actions": [
+            "ACTION_AUTONOMY_SUPPORT"
+          ],
+          "label_en": "Mobility"
+        },
+        {
+          "id": "phone",
+          "label_ca": "Tel?fon",
+          "label_es": "Teléfono",
+          "tone": "warning",
+          "activate_indicators": [
+            "self_deprioritization"
+          ],
+          "actions": [
+            "ACTION_AUTONOMY_SUPPORT"
+          ],
+          "label_en": "Phone"
+        },
+        {
+          "id": "visits",
+          "label_ca": "Visites",
+          "label_es": "Visitas",
+          "tone": "warning",
+          "activate_indicators": [
+            "self_deprioritization"
+          ],
+          "actions": [
+            "ACTION_AUTONOMY_SUPPORT"
+          ],
+          "label_en": "Visits"
+        },
+        {
+          "id": "shopping",
+          "label_ca": "Compres",
+          "label_es": "Compras",
+          "tone": "warning",
+          "activate_indicators": [
+            "self_deprioritization"
+          ],
+          "actions": [
+            "ACTION_AUTONOMY_SUPPORT"
+          ],
+          "label_en": "Shopping"
+        },
+        {
+          "id": "leisure",
+          "label_ca": "Oci",
+          "label_es": "Ocio",
+          "tone": "warning",
+          "activate_indicators": [
+            "self_deprioritization"
+          ],
+          "actions": [
+            "ACTION_AUTONOMY_SUPPORT"
+          ],
+          "label_en": "Leisure"
+        },
+        {
+          "id": "other",
+          "label_ca": "Altres",
+          "label_es": "Otros",
+          "tone": "neutral",
+          "actions": [
+            "ACTION_AUTONOMY_SUPPORT"
+          ],
+          "label_en": "Other"
+        },
+        {
+          "id": "free_text",
+          "label_ca": "Text lliure",
+          "label_es": "Texto libre",
+          "tone": "warning",
+          "activate_indicators": [
+            "self_deprioritization"
+          ],
+          "actions": [
+            "ACTION_AUTONOMY_SUPPORT"
+          ],
+          "label_en": "Free text"
+        },
+        {
+          "id": "not_now",
+          "label_ca": "Ara no",
+          "label_es": "Ahora no",
+          "tone": "neutral",
+          "next": "Q250",
+          "label_en": "Not now"
+        }
+      ],
+      "question_en": "Is there any small, safe decision that she wants to recover with support?",
+      "help_en": "Guide gradual autonomy support while respecting the woman’s pace.",
+      "why_en": "Guide gradual autonomy support while respecting the woman’s pace."
+    },
+    {
+      "id": "Q250",
+      "domain": "autonomy_erosion",
+      "priority": "high",
+      "question_ca": "Quan hi ha recursos limitats, tendeix sistemàticament a renunciar a necessitats pròpies a favor de la parella?",
+      "question_es": "Cuando hay recursos limitados, ¿tiende sistemáticamente a renunciar a necesidades propias a favor de la pareja?",
+      "plain_ca": "Sempre es deixa a ella per al final?",
+      "direct_to_woman_ca": "Quan no hi ha temps o diners per a tot, acostuma a deixar les seves necessitats per al final?",
+      "help_ca": "Explorar despriorització crònica de salut, descans i necessitats pròpies.",
+      "help_es": "Explorar despriorización crónica de salud, descanso y necesidades propias.",
+      "why_ca": "Explorar despriorització crònica de salut, descans i necessitats pròpies.",
+      "why_es": "Explorar despriorización crónica de salud, descanso y necesidades propias.",
+      "sources": [],
+      "allows_note": true,
+      "sensitive": true,
+      "answers": [
+        {
+          "id": "often",
+          "label_ca": "Sovint",
+          "label_es": "A menudo",
+          "tone": "warning",
+          "activate_indicators": [
+            "self_deprioritization",
+            "economic_self_denial",
+            "health_priority_displacement"
+          ],
+          "actions": [
+            "ACTION_AUTONOMY_SUPPORT"
+          ],
+          "label_en": "Often"
+        },
+        {
+          "id": "sometimes",
+          "label_ca": "De vegades",
+          "label_es": "A veces",
+          "tone": "warning",
+          "activate_indicators": [
+            "self_deprioritization",
+            "economic_self_denial",
+            "health_priority_displacement"
+          ],
+          "actions": [
+            "ACTION_AUTONOMY_SUPPORT"
+          ],
+          "label_en": "Sometimes"
+        },
+        {
+          "id": "rarely",
+          "label_ca": "Poques vegades",
+          "label_es": "Pocas veces",
+          "tone": "neutral",
+          "next": "Q300",
+          "label_en": "Rarely"
+        },
+        {
+          "id": "never",
+          "label_ca": "Mai",
+          "label_es": "Nunca",
+          "tone": "neutral",
+          "next": "Q300",
+          "label_en": "Never"
+        },
+        {
+          "id": "unknown",
+          "label_ca": "No consta",
+          "label_es": "No consta",
+          "tone": "neutral",
+          "next": "Q300",
+          "label_en": "Not known"
+        }
+      ],
+      "question_en": "When resources are limited, does she systematically give up her own needs in favor of her partner?",
+      "help_en": "Explore chronic deprioritization of her own health, rest and needs.",
+      "why_en": "Explore chronic deprioritization of her own health, rest and needs."
+    }
+  ]
+}

@@ -1,0 +1,279 @@
+[
+  {
+    "id": "ACTION_URGENT_SAFE",
+    "label": "Activar protocol urgent amb la dona en espai segur",
+    "category": "urgent",
+    "instructions": [
+      "Aplicar el protocol d'emergència o risc imminent de l'organització.",
+      "Prioritzar atenció sanitària i seguretat.",
+      "No contactar ni confrontar la persona potencialment agressora des de l'eina.",
+      "Registrar només les dades imprescindibles.",
+      "No basar la decisió únicament en LUCERNA 65."
+    ],
+    "label_es": "Activar protocolo urgente con la mujer en un espacio seguro",
+    "label_en": "Activate urgent protocol with the woman in a safe space",
+    "instructions_es": [
+      "Aplicar el protocolo vigente del servicio.",
+      "Priorizar seguridad y atención sanitaria o social según corresponda.",
+      "No basar la decisión únicamente en LUCERNA 65."
+    ],
+    "instructions_en": [
+      "Apply the current service protocol.",
+      "Prioritize safety and health or social care as appropriate.",
+      "Do not base the decision only on LUCERNA 65."
+    ]
+  },
+  {
+    "id": "ACTION_URGENT_UNSAFE",
+    "label": "Risc urgent i espai no segur",
+    "category": "urgent",
+    "instructions": [
+      "Evitar preguntes que puguin augmentar el risc en presència d'una tercera persona.",
+      "Buscar una via segura de separació o atenció segons protocol.",
+      "Aplicar les instruccions del servei i els recursos d'emergència pertinents."
+    ],
+    "label_es": "Riesgo urgente y espacio no seguro",
+    "label_en": "Urgent risk and unsafe space",
+    "instructions_es": [
+      "Aplicar el protocolo vigente del servicio.",
+      "Priorizar seguridad y atención sanitaria o social según corresponda.",
+      "No basar la decisión únicamente en LUCERNA 65."
+    ],
+    "instructions_en": [
+      "Apply the current service protocol.",
+      "Prioritize safety and health or social care as appropriate.",
+      "Do not base the decision only on LUCERNA 65."
+    ]
+  },
+  {
+    "id": "ACTION_URGENT_ASSESS",
+    "label": "Valoració urgent professional",
+    "category": "urgent",
+    "instructions": [
+      "Fer valoració clínica o social immediata segons competència.",
+      "Consultar protocol vigent.",
+      "No continuar l'arbre com si fos una entrevista rutinària."
+    ],
+    "label_es": "Valoración profesional urgente",
+    "label_en": "Urgent professional assessment",
+    "instructions_es": [
+      "Aplicar el protocolo vigente del servicio.",
+      "Priorizar seguridad y atención sanitaria o social según corresponda.",
+      "No basar la decisión únicamente en LUCERNA 65."
+    ],
+    "instructions_en": [
+      "Apply the current service protocol.",
+      "Prioritize safety and health or social care as appropriate.",
+      "Do not base the decision only on LUCERNA 65."
+    ]
+  },
+  {
+    "id": "ACTION_PRIVATE_INTERVIEW",
+    "label": "Programar entrevista privada",
+    "category": "priority",
+    "instructions": [
+      "Crear una oportunitat de conversa privada i segura.",
+      "Explicar la privacitat com una pràctica habitual del servei.",
+      "No assenyalar davant tercers que existeix sospita de violència."
+    ],
+    "label_es": "Programar entrevista privada",
+    "label_en": "Schedule a private interview",
+    "instructions_es": [
+      "Crear una vía de valoración profesional segura.",
+      "Coordinar según el circuito territorial vigente.",
+      "Respetar el ritmo, las decisiones y el consentimiento de la mujer."
+    ],
+    "instructions_en": [
+      "Create a safe professional review pathway.",
+      "Coordinate according to the current territorial pathway.",
+      "Respect the woman’s pace, decisions and consent."
+    ]
+  },
+  {
+    "id": "ACTION_LEGAL_REVIEW",
+    "label": "Revisió jurídica independent",
+    "category": "priority",
+    "instructions": [
+      "Oferir informació sobre assessorament jurídic independent.",
+      "Conservar documents només amb base jurídica i consentiment adequats.",
+      "No declarar la invalidesa d'un document des del sistema."
+    ],
+    "label_es": "Revisión jurídica independiente",
+    "label_en": "Independent legal review",
+    "instructions_es": [
+      "Crear una vía de valoración profesional segura.",
+      "Coordinar según el circuito territorial vigente.",
+      "Respetar el ritmo, las decisiones y el consentimiento de la mujer."
+    ],
+    "instructions_en": [
+      "Create a safe professional review pathway.",
+      "Coordinate according to the current territorial pathway.",
+      "Respect the woman’s pace, decisions and consent."
+    ]
+  },
+  {
+    "id": "ACTION_SOCIAL_PRIORITY",
+    "label": "Valoració prioritària de suport social i cures",
+    "category": "priority",
+    "instructions": [
+      "Explorar alternatives reals de cura, habitatge, suport i teleassistència.",
+      "Valorar dependència de la persona controladora.",
+      "Coordinar segons el circuit territorial vigent."
+    ],
+    "label_es": "Valoración prioritaria de apoyo social y cuidados",
+    "label_en": "Priority review of social support and care",
+    "instructions_es": [
+      "Crear una vía de valoración profesional segura.",
+      "Coordinar según el circuito territorial vigente.",
+      "Respetar el ritmo, las decisiones y el consentimiento de la mujer."
+    ],
+    "instructions_en": [
+      "Create a safe professional review pathway.",
+      "Coordinate according to the current territorial pathway.",
+      "Respect the woman’s pace, decisions and consent."
+    ]
+  },
+  {
+    "id": "ACTION_RESOURCE_SUPPORT",
+    "label": "Orientació de recursos i accessibilitat",
+    "category": "support",
+    "instructions": [
+      "Diferenciar barreres materials d'una limitació coercitiva.",
+      "Facilitar recursos de mobilitat, accessibilitat, comunitat o suport econòmic."
+    ],
+    "label_es": "Orientación de recursos y accesibilidad",
+    "label_en": "Resource and accessibility guidance",
+    "instructions_es": [
+      "Diferenciar barreras materiales de limitaciones coercitivas.",
+      "Ofrecer apoyo sin sustituir la decisión de la mujer."
+    ],
+    "instructions_en": [
+      "Differentiate material barriers from coercive limitations.",
+      "Offer support without replacing the woman’s decision."
+    ]
+  },
+  {
+    "id": "ACTION_SPECIALIST_SUPPORT",
+    "label": "Oferir suport especialitzat",
+    "category": "priority",
+    "instructions": [
+      "Oferir derivació o consulta especialitzada adequada al context.",
+      "Respectar el ritme, les decisions i el consentiment de la dona.",
+      "Evitar exigir una narració completa com a condició per oferir suport."
+    ],
+    "label_es": "Ofrecer apoyo especializado",
+    "label_en": "Offer specialized support",
+    "instructions_es": [
+      "Crear una vía de valoración profesional segura.",
+      "Coordinar según el circuito territorial vigente.",
+      "Respetar el ritmo, las decisiones y el consentimiento de la mujer."
+    ],
+    "instructions_en": [
+      "Create a safe professional review pathway.",
+      "Coordinate according to the current territorial pathway.",
+      "Respect the woman’s pace, decisions and consent."
+    ]
+  },
+  {
+    "id": "ACTION_GENERATE_REPORT",
+    "label": "Generar informe revisable",
+    "category": "system",
+    "instructions": [
+      "Generar un esborrany amb fets, fonts, indicadors, incerteses i recomanacions.",
+      "Exigir revisió i confirmació professional abans d'exportar el PDF."
+    ],
+    "label_es": "Generar informe revisable",
+    "label_en": "Generate a reviewable report",
+    "instructions_es": [
+      "Generar solo un borrador revisable.",
+      "Exigir revisión profesional antes de compartir o archivar."
+    ],
+    "instructions_en": [
+      "Generate only a reviewable draft.",
+      "Require professional review before sharing or filing."
+    ]
+  },
+  {
+    "id": "ACTION_SAVE_DRAFT",
+    "label": "Desar com a esborrany no validat",
+    "category": "system",
+    "instructions": [
+      "No generar un informe final.",
+      "Marcar clarament que el cas no ha estat revisat per la professional."
+    ],
+    "label_es": "Guardar como borrador no validado",
+    "label_en": "Save as an unvalidated draft",
+    "instructions_es": [
+      "Generar solo un borrador revisable.",
+      "Exigir revisión profesional antes de compartir o archivar."
+    ],
+    "instructions_en": [
+      "Generate only a reviewable draft.",
+      "Require professional review before sharing or filing."
+    ]
+  },
+  {
+    "id": "ACTION_HEALTH_PRIORITY",
+    "label": "Recuperació prioritària del seguiment sanitari",
+    "category": "priority",
+    "instructions": [
+      "Facilitar valoració sanitària segons criteri clínic i protocol del servei.",
+      "Explorar barreres de cura, transport, substitució i dependència de la parella.",
+      "Evitar responsabilitzar la dona per les absències.",
+      "No inferir diagnòstic des de LUCERNA 65."
+    ],
+    "label_es": "Recuperación prioritaria del seguimiento sanitario",
+    "label_en": "Priority recovery of health follow-up",
+    "instructions_es": [
+      "Crear una vía de valoración profesional segura.",
+      "Coordinar según el circuito territorial vigente.",
+      "Respetar el ritmo, las decisiones y el consentimiento de la mujer."
+    ],
+    "instructions_en": [
+      "Create a safe professional review pathway.",
+      "Coordinate according to the current territorial pathway.",
+      "Respect the woman’s pace, decisions and consent."
+    ]
+  },
+  {
+    "id": "ACTION_HEALTH_REVIEW",
+    "label": "Revisió sanitària del seguiment pendent",
+    "category": "scheduled",
+    "instructions": [
+      "Revisar proves, controls i tractaments pendents.",
+      "Distingir absència voluntària, barrera estructural i obligació de cures.",
+      "Planificar una via realista perquè pugui assistir."
+    ],
+    "label_es": "Revisión sanitaria del seguimiento pendiente",
+    "label_en": "Health review of pending follow-up",
+    "instructions_es": [
+      "Revisar la información pendiente con criterio profesional.",
+      "Planificar una vía realista de seguimiento."
+    ],
+    "instructions_en": [
+      "Review pending information with professional judgement.",
+      "Plan a realistic follow-up pathway."
+    ]
+  },
+  {
+    "id": "ACTION_AUTONOMY_SUPPORT",
+    "label": "Pla gradual de recuperació d'autonomia",
+    "category": "support",
+    "instructions": [
+      "Identificar una decisió petita, segura i escollida per la dona.",
+      "Oferir suport sense substituir novament la seva decisió.",
+      "No confondre manca d'experiència o dependència apresa amb incapacitat.",
+      "Registrar preferències, límits i ritme de la dona."
+    ],
+    "label_es": "Plan gradual de recuperación de autonomía",
+    "label_en": "Gradual autonomy recovery plan",
+    "instructions_es": [
+      "Diferenciar barreras materiales de limitaciones coercitivas.",
+      "Ofrecer apoyo sin sustituir la decisión de la mujer."
+    ],
+    "instructions_en": [
+      "Differentiate material barriers from coercive limitations.",
+      "Offer support without replacing the woman’s decision."
+    ]
+  }
+]

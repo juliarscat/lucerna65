@@ -1,0 +1,190 @@
+{
+  "_meta": {
+    "project": "LUCERNA 65",
+    "version": "0.2.0-draft",
+    "language": "ca",
+    "generated_at": "2026-07-30",
+    "status": "prototip_no_validat",
+    "disclaimer": "Contingut de prototip per al desenvolupament i la validació de LUCERNA 65. No és un instrument clínic, social, jurídic ni policial validat. No diagnostica, no determina l'existència de violència i no substitueix el criteri professional, els protocols vigents ni l'actuació d'emergència."
+  },
+  "cases": [
+    {
+      "id": "CASE_FICT_001",
+      "title": "Relacions sexuals normalitzades dins del matrimoni",
+      "fictionalized": true,
+      "input": {
+        "age_band": "75_84",
+        "professional_role": "psychology",
+        "statements": [
+          "El meu marit tenia relacions quan volia.",
+          "Jo no sempre volia, però era el meu marit.",
+          "Encara que estigués malalta o embarassada, era normal."
+        ]
+      },
+      "expected_indicators": [
+        "marital_entitlement",
+        "historical_normalization",
+        "unable_to_refuse_sex",
+        "sex_during_illness_or_pain",
+        "sex_during_pregnancy_without_consent"
+      ],
+      "expected_followups": [
+        "Q400",
+        "Q401",
+        "Q402",
+        "Q403"
+      ],
+      "safe_summary": "El relat inclou expressions de normalització i manca percebuda de llibertat per rebutjar relacions íntimes. Convé explorar consentiment, conseqüències de la negativa i impacte actual.",
+      "must_not_output": [
+        "violació confirmada",
+        "marit violador",
+        "diagnòstic"
+      ]
+    },
+    {
+      "id": "CASE_FICT_002",
+      "title": "Control econòmic quotidià i prohibició de treballar",
+      "fictionalized": true,
+      "input": {
+        "age_band": "75_84",
+        "professional_role": "social_work",
+        "statements": [
+          "Ell no volia que treballés.",
+          "Per comprar-me unes mitges havia de demanar permís.",
+          "Havia de justificar cada pesseta."
+        ]
+      },
+      "expected_indicators": [
+        "forced_domesticity",
+        "permission_for_small_purchases",
+        "unknown_financial_state"
+      ],
+      "expected_followups": [
+        "Q100",
+        "Q102",
+        "Q103",
+        "Q110",
+        "Q111"
+      ],
+      "safe_summary": "S'han registrat limitacions històriques de l'autonomia laboral i econòmica, inclosa la necessitat de permís per a despeses personals bàsiques."
+    },
+    {
+      "id": "CASE_FICT_003",
+      "title": "Apropiació d'estalvis i impacte sobre necessitats",
+      "fictionalized": true,
+      "input": {
+        "professional_role": "primary_care",
+        "statements": [
+          "Ella havia estalviat treballant en neteja.",
+          "La parella va gastar els estalvis en una compra unilateral.",
+          "Ella justificava que ell treballava molt i tenia aficions cares."
+        ]
+      },
+      "expected_indicators": [
+        "unilateral_spending",
+        "income_appropriation",
+        "excusing_perpetrator"
+      ],
+      "expected_followups": [
+        "Q103",
+        "Q105",
+        "Q106"
+      ],
+      "safe_summary": "El relat descriu una possible apropiació o decisió unilateral sobre estalvis generats per ella, acompanyada de justificacions de la conducta de la parella."
+    },
+    {
+      "id": "CASE_FICT_004",
+      "title": "Patró agressiu observable en residència",
+      "fictionalized": true,
+      "input": {
+        "professional_role": "residential_care",
+        "observations": [
+          "L'home insulta i amenaça personal femení.",
+          "Durant la visita, colpeja amb el bastó.",
+          "La dona mesura les paraules, mostra temor i mira la filla abans de respondre."
+        ]
+      },
+      "expected_indicators": [
+        "violence_toward_staff",
+        "object_assault",
+        "fearful_behavior",
+        "emotional_lability_contextual"
+      ],
+      "expected_followups": [
+        "Q060",
+        "Q061",
+        "Q070",
+        "Q071",
+        "Q010"
+      ],
+      "safe_summary": "S'han observat conductes agressives i una resposta de temor contextual en la dona. Cal prioritzar seguretat, entrevista privada i aplicació del protocol del centre."
+    },
+    {
+      "id": "CASE_FICT_005",
+      "title": "Asimetria de cures i revisions mèdiques perdudes",
+      "fictionalized": true,
+      "input": {
+        "professional_role": "primary_care",
+        "statements": [
+          "Ella acompanya sempre el marit a les visites i li gestiona la medicació.",
+          "Ha faltat repetidament a revisions pròpies perquè no el podia deixar sol.",
+          "Té una prova diagnòstica pendent des de fa mesos."
+        ]
+      },
+      "expected_indicators": [
+        "caregiving_asymmetry",
+        "self_neglect_due_to_partner_care",
+        "missed_preventive_care",
+        "delayed_diagnosis_risk",
+        "health_priority_displacement"
+      ],
+      "expected_followups": [
+        "Q230",
+        "Q231",
+        "Q232",
+        "Q233",
+        "Q234",
+        "Q235"
+      ],
+      "safe_summary": "S'ha registrat una asimetria sostinguda de cures i pèrdua de seguiment sanitari propi. Convé recuperar les proves pendents i explorar alternatives de cura que permetin l'assistència.",
+      "must_not_output": [
+        "ella és negligent amb la seva salut",
+        "diagnòstic tardà confirmat"
+      ]
+    },
+    {
+      "id": "CASE_FICT_006",
+      "title": "Dependència apresa després d'anys de control",
+      "fictionalized": true,
+      "input": {
+        "professional_role": "social_work",
+        "observations": [
+          "Demana permís per comprar objectes de baix cost.",
+          "Diu que no sap decidir sola.",
+          "No inicia activitats per a ella mateixa tot i disposar de recursos."
+        ]
+      },
+      "expected_indicators": [
+        "permission_for_everyday_actions",
+        "initiative_loss",
+        "internalized_dependency",
+        "learned_compliance",
+        "economic_self_denial"
+      ],
+      "expected_followups": [
+        "Q240",
+        "Q241",
+        "Q242",
+        "Q243",
+        "Q244",
+        "Q245",
+        "Q250"
+      ],
+      "safe_summary": "S'observen dificultats persistents per prendre decisions quotidianes i prioritzar necessitats pròpies. Cal diferenciar deteriorament cognitiu, manca d'experiència, por i dependència apresa.",
+      "must_not_output": [
+        "incapacitat",
+        "no pot decidir per si mateixa"
+      ]
+    }
+  ]
+}

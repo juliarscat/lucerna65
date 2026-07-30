@@ -1,0 +1,1291 @@
+[
+  {
+    "id": "immediate_danger",
+    "domain": "urgent_safety",
+    "severity": "urgent",
+    "label_ca": "Perill immediat",
+    "label_es": "Peligro inmediato",
+    "rationale_ca": "Indicadors que poden requerir una valoració urgent o actuació segons el protocol aplicable.",
+    "rationale_es": "Indicadores que pueden requerir una valoración urgente o actuación según el protocolo aplicable.",
+    "source_ids": [
+      "SRC_CAT_PROTOCOL_MARC_2022"
+    ],
+    "follow_up_ca": [],
+    "follow_up_es": [],
+    "label_en": "Immediate danger",
+    "rationale_en": "Indicators that may require urgent professional assessment or action according to the applicable protocol.",
+    "follow_up_en": []
+  },
+  {
+    "id": "serious_injury",
+    "domain": "urgent_safety",
+    "severity": "urgent",
+    "label_ca": "Lesió greu o necessitat mèdica urgent",
+    "label_es": "Lesión grave o necesidad médica urgente",
+    "rationale_ca": "Indicadors que poden requerir una valoració urgent o actuació segons el protocol aplicable.",
+    "rationale_es": "Indicadores que pueden requerir una valoración urgente o actuación según el protocolo aplicable.",
+    "source_ids": [
+      "SRC_CAT_PROTOCOL_MARC_2022"
+    ],
+    "follow_up_ca": [],
+    "follow_up_es": [],
+    "label_en": "Serious injury or urgent medical need",
+    "rationale_en": "Indicators that may require urgent professional assessment or action according to the applicable protocol.",
+    "follow_up_en": []
+  },
+  {
+    "id": "weapon_or_object",
+    "domain": "urgent_safety",
+    "severity": "urgent",
+    "label_ca": "Ús o amenaça amb arma o objecte",
+    "label_es": "Uso o amenaza con arma u objeto",
+    "rationale_ca": "Indicadors que poden requerir una valoració urgent o actuació segons el protocol aplicable.",
+    "rationale_es": "Indicadores que pueden requerir una valoración urgente o actuación según el protocolo aplicable.",
+    "source_ids": [
+      "SRC_CAT_PROTOCOL_MARC_2022"
+    ],
+    "follow_up_ca": [],
+    "follow_up_es": [],
+    "label_en": "Use or threat with a weapon or object",
+    "rationale_en": "Indicators that may require urgent professional assessment or action according to the applicable protocol.",
+    "follow_up_en": []
+  },
+  {
+    "id": "unsafe_discharge",
+    "domain": "urgent_safety",
+    "severity": "urgent",
+    "label_ca": "Retorn potencialment insegur",
+    "label_es": "Retorno potencialmente inseguro",
+    "rationale_ca": "Indicadors que poden requerir una valoració urgent o actuació segons el protocol aplicable.",
+    "rationale_es": "Indicadores que pueden requerir una valoración urgente o actuación según el protocolo aplicable.",
+    "source_ids": [
+      "SRC_CAT_PROTOCOL_MARC_2022"
+    ],
+    "follow_up_ca": [],
+    "follow_up_es": [],
+    "label_en": "Potentially unsafe return",
+    "rationale_en": "Indicators that may require urgent professional assessment or action according to the applicable protocol.",
+    "follow_up_en": []
+  },
+  {
+    "id": "suicidal_or_homicidal_statement",
+    "domain": "urgent_safety",
+    "severity": "urgent",
+    "label_ca": "Expressió de risc autolesiu o envers tercers",
+    "label_es": "Expresión de riesgo autolesivo o hacia terceros",
+    "rationale_ca": "Indicadors que poden requerir una valoració urgent o actuació segons el protocol aplicable.",
+    "rationale_es": "Indicadores que pueden requerir una valoración urgente o actuación según el protocolo aplicable.",
+    "source_ids": [
+      "SRC_CAT_PROTOCOL_MARC_2022"
+    ],
+    "follow_up_ca": [],
+    "follow_up_es": [],
+    "label_en": "Statement of self-harm or harm to others",
+    "rationale_en": "Indicators that may require urgent professional assessment or action according to the applicable protocol.",
+    "follow_up_en": []
+  },
+  {
+    "id": "duty_language",
+    "domain": "normalization",
+    "severity": "medium",
+    "label_ca": "Llenguatge de deure",
+    "label_es": "Lenguaje de deber",
+    "rationale_ca": "Expressions que poden mostrar acceptació cultural, biogràfica o relacional de fets potencialment violents. Exemples: era el meu deure; com a esposa ho havia de fer.",
+    "rationale_es": "Expresiones que pueden mostrar aceptación cultural, biográfica o relacional de hechos potencialmente violentos. Conviene explorarlas sin invalidar el relato.",
+    "source_ids": [
+      "SRC_CAT_DONES_GRANS"
+    ],
+    "follow_up_ca": [],
+    "follow_up_es": [],
+    "label_en": "Language of duty",
+    "rationale_en": "Expressions that may show cultural, biographical or relational acceptance of potentially violent events. They should be explored without invalidating the account.",
+    "follow_up_en": []
+  },
+  {
+    "id": "historical_normalization",
+    "domain": "normalization",
+    "severity": "medium",
+    "label_ca": "Normalització generacional",
+    "label_es": "Normalización generacional",
+    "rationale_ca": "Expressions que poden mostrar acceptació cultural, biogràfica o relacional de fets potencialment violents. Exemples: abans era així; totes ho aguantaven; era una altra època.",
+    "rationale_es": "Expresiones que pueden mostrar aceptación cultural, biográfica o relacional de hechos potencialmente violentos. Conviene explorarlas sin invalidar el relato.",
+    "source_ids": [
+      "SRC_CAT_DONES_GRANS"
+    ],
+    "follow_up_ca": [],
+    "follow_up_es": [],
+    "label_en": "Generational normalization",
+    "rationale_en": "Expressions that may show cultural, biographical or relational acceptance of potentially violent events. They should be explored without invalidating the account.",
+    "follow_up_en": []
+  },
+  {
+    "id": "excusing_perpetrator",
+    "domain": "normalization",
+    "severity": "medium",
+    "label_ca": "Justificació de la conducta",
+    "label_es": "Justificación de la conducta",
+    "rationale_ca": "Expressions que poden mostrar acceptació cultural, biogràfica o relacional de fets potencialment violents. Exemples: treballava molt; arribava cansat; havia begut.",
+    "rationale_es": "Expresiones que pueden mostrar aceptación cultural, biográfica o relacional de hechos potencialmente violentos. Conviene explorarlas sin invalidar el relato.",
+    "source_ids": [
+      "SRC_CAT_DONES_GRANS"
+    ],
+    "follow_up_ca": [],
+    "follow_up_es": [],
+    "label_en": "Justification of conduct",
+    "rationale_en": "Expressions that may show cultural, biographical or relational acceptance of potentially violent events. They should be explored without invalidating the account.",
+    "follow_up_en": []
+  },
+  {
+    "id": "marital_entitlement",
+    "domain": "normalization",
+    "severity": "medium",
+    "label_ca": "Dret conjugal assumit",
+    "label_es": "Derecho conyugal asumido",
+    "rationale_ca": "Expressions que poden mostrar acceptació cultural, biogràfica o relacional de fets potencialment violents. Exemples: era el meu marit; no podia negar-m'hi.",
+    "rationale_es": "Expresiones que pueden mostrar aceptación cultural, biográfica o relacional de hechos potencialmente violentos. Conviene explorarlas sin invalidar el relato.",
+    "source_ids": [
+      "SRC_CAT_DONES_GRANS"
+    ],
+    "follow_up_ca": [],
+    "follow_up_es": [],
+    "label_en": "Assumed marital entitlement",
+    "rationale_en": "Expressions that may show cultural, biographical or relational acceptance of potentially violent events. They should be explored without invalidating the account.",
+    "follow_up_en": []
+  },
+  {
+    "id": "minimization",
+    "domain": "normalization",
+    "severity": "medium",
+    "label_ca": "Minimització",
+    "label_es": "Minimización",
+    "rationale_ca": "Expressions que poden mostrar acceptació cultural, biogràfica o relacional de fets potencialment violents. Exemples: només passava de vegades; no era per tant.",
+    "rationale_es": "Expresiones que pueden mostrar aceptación cultural, biográfica o relacional de hechos potencialmente violentos. Conviene explorarlas sin invalidar el relato.",
+    "source_ids": [
+      "SRC_CAT_DONES_GRANS"
+    ],
+    "follow_up_ca": [],
+    "follow_up_es": [],
+    "label_en": "Minimization",
+    "rationale_en": "Expressions that may show cultural, biographical or relational acceptance of potentially violent events. They should be explored without invalidating the account.",
+    "follow_up_en": []
+  },
+  {
+    "id": "self_blame",
+    "domain": "normalization",
+    "severity": "medium",
+    "label_ca": "Autoculpabilització",
+    "label_es": "Autoculpabilización",
+    "rationale_ca": "Expressions que poden mostrar acceptació cultural, biogràfica o relacional de fets potencialment violents. Exemples: jo el provocava; jo era massa sensible.",
+    "rationale_es": "Expresiones que pueden mostrar aceptación cultural, biográfica o relacional de hechos potencialmente violentos. Conviene explorarlas sin invalidar el relato.",
+    "source_ids": [
+      "SRC_CAT_DONES_GRANS"
+    ],
+    "follow_up_ca": [],
+    "follow_up_es": [],
+    "label_en": "Self-blame",
+    "rationale_en": "Expressions that may show cultural, biographical or relational acceptance of potentially violent events. They should be explored without invalidating the account.",
+    "follow_up_en": []
+  },
+  {
+    "id": "unable_to_refuse_sex",
+    "domain": "sexual",
+    "severity": "high",
+    "label_ca": "Impossibilitat percebuda de dir que no",
+    "label_es": "Imposibilidad percibida de decir que no",
+    "rationale_ca": "Situacions en què no hi ha consentiment lliure, informat, específic i revocable.",
+    "rationale_es": "Situaciones en las que el consentimiento puede no ser libre, informado, específico y revocable.",
+    "source_ids": [
+      "SRC_CAT_PROTOCOL_MARC_2022",
+      "SRC_CAT_DONES_GRANS"
+    ],
+    "follow_up_ca": [],
+    "follow_up_es": [],
+    "label_en": "Perceived inability to say no",
+    "rationale_en": "Situations in which consent may not be free, informed, specific and revocable.",
+    "follow_up_en": []
+  },
+  {
+    "id": "sex_despite_refusal",
+    "domain": "sexual",
+    "severity": "high",
+    "label_ca": "Relacions malgrat negativa",
+    "label_es": "Relaciones pese a negativa",
+    "rationale_ca": "Situacions en què no hi ha consentiment lliure, informat, específic i revocable.",
+    "rationale_es": "Situaciones en las que el consentimiento puede no ser libre, informado, específico y revocable.",
+    "source_ids": [
+      "SRC_CAT_PROTOCOL_MARC_2022",
+      "SRC_CAT_DONES_GRANS"
+    ],
+    "follow_up_ca": [],
+    "follow_up_es": [],
+    "label_en": "Sex despite refusal",
+    "rationale_en": "Situations in which consent may not be free, informed, specific and revocable.",
+    "follow_up_en": []
+  },
+  {
+    "id": "sex_during_illness_or_pain",
+    "domain": "sexual",
+    "severity": "high",
+    "label_ca": "Relacions durant malaltia, dolor o indisposició",
+    "label_es": "Relaciones durante enfermedad, dolor o indisposición",
+    "rationale_ca": "Situacions en què no hi ha consentiment lliure, informat, específic i revocable.",
+    "rationale_es": "Situaciones en las que el consentimiento puede no ser libre, informado, específico y revocable.",
+    "source_ids": [
+      "SRC_CAT_PROTOCOL_MARC_2022",
+      "SRC_CAT_DONES_GRANS"
+    ],
+    "follow_up_ca": [],
+    "follow_up_es": [],
+    "label_en": "Sex during illness, pain or indisposition",
+    "rationale_en": "Situations in which consent may not be free, informed, specific and revocable.",
+    "follow_up_en": []
+  },
+  {
+    "id": "sex_during_pregnancy_without_consent",
+    "domain": "sexual",
+    "severity": "high",
+    "label_ca": "Relacions durant embaràs sense consentiment",
+    "label_es": "Relaciones durante embarazo sin consentimiento",
+    "rationale_ca": "Situacions en què no hi ha consentiment lliure, informat, específic i revocable.",
+    "rationale_es": "Situaciones en las que el consentimiento puede no ser libre, informado, específico y revocable.",
+    "source_ids": [
+      "SRC_CAT_PROTOCOL_MARC_2022",
+      "SRC_CAT_DONES_GRANS"
+    ],
+    "follow_up_ca": [],
+    "follow_up_es": [],
+    "label_en": "Sex during pregnancy without consent",
+    "rationale_en": "Situations in which consent may not be free, informed, specific and revocable.",
+    "follow_up_en": []
+  },
+  {
+    "id": "reproductive_control",
+    "domain": "sexual",
+    "severity": "high",
+    "label_ca": "Control reproductiu",
+    "label_es": "Control reproductivo",
+    "rationale_ca": "Situacions en què no hi ha consentiment lliure, informat, específic i revocable.",
+    "rationale_es": "Situaciones en las que el consentimiento puede no ser libre, informado, específico y revocable.",
+    "source_ids": [
+      "SRC_CAT_PROTOCOL_MARC_2022",
+      "SRC_CAT_DONES_GRANS"
+    ],
+    "follow_up_ca": [],
+    "follow_up_es": [],
+    "label_en": "Reproductive control",
+    "rationale_en": "Situations in which consent may not be free, informed, specific and revocable.",
+    "follow_up_en": []
+  },
+  {
+    "id": "coercive_consequences",
+    "domain": "sexual",
+    "severity": "high",
+    "label_ca": "Por de conseqüències en negar-s'hi",
+    "label_es": "Miedo a consecuencias al negarse",
+    "rationale_ca": "Situacions en què no hi ha consentiment lliure, informat, específic i revocable.",
+    "rationale_es": "Situaciones en las que el consentimiento puede no ser libre, informado, específico y revocable.",
+    "source_ids": [
+      "SRC_CAT_PROTOCOL_MARC_2022",
+      "SRC_CAT_DONES_GRANS"
+    ],
+    "follow_up_ca": [],
+    "follow_up_es": [],
+    "label_en": "Fear of consequences when refusing",
+    "rationale_en": "Situations in which consent may not be free, informed, specific and revocable.",
+    "follow_up_en": []
+  },
+  {
+    "id": "permission_for_small_purchases",
+    "domain": "economic",
+    "severity": "high",
+    "label_ca": "Necessitat de permís per a compres bàsiques",
+    "label_es": "Necesidad de permiso para compras básicas",
+    "rationale_ca": "Control, apropiació o limitació injustificada de recursos econòmics, ingressos, béns o capacitat de decisió.",
+    "rationale_es": "Control, apropiación o limitación injustificada de recursos económicos, ingresos, bienes o capacidad de decisión.",
+    "source_ids": [
+      "SRC_CAT_DONES_GRANS"
+    ],
+    "follow_up_ca": [],
+    "follow_up_es": [],
+    "label_en": "Need for permission for basic purchases",
+    "rationale_en": "Control, appropriation or unjustified limitation of economic resources, income, assets or decision-making capacity.",
+    "follow_up_en": []
+  },
+  {
+    "id": "forced_domesticity",
+    "domain": "economic",
+    "severity": "high",
+    "label_ca": "Impediment o prohibició de treballar",
+    "label_es": "Impedimento o prohibición de trabajar",
+    "rationale_ca": "Control, apropiació o limitació injustificada de recursos econòmics, ingressos, béns o capacitat de decisió.",
+    "rationale_es": "Control, apropiación o limitación injustificada de recursos económicos, ingresos, bienes o capacidad de decisión.",
+    "source_ids": [
+      "SRC_CAT_DONES_GRANS"
+    ],
+    "follow_up_ca": [],
+    "follow_up_es": [],
+    "label_en": "Prevented or forbidden from working",
+    "rationale_en": "Control, appropriation or unjustified limitation of economic resources, income, assets or decision-making capacity.",
+    "follow_up_en": []
+  },
+  {
+    "id": "income_appropriation",
+    "domain": "economic",
+    "severity": "high",
+    "label_ca": "Apropiació dels ingressos",
+    "label_es": "Apropiación de ingresos",
+    "rationale_ca": "Control, apropiació o limitació injustificada de recursos econòmics, ingressos, béns o capacitat de decisió.",
+    "rationale_es": "Control, apropiación o limitación injustificada de recursos económicos, ingresos, bienes o capacidad de decisión.",
+    "source_ids": [
+      "SRC_CAT_DONES_GRANS"
+    ],
+    "follow_up_ca": [],
+    "follow_up_es": [],
+    "label_en": "Appropriation of income",
+    "rationale_en": "Control, appropriation or unjustified limitation of economic resources, income, assets or decision-making capacity.",
+    "follow_up_en": []
+  },
+  {
+    "id": "unilateral_spending",
+    "domain": "economic",
+    "severity": "high",
+    "label_ca": "Despesa unilateral de diners comuns o d'ella",
+    "label_es": "Gasto unilateral de dinero común o de ella",
+    "rationale_ca": "Control, apropiació o limitació injustificada de recursos econòmics, ingressos, béns o capacitat de decisió.",
+    "rationale_es": "Control, apropiación o limitación injustificada de recursos económicos, ingresos, bienes o capacidad de decisión.",
+    "source_ids": [
+      "SRC_CAT_DONES_GRANS"
+    ],
+    "follow_up_ca": [],
+    "follow_up_es": [],
+    "label_en": "Unilateral spending of shared or her own money",
+    "rationale_en": "Control, appropriation or unjustified limitation of economic resources, income, assets or decision-making capacity.",
+    "follow_up_en": []
+  },
+  {
+    "id": "bank_access_restriction",
+    "domain": "economic",
+    "severity": "high",
+    "label_ca": "Restricció d'accés al banc o comptes",
+    "label_es": "Restricción de acceso al banco o cuentas",
+    "rationale_ca": "Control, apropiació o limitació injustificada de recursos econòmics, ingressos, béns o capacitat de decisió.",
+    "rationale_es": "Control, apropiación o limitación injustificada de recursos económicos, ingresos, bienes o capacidad de decisión.",
+    "source_ids": [
+      "SRC_CAT_DONES_GRANS"
+    ],
+    "follow_up_ca": [],
+    "follow_up_es": [],
+    "label_en": "Restriction of access to bank or accounts",
+    "rationale_en": "Control, appropriation or unjustified limitation of economic resources, income, assets or decision-making capacity.",
+    "follow_up_en": []
+  },
+  {
+    "id": "unknown_financial_state",
+    "domain": "economic",
+    "severity": "high",
+    "label_ca": "Desconeixement imposat de la situació econòmica",
+    "label_es": "Desconocimiento impuesto de la situación económica",
+    "rationale_ca": "Control, apropiació o limitació injustificada de recursos econòmics, ingressos, béns o capacitat de decisió.",
+    "rationale_es": "Control, apropiación o limitación injustificada de recursos económicos, ingresos, bienes o capacidad de decisión.",
+    "source_ids": [
+      "SRC_CAT_DONES_GRANS"
+    ],
+    "follow_up_ca": [],
+    "follow_up_es": [],
+    "label_en": "Imposed lack of knowledge of financial situation",
+    "rationale_en": "Control, appropriation or unjustified limitation of economic resources, income, assets or decision-making capacity.",
+    "follow_up_en": []
+  },
+  {
+    "id": "coerced_signature",
+    "domain": "economic",
+    "severity": "high",
+    "label_ca": "Signatures o poders sota pressió",
+    "label_es": "Firmas o poderes bajo presión",
+    "rationale_ca": "Control, apropiació o limitació injustificada de recursos econòmics, ingressos, béns o capacitat de decisió.",
+    "rationale_es": "Control, apropiación o limitación injustificada de recursos económicos, ingresos, bienes o capacidad de decisión.",
+    "source_ids": [
+      "SRC_CAT_DONES_GRANS"
+    ],
+    "follow_up_ca": [],
+    "follow_up_es": [],
+    "label_en": "Signatures or powers under pressure",
+    "rationale_en": "Control, appropriation or unjustified limitation of economic resources, income, assets or decision-making capacity.",
+    "follow_up_en": []
+  },
+  {
+    "id": "property_pressure",
+    "domain": "economic",
+    "severity": "high",
+    "label_ca": "Pressió sobre habitatge, herència o propietats",
+    "label_es": "Presión sobre vivienda, herencia o propiedades",
+    "rationale_ca": "Control, apropiació o limitació injustificada de recursos econòmics, ingressos, béns o capacitat de decisió.",
+    "rationale_es": "Control, apropiación o limitación injustificada de recursos económicos, ingresos, bienes o capacidad de decisión.",
+    "source_ids": [
+      "SRC_CAT_DONES_GRANS"
+    ],
+    "follow_up_ca": [],
+    "follow_up_es": [],
+    "label_en": "Pressure over housing, inheritance or property",
+    "rationale_en": "Control, appropriation or unjustified limitation of economic resources, income, assets or decision-making capacity.",
+    "follow_up_en": []
+  },
+  {
+    "id": "fearful_behavior",
+    "domain": "psychological",
+    "severity": "medium",
+    "label_ca": "Temor evident",
+    "label_es": "Temor evidente",
+    "rationale_ca": "Conductes que provoquen por, submissió, desautorització o pèrdua d'autonomia.",
+    "rationale_es": "Conductas que pueden provocar miedo, sumisión, desautorización o pérdida de autonomía.",
+    "source_ids": [
+      "SRC_CAT_PROTOCOL_MARC_2022",
+      "SRC_CAT_DONES_GRANS"
+    ],
+    "follow_up_ca": [],
+    "follow_up_es": [],
+    "label_en": "Evident fear",
+    "rationale_en": "Behaviors that may cause fear, submission, disauthorization or loss of autonomy.",
+    "follow_up_en": []
+  },
+  {
+    "id": "humiliation",
+    "domain": "psychological",
+    "severity": "medium",
+    "label_ca": "Humiliació o menyspreu",
+    "label_es": "Humillación o desprecio",
+    "rationale_ca": "Conductes que provoquen por, submissió, desautorització o pèrdua d'autonomia.",
+    "rationale_es": "Conductas que pueden provocar miedo, sumisión, desautorización o pérdida de autonomía.",
+    "source_ids": [
+      "SRC_CAT_PROTOCOL_MARC_2022",
+      "SRC_CAT_DONES_GRANS"
+    ],
+    "follow_up_ca": [],
+    "follow_up_es": [],
+    "label_en": "Humiliation or contempt",
+    "rationale_en": "Behaviors that may cause fear, submission, disauthorization or loss of autonomy.",
+    "follow_up_en": []
+  },
+  {
+    "id": "threats",
+    "domain": "psychological",
+    "severity": "medium",
+    "label_ca": "Amenaces",
+    "label_es": "Amenazas",
+    "rationale_ca": "Conductes que provoquen por, submissió, desautorització o pèrdua d'autonomia.",
+    "rationale_es": "Conductas que pueden provocar miedo, sumisión, desautorización o pérdida de autonomía.",
+    "source_ids": [
+      "SRC_CAT_PROTOCOL_MARC_2022",
+      "SRC_CAT_DONES_GRANS"
+    ],
+    "follow_up_ca": [],
+    "follow_up_es": [],
+    "label_en": "Threats",
+    "rationale_en": "Behaviors that may cause fear, submission, disauthorization or loss of autonomy.",
+    "follow_up_en": []
+  },
+  {
+    "id": "infantilization",
+    "domain": "psychological",
+    "severity": "medium",
+    "label_ca": "Infantilització",
+    "label_es": "Infantilización",
+    "rationale_ca": "Conductes que provoquen por, submissió, desautorització o pèrdua d'autonomia.",
+    "rationale_es": "Conductas que pueden provocar miedo, sumisión, desautorización o pérdida de autonomía.",
+    "source_ids": [
+      "SRC_CAT_PROTOCOL_MARC_2022",
+      "SRC_CAT_DONES_GRANS"
+    ],
+    "follow_up_ca": [],
+    "follow_up_es": [],
+    "label_en": "Infantilization",
+    "rationale_en": "Behaviors that may cause fear, submission, disauthorization or loss of autonomy.",
+    "follow_up_en": []
+  },
+  {
+    "id": "gaslighting_ageism",
+    "domain": "psychological",
+    "severity": "medium",
+    "label_ca": "Descrèdit basat en edat o salut",
+    "label_es": "Descrédito basado en edad o salud",
+    "rationale_ca": "Conductes que provoquen por, submissió, desautorització o pèrdua d'autonomia.",
+    "rationale_es": "Conductas que pueden provocar miedo, sumisión, desautorización o pérdida de autonomía.",
+    "source_ids": [
+      "SRC_CAT_PROTOCOL_MARC_2022",
+      "SRC_CAT_DONES_GRANS"
+    ],
+    "follow_up_ca": [],
+    "follow_up_es": [],
+    "label_en": "Discrediting based on age or health",
+    "rationale_en": "Behaviors that may cause fear, submission, disauthorization or loss of autonomy.",
+    "follow_up_en": []
+  },
+  {
+    "id": "permission_seeking",
+    "domain": "psychological",
+    "severity": "medium",
+    "label_ca": "Necessitat de demanar permís",
+    "label_es": "Necesidad de pedir permiso",
+    "rationale_ca": "Conductes que provoquen por, submissió, desautorització o pèrdua d'autonomia.",
+    "rationale_es": "Conductas que pueden provocar miedo, sumisión, desautorización o pérdida de autonomía.",
+    "source_ids": [
+      "SRC_CAT_PROTOCOL_MARC_2022",
+      "SRC_CAT_DONES_GRANS"
+    ],
+    "follow_up_ca": [],
+    "follow_up_es": [],
+    "label_en": "Need to ask permission",
+    "rationale_en": "Behaviors that may cause fear, submission, disauthorization or loss of autonomy.",
+    "follow_up_en": []
+  },
+  {
+    "id": "emotional_lability_contextual",
+    "domain": "psychological",
+    "severity": "medium",
+    "label_ca": "Labilitat emocional contextual",
+    "label_es": "Labilidad emocional contextual",
+    "rationale_ca": "Conductes que provoquen por, submissió, desautorització o pèrdua d'autonomia.",
+    "rationale_es": "Conductas que pueden provocar miedo, sumisión, desautorización o pérdida de autonomía.",
+    "source_ids": [
+      "SRC_CAT_PROTOCOL_MARC_2022",
+      "SRC_CAT_DONES_GRANS"
+    ],
+    "follow_up_ca": [],
+    "follow_up_es": [],
+    "label_en": "Contextual emotional lability",
+    "rationale_en": "Behaviors that may cause fear, submission, disauthorization or loss of autonomy.",
+    "follow_up_en": []
+  },
+  {
+    "id": "retaliation_fear",
+    "domain": "psychological",
+    "severity": "medium",
+    "label_ca": "Por de represàlies",
+    "label_es": "Miedo a represalias",
+    "rationale_ca": "Conductes que provoquen por, submissió, desautorització o pèrdua d'autonomia.",
+    "rationale_es": "Conductas que pueden provocar miedo, sumisión, desautorización o pérdida de autonomía.",
+    "source_ids": [
+      "SRC_CAT_PROTOCOL_MARC_2022",
+      "SRC_CAT_DONES_GRANS"
+    ],
+    "follow_up_ca": [],
+    "follow_up_es": [],
+    "label_en": "Fear of retaliation",
+    "rationale_en": "Behaviors that may cause fear, submission, disauthorization or loss of autonomy.",
+    "follow_up_en": []
+  },
+  {
+    "id": "hitting",
+    "domain": "physical",
+    "severity": "high",
+    "label_ca": "Cops",
+    "label_es": "Golpes",
+    "rationale_ca": "Ús de força, objectes o restriccions que poden causar dany físic.",
+    "rationale_es": "Uso de fuerza, objetos o restricciones que pueden causar daño físico.",
+    "source_ids": [
+      "SRC_CAT_PROTOCOL_MARC_2022"
+    ],
+    "follow_up_ca": [],
+    "follow_up_es": [],
+    "label_en": "Blows",
+    "rationale_en": "Use of force, objects or restrictions that may cause physical harm.",
+    "follow_up_en": []
+  },
+  {
+    "id": "pushing_or_grabbing",
+    "domain": "physical",
+    "severity": "high",
+    "label_ca": "Empentes o subjeccions",
+    "label_es": "Empujones o sujeciones",
+    "rationale_ca": "Ús de força, objectes o restriccions que poden causar dany físic.",
+    "rationale_es": "Uso de fuerza, objetos o restricciones que pueden causar daño físico.",
+    "source_ids": [
+      "SRC_CAT_PROTOCOL_MARC_2022"
+    ],
+    "follow_up_ca": [],
+    "follow_up_es": [],
+    "label_en": "Pushing or grabbing",
+    "rationale_en": "Use of force, objects or restrictions that may cause physical harm.",
+    "follow_up_en": []
+  },
+  {
+    "id": "restraint",
+    "domain": "physical",
+    "severity": "high",
+    "label_ca": "Restricció física injustificada",
+    "label_es": "Restricción física injustificada",
+    "rationale_ca": "Ús de força, objectes o restriccions que poden causar dany físic.",
+    "rationale_es": "Uso de fuerza, objetos o restricciones que pueden causar daño físico.",
+    "source_ids": [
+      "SRC_CAT_PROTOCOL_MARC_2022"
+    ],
+    "follow_up_ca": [],
+    "follow_up_es": [],
+    "label_en": "Unjustified physical restraint",
+    "rationale_en": "Use of force, objects or restrictions that may cause physical harm.",
+    "follow_up_en": []
+  },
+  {
+    "id": "unexplained_injuries",
+    "domain": "physical",
+    "severity": "high",
+    "label_ca": "Lesions no explicades o explicacions inconsistents",
+    "label_es": "Lesiones no explicadas o explicaciones inconsistentes",
+    "rationale_ca": "Ús de força, objectes o restriccions que poden causar dany físic.",
+    "rationale_es": "Uso de fuerza, objetos o restricciones que pueden causar daño físico.",
+    "source_ids": [
+      "SRC_CAT_PROTOCOL_MARC_2022"
+    ],
+    "follow_up_ca": [],
+    "follow_up_es": [],
+    "label_en": "Unexplained injuries or inconsistent explanations",
+    "rationale_en": "Use of force, objects or restrictions that may cause physical harm.",
+    "follow_up_en": []
+  },
+  {
+    "id": "violence_toward_staff",
+    "domain": "physical",
+    "severity": "high",
+    "label_ca": "Violència envers personal femení",
+    "label_es": "Violencia hacia personal femenino",
+    "rationale_ca": "Ús de força, objectes o restriccions que poden causar dany físic.",
+    "rationale_es": "Uso de fuerza, objetos o restricciones que pueden causar daño físico.",
+    "source_ids": [
+      "SRC_CAT_PROTOCOL_MARC_2022"
+    ],
+    "follow_up_ca": [],
+    "follow_up_es": [],
+    "label_en": "Violence toward female staff",
+    "rationale_en": "Use of force, objects or restrictions that may cause physical harm.",
+    "follow_up_en": []
+  },
+  {
+    "id": "object_assault",
+    "domain": "physical",
+    "severity": "high",
+    "label_ca": "Agressió amb objecte",
+    "label_es": "Agresión con objeto",
+    "rationale_ca": "Ús de força, objectes o restriccions que poden causar dany físic.",
+    "rationale_es": "Uso de fuerza, objetos o restricciones que pueden causar daño físico.",
+    "source_ids": [
+      "SRC_CAT_PROTOCOL_MARC_2022"
+    ],
+    "follow_up_ca": [],
+    "follow_up_es": [],
+    "label_en": "Assault with an object",
+    "rationale_en": "Use of force, objects or restrictions that may cause physical harm.",
+    "follow_up_en": []
+  },
+  {
+    "id": "medication_control",
+    "domain": "care_and_health",
+    "severity": "high",
+    "label_ca": "Control injustificat de medicació",
+    "label_es": "Control injustificado de medicación",
+    "rationale_ca": "Negligència, control o ús coercitiu de necessitats de salut i dependència.",
+    "rationale_es": "Negligencia, control o uso coercitivo de necesidades de salud, cuidados y dependencia.",
+    "source_ids": [
+      "SRC_CAT_SALUT_VM",
+      "SRC_CAT_DONES_GRANS"
+    ],
+    "follow_up_ca": [],
+    "follow_up_es": [],
+    "label_en": "Unjustified medication control",
+    "rationale_en": "Neglect, control or coercive use of health, care and dependency needs.",
+    "follow_up_en": []
+  },
+  {
+    "id": "medical_visit_control",
+    "domain": "care_and_health",
+    "severity": "high",
+    "label_ca": "Control de visites o informació sanitària",
+    "label_es": "Control de visitas o información sanitaria",
+    "rationale_ca": "Negligència, control o ús coercitiu de necessitats de salut i dependència.",
+    "rationale_es": "Negligencia, control o uso coercitivo de necesidades de salud, cuidados y dependencia.",
+    "source_ids": [
+      "SRC_CAT_SALUT_VM",
+      "SRC_CAT_DONES_GRANS"
+    ],
+    "follow_up_ca": [],
+    "follow_up_es": [],
+    "label_en": "Control of medical visits or health information",
+    "rationale_en": "Neglect, control or coercive use of health, care and dependency needs.",
+    "follow_up_en": []
+  },
+  {
+    "id": "neglect_basic_needs",
+    "domain": "care_and_health",
+    "severity": "high",
+    "label_ca": "Desatenció de necessitats bàsiques",
+    "label_es": "Desatención de necesidades básicas",
+    "rationale_ca": "Negligència, control o ús coercitiu de necessitats de salut i dependència.",
+    "rationale_es": "Negligencia, control o uso coercitivo de necesidades de salud, cuidados y dependencia.",
+    "source_ids": [
+      "SRC_CAT_SALUT_VM",
+      "SRC_CAT_DONES_GRANS"
+    ],
+    "follow_up_ca": [],
+    "follow_up_es": [],
+    "label_en": "Neglect of basic needs",
+    "rationale_en": "Neglect, control or coercive use of health, care and dependency needs.",
+    "follow_up_en": []
+  },
+  {
+    "id": "caregiver_retaliation",
+    "domain": "care_and_health",
+    "severity": "high",
+    "label_ca": "Amenaces de retirar cures",
+    "label_es": "Amenazas de retirar cuidados",
+    "rationale_ca": "Negligència, control o ús coercitiu de necessitats de salut i dependència.",
+    "rationale_es": "Negligencia, control o uso coercitivo de necesidades de salud, cuidados y dependencia.",
+    "source_ids": [
+      "SRC_CAT_SALUT_VM",
+      "SRC_CAT_DONES_GRANS"
+    ],
+    "follow_up_ca": [],
+    "follow_up_es": [],
+    "label_en": "Threats to withdraw care",
+    "rationale_en": "Neglect, control or coercive use of health, care and dependency needs.",
+    "follow_up_en": []
+  },
+  {
+    "id": "induced_dependency",
+    "domain": "care_and_health",
+    "severity": "high",
+    "label_ca": "Dependència induïda",
+    "label_es": "Dependencia inducida",
+    "rationale_ca": "Negligència, control o ús coercitiu de necessitats de salut i dependència.",
+    "rationale_es": "Negligencia, control o uso coercitivo de necesidades de salud, cuidados y dependencia.",
+    "source_ids": [
+      "SRC_CAT_SALUT_VM",
+      "SRC_CAT_DONES_GRANS"
+    ],
+    "follow_up_ca": [],
+    "follow_up_es": [],
+    "label_en": "Induced dependency",
+    "rationale_en": "Neglect, control or coercive use of health, care and dependency needs.",
+    "follow_up_en": []
+  },
+  {
+    "id": "symptom_dismissal",
+    "domain": "care_and_health",
+    "severity": "high",
+    "label_ca": "Desatenció o banalització de símptomes",
+    "label_es": "Desatención o banalización de síntomas",
+    "rationale_ca": "Negligència, control o ús coercitiu de necessitats de salut i dependència.",
+    "rationale_es": "Negligencia, control o uso coercitivo de necesidades de salud, cuidados y dependencia.",
+    "source_ids": [
+      "SRC_CAT_SALUT_VM",
+      "SRC_CAT_DONES_GRANS"
+    ],
+    "follow_up_ca": [],
+    "follow_up_es": [],
+    "label_en": "Dismissal or trivialization of symptoms",
+    "rationale_en": "Neglect, control or coercive use of health, care and dependency needs.",
+    "follow_up_en": []
+  },
+  {
+    "id": "caregiving_asymmetry",
+    "domain": "care_and_health",
+    "severity": "high",
+    "label_ca": "Asimetria sostinguda de cures",
+    "label_es": "Asimetría sostenida de cuidados",
+    "rationale_ca": "Negligència, control o ús coercitiu de necessitats de salut i dependència. Exemples: ella acompanya i cuida; ell no correspon.",
+    "rationale_es": "Negligencia, control o uso coercitivo de necesidades de salud, cuidados y dependencia.",
+    "source_ids": [
+      "SRC_CAT_SALUT_VM",
+      "SRC_CAT_DONES_GRANS"
+    ],
+    "follow_up_ca": [],
+    "follow_up_es": [],
+    "label_en": "Sustained care asymmetry",
+    "rationale_en": "Neglect, control or coercive use of health, care and dependency needs.",
+    "follow_up_en": []
+  },
+  {
+    "id": "self_neglect_due_to_partner_care",
+    "domain": "care_and_health",
+    "severity": "high",
+    "label_ca": "Autodesatenció vinculada a la cura de la parella",
+    "label_es": "Autodesatención vinculada al cuidado de la pareja",
+    "rationale_ca": "Negligència, control o ús coercitiu de necessitats de salut i dependència. Exemples: falta a revisions; ajorna proves; no recull medicació.",
+    "rationale_es": "Negligencia, control o uso coercitivo de necesidades de salud, cuidados y dependencia.",
+    "source_ids": [
+      "SRC_CAT_SALUT_VM",
+      "SRC_CAT_DONES_GRANS"
+    ],
+    "follow_up_ca": [],
+    "follow_up_es": [],
+    "label_en": "Self-neglect linked to partner care",
+    "rationale_en": "Neglect, control or coercive use of health, care and dependency needs.",
+    "follow_up_en": []
+  },
+  {
+    "id": "missed_preventive_care",
+    "domain": "care_and_health",
+    "severity": "high",
+    "label_ca": "Pèrdua de seguiment preventiu",
+    "label_es": "Pérdida de seguimiento preventivo",
+    "rationale_ca": "Negligència, control o ús coercitiu de necessitats de salut i dependència. Exemples: mamografies; citologies; controls crònics.",
+    "rationale_es": "Negligencia, control o uso coercitivo de necesidades de salud, cuidados y dependencia.",
+    "source_ids": [
+      "SRC_CAT_SALUT_VM",
+      "SRC_CAT_DONES_GRANS"
+    ],
+    "follow_up_ca": [],
+    "follow_up_es": [],
+    "label_en": "Loss of preventive follow-up",
+    "rationale_en": "Neglect, control or coercive use of health, care and dependency needs.",
+    "follow_up_en": []
+  },
+  {
+    "id": "delayed_diagnosis_risk",
+    "domain": "care_and_health",
+    "severity": "high",
+    "label_ca": "Risc de diagnòstic tardà per absència de seguiment",
+    "label_es": "Riesgo de diagnóstico tardío por falta de seguimiento",
+    "rationale_ca": "Negligència, control o ús coercitiu de necessitats de salut i dependència.",
+    "rationale_es": "Negligencia, control o uso coercitivo de necesidades de salud, cuidados y dependencia.",
+    "source_ids": [
+      "SRC_CAT_SALUT_VM",
+      "SRC_CAT_DONES_GRANS"
+    ],
+    "follow_up_ca": [],
+    "follow_up_es": [],
+    "label_en": "Risk of delayed diagnosis due to lack of follow-up",
+    "rationale_en": "Neglect, control or coercive use of health, care and dependency needs.",
+    "follow_up_en": []
+  },
+  {
+    "id": "health_priority_displacement",
+    "domain": "care_and_health",
+    "severity": "high",
+    "label_ca": "Desplaçament sistemàtic de la pròpia salut",
+    "label_es": "Desplazamiento sistemático de la propia salud",
+    "rationale_ca": "Negligència, control o ús coercitiu de necessitats de salut i dependència. Exemples: primer ell; jo no tinc temps; no el puc deixar sol.",
+    "rationale_es": "Negligencia, control o uso coercitivo de necesidades de salud, cuidados y dependencia.",
+    "source_ids": [
+      "SRC_CAT_SALUT_VM",
+      "SRC_CAT_DONES_GRANS"
+    ],
+    "follow_up_ca": [],
+    "follow_up_es": [],
+    "label_en": "Systematic displacement of her own health",
+    "rationale_en": "Neglect, control or coercive use of health, care and dependency needs.",
+    "follow_up_en": []
+  },
+  {
+    "id": "care_obligation_coercion",
+    "domain": "care_and_health",
+    "severity": "high",
+    "label_ca": "Obligació coercitiva de cuidar",
+    "label_es": "Obligación coercitiva de cuidar",
+    "rationale_ca": "Negligència, control o ús coercitiu de necessitats de salut i dependència. Exemples: culpa; por; exigència.",
+    "rationale_es": "Negligencia, control o uso coercitivo de necesidades de salud, cuidados y dependencia.",
+    "source_ids": [
+      "SRC_CAT_SALUT_VM",
+      "SRC_CAT_DONES_GRANS"
+    ],
+    "follow_up_ca": [],
+    "follow_up_es": [],
+    "label_en": "Coercive obligation to care",
+    "rationale_en": "Neglect, control or coercive use of health, care and dependency needs.",
+    "follow_up_en": []
+  },
+  {
+    "id": "visit_restriction",
+    "domain": "social_isolation",
+    "severity": "medium",
+    "label_ca": "Restricció de visites",
+    "label_es": "Restricción de visitas",
+    "rationale_ca": "Limitació de contactes, mobilitat, activitats o comunicacions.",
+    "rationale_es": "Limitación de contactos, movilidad, actividades o comunicaciones.",
+    "source_ids": [
+      "SRC_CAT_DONES_GRANS"
+    ],
+    "follow_up_ca": [],
+    "follow_up_es": [],
+    "label_en": "Visit restriction",
+    "rationale_en": "Limitation of contacts, mobility, activities or communications.",
+    "follow_up_en": []
+  },
+  {
+    "id": "phone_control",
+    "domain": "social_isolation",
+    "severity": "medium",
+    "label_ca": "Control del telèfon",
+    "label_es": "Control del teléfono",
+    "rationale_ca": "Limitació de contactes, mobilitat, activitats o comunicacions.",
+    "rationale_es": "Limitación de contactos, movilidad, actividades o comunicaciones.",
+    "source_ids": [
+      "SRC_CAT_DONES_GRANS"
+    ],
+    "follow_up_ca": [],
+    "follow_up_es": [],
+    "label_en": "Phone control",
+    "rationale_en": "Limitation of contacts, mobility, activities or communications.",
+    "follow_up_en": []
+  },
+  {
+    "id": "mobility_control",
+    "domain": "social_isolation",
+    "severity": "medium",
+    "label_ca": "Control de sortides o transport",
+    "label_es": "Control de salidas o transporte",
+    "rationale_ca": "Limitació de contactes, mobilitat, activitats o comunicacions.",
+    "rationale_es": "Limitación de contactos, movilidad, actividades o comunicaciones.",
+    "source_ids": [
+      "SRC_CAT_DONES_GRANS"
+    ],
+    "follow_up_ca": [],
+    "follow_up_es": [],
+    "label_en": "Control of outings or transport",
+    "rationale_en": "Limitation of contacts, mobility, activities or communications.",
+    "follow_up_en": []
+  },
+  {
+    "id": "community_withdrawal",
+    "domain": "social_isolation",
+    "severity": "medium",
+    "label_ca": "Abandonament d'activitats comunitàries",
+    "label_es": "Abandono de actividades comunitarias",
+    "rationale_ca": "Limitació de contactes, mobilitat, activitats o comunicacions.",
+    "rationale_es": "Limitación de contactos, movilidad, actividades o comunicaciones.",
+    "source_ids": [
+      "SRC_CAT_DONES_GRANS"
+    ],
+    "follow_up_ca": [],
+    "follow_up_es": [],
+    "label_en": "Withdrawal from community activities",
+    "rationale_en": "Limitation of contacts, mobility, activities or communications.",
+    "follow_up_en": []
+  },
+  {
+    "id": "speaking_for_her",
+    "domain": "social_isolation",
+    "severity": "medium",
+    "label_ca": "Una altra persona respon sistemàticament per ella",
+    "label_es": "Otra persona responde sistemáticamente por ella",
+    "rationale_ca": "Limitació de contactes, mobilitat, activitats o comunicacions.",
+    "rationale_es": "Limitación de contactos, movilidad, actividades o comunicaciones.",
+    "source_ids": [
+      "SRC_CAT_DONES_GRANS"
+    ],
+    "follow_up_ca": [],
+    "follow_up_es": [],
+    "label_en": "Another person systematically answers for her",
+    "rationale_en": "Limitation of contacts, mobility, activities or communications.",
+    "follow_up_en": []
+  },
+  {
+    "id": "privacy_denied",
+    "domain": "institutional",
+    "severity": "medium",
+    "label_ca": "Negació de privacitat",
+    "label_es": "Negación de privacidad",
+    "rationale_ca": "Pèrdua de drets, autonomia o dignitat en serveis, institucions o dispositius de cura.",
+    "rationale_es": "Pérdida de derechos, autonomía o dignidad en servicios, instituciones o dispositivos de cuidado.",
+    "source_ids": [
+      "SRC_CAT_DONES_GRANS",
+      "SRC_BCN_RESOURCES"
+    ],
+    "follow_up_ca": [],
+    "follow_up_es": [],
+    "label_en": "Denial of privacy",
+    "rationale_en": "Loss of rights, autonomy or dignity in services, institutions or care settings.",
+    "follow_up_en": []
+  },
+  {
+    "id": "consent_bypassed",
+    "domain": "institutional",
+    "severity": "medium",
+    "label_ca": "Decisions sense consentiment",
+    "label_es": "Decisiones sin consentimiento",
+    "rationale_ca": "Pèrdua de drets, autonomia o dignitat en serveis, institucions o dispositius de cura.",
+    "rationale_es": "Pérdida de derechos, autonomía o dignidad en servicios, instituciones o dispositivos de cuidado.",
+    "source_ids": [
+      "SRC_CAT_DONES_GRANS",
+      "SRC_BCN_RESOURCES"
+    ],
+    "follow_up_ca": [],
+    "follow_up_es": [],
+    "label_en": "Decisions without consent",
+    "rationale_en": "Loss of rights, autonomy or dignity in services, institutions or care settings.",
+    "follow_up_en": []
+  },
+  {
+    "id": "complaint_dismissal",
+    "domain": "institutional",
+    "severity": "medium",
+    "label_ca": "Queixa desatesa o atribuïda a l'edat",
+    "label_es": "Queja desatendida o atribuida a la edad",
+    "rationale_ca": "Pèrdua de drets, autonomia o dignitat en serveis, institucions o dispositius de cura.",
+    "rationale_es": "Pérdida de derechos, autonomía o dignidad en servicios, instituciones o dispositivos de cuidado.",
+    "source_ids": [
+      "SRC_CAT_DONES_GRANS",
+      "SRC_BCN_RESOURCES"
+    ],
+    "follow_up_ca": [],
+    "follow_up_es": [],
+    "label_en": "Complaint dismissed or attributed to age",
+    "rationale_en": "Loss of rights, autonomy or dignity in services, institutions or care settings.",
+    "follow_up_en": []
+  },
+  {
+    "id": "unnecessary_restriction",
+    "domain": "institutional",
+    "severity": "medium",
+    "label_ca": "Restricció injustificada",
+    "label_es": "Restricción injustificada",
+    "rationale_ca": "Pèrdua de drets, autonomia o dignitat en serveis, institucions o dispositius de cura.",
+    "rationale_es": "Pérdida de derechos, autonomía o dignidad en servicios, instituciones o dispositivos de cuidado.",
+    "source_ids": [
+      "SRC_CAT_DONES_GRANS",
+      "SRC_BCN_RESOURCES"
+    ],
+    "follow_up_ca": [],
+    "follow_up_es": [],
+    "label_en": "Unjustified restriction",
+    "rationale_en": "Loss of rights, autonomy or dignity in services, institutions or care settings.",
+    "follow_up_en": []
+  },
+  {
+    "id": "dignity_loss",
+    "domain": "institutional",
+    "severity": "medium",
+    "label_ca": "Tracte indigne o despersonalitzat",
+    "label_es": "Trato indigno o despersonalizado",
+    "rationale_ca": "Pèrdua de drets, autonomia o dignitat en serveis, institucions o dispositius de cura.",
+    "rationale_es": "Pérdida de derechos, autonomía o dignidad en servicios, instituciones o dispositivos de cuidado.",
+    "source_ids": [
+      "SRC_CAT_DONES_GRANS",
+      "SRC_BCN_RESOURCES"
+    ],
+    "follow_up_ca": [],
+    "follow_up_es": [],
+    "label_en": "Undignified or depersonalized treatment",
+    "rationale_en": "Loss of rights, autonomy or dignity in services, institutions or care settings.",
+    "follow_up_en": []
+  },
+  {
+    "id": "password_control",
+    "domain": "digital",
+    "severity": "medium",
+    "label_ca": "Control de contrasenyes",
+    "label_es": "Control de contraseñas",
+    "rationale_ca": "Control, vigilància, suplantació o explotació mitjançant dispositius i serveis digitals.",
+    "rationale_es": "Control, vigilancia, suplantación o explotación mediante dispositivos y servicios digitales.",
+    "source_ids": [
+      "SRC_CAT_DONES_GRANS"
+    ],
+    "follow_up_ca": [],
+    "follow_up_es": [],
+    "label_en": "Password control",
+    "rationale_en": "Control, surveillance, impersonation or exploitation through devices and digital services.",
+    "follow_up_en": []
+  },
+  {
+    "id": "banking_app_control",
+    "domain": "digital",
+    "severity": "medium",
+    "label_ca": "Control de banca digital",
+    "label_es": "Control de banca digital",
+    "rationale_ca": "Control, vigilància, suplantació o explotació mitjançant dispositius i serveis digitals.",
+    "rationale_es": "Control, vigilancia, suplantación o explotación mediante dispositivos y servicios digitales.",
+    "source_ids": [
+      "SRC_CAT_DONES_GRANS"
+    ],
+    "follow_up_ca": [],
+    "follow_up_es": [],
+    "label_en": "Digital banking control",
+    "rationale_en": "Control, surveillance, impersonation or exploitation through devices and digital services.",
+    "follow_up_en": []
+  },
+  {
+    "id": "device_surveillance",
+    "domain": "digital",
+    "severity": "medium",
+    "label_ca": "Vigilància del dispositiu",
+    "label_es": "Vigilancia del dispositivo",
+    "rationale_ca": "Control, vigilància, suplantació o explotació mitjançant dispositius i serveis digitals.",
+    "rationale_es": "Control, vigilancia, suplantación o explotación mediante dispositivos y servicios digitales.",
+    "source_ids": [
+      "SRC_CAT_DONES_GRANS"
+    ],
+    "follow_up_ca": [],
+    "follow_up_es": [],
+    "label_en": "Device surveillance",
+    "rationale_en": "Control, surveillance, impersonation or exploitation through devices and digital services.",
+    "follow_up_en": []
+  },
+  {
+    "id": "identity_impersonation",
+    "domain": "digital",
+    "severity": "medium",
+    "label_ca": "Suplantació",
+    "label_es": "Suplantación",
+    "rationale_ca": "Control, vigilància, suplantació o explotació mitjançant dispositius i serveis digitals.",
+    "rationale_es": "Control, vigilancia, suplantación o explotación mediante dispositivos y servicios digitales.",
+    "source_ids": [
+      "SRC_CAT_DONES_GRANS"
+    ],
+    "follow_up_ca": [],
+    "follow_up_es": [],
+    "label_en": "Impersonation",
+    "rationale_en": "Control, surveillance, impersonation or exploitation through devices and digital services.",
+    "follow_up_en": []
+  },
+  {
+    "id": "digital_exclusion_dependency",
+    "domain": "digital",
+    "severity": "medium",
+    "label_ca": "Dependència digital utilitzada per controlar",
+    "label_es": "Dependencia digital utilizada para controlar",
+    "rationale_ca": "Control, vigilància, suplantació o explotació mitjançant dispositius i serveis digitals.",
+    "rationale_es": "Control, vigilancia, suplantación o explotación mediante dispositivos y servicios digitales.",
+    "source_ids": [
+      "SRC_CAT_DONES_GRANS"
+    ],
+    "follow_up_ca": [],
+    "follow_up_es": [],
+    "label_en": "Digital dependency used for control",
+    "rationale_en": "Control, surveillance, impersonation or exploitation through devices and digital services.",
+    "follow_up_en": []
+  },
+  {
+    "id": "online_fraud_by_known_person",
+    "domain": "digital",
+    "severity": "medium",
+    "label_ca": "Frau o operacions per persona coneguda",
+    "label_es": "Fraude u operaciones por persona conocida",
+    "rationale_ca": "Control, vigilància, suplantació o explotació mitjançant dispositius i serveis digitals.",
+    "rationale_es": "Control, vigilancia, suplantación o explotación mediante dispositivos y servicios digitales.",
+    "source_ids": [
+      "SRC_CAT_DONES_GRANS"
+    ],
+    "follow_up_ca": [],
+    "follow_up_es": [],
+    "label_en": "Fraud or transactions by a known person",
+    "rationale_en": "Control, surveillance, impersonation or exploitation through devices and digital services.",
+    "follow_up_en": []
+  },
+  {
+    "id": "permission_for_everyday_actions",
+    "domain": "autonomy_erosion",
+    "severity": "medium",
+    "label_ca": "Demana permís per accions quotidianes",
+    "label_es": "Pide permiso para acciones cotidianas",
+    "rationale_ca": "Pèrdua progressiva de capacitat percebuda per decidir, iniciar accions o gestionar necessitats pròpies després d'anys de control.",
+    "rationale_es": "Pérdida progresiva de capacidad percibida para decidir, iniciar acciones o gestionar necesidades propias después de años de control.",
+    "source_ids": [
+      "SRC_CAT_DONES_GRANS"
+    ],
+    "follow_up_ca": [],
+    "follow_up_es": [],
+    "label_en": "Asks permission for everyday actions",
+    "rationale_en": "Progressive loss of perceived capacity to decide, initiate actions or manage personal needs after years of control.",
+    "follow_up_en": []
+  },
+  {
+    "id": "initiative_loss",
+    "domain": "autonomy_erosion",
+    "severity": "medium",
+    "label_ca": "Manca d'iniciativa",
+    "label_es": "Falta de iniciativa",
+    "rationale_ca": "Pèrdua progressiva de capacitat percebuda per decidir, iniciar accions o gestionar necessitats pròpies després d'anys de control.",
+    "rationale_es": "Pérdida progresiva de capacidad percibida para decidir, iniciar acciones o gestionar necesidades propias después de años de control.",
+    "source_ids": [
+      "SRC_CAT_DONES_GRANS"
+    ],
+    "follow_up_ca": [],
+    "follow_up_es": [],
+    "label_en": "Lack of initiative",
+    "rationale_en": "Progressive loss of perceived capacity to decide, initiate actions or manage personal needs after years of control.",
+    "follow_up_en": []
+  },
+  {
+    "id": "decision_paralysis",
+    "domain": "autonomy_erosion",
+    "severity": "medium",
+    "label_ca": "Bloqueig davant decisions senzilles",
+    "label_es": "Bloqueo ante decisiones sencillas",
+    "rationale_ca": "Pèrdua progressiva de capacitat percebuda per decidir, iniciar accions o gestionar necessitats pròpies després d'anys de control.",
+    "rationale_es": "Pérdida progresiva de capacidad percibida para decidir, iniciar acciones o gestionar necesidades propias después de años de control.",
+    "source_ids": [
+      "SRC_CAT_DONES_GRANS"
+    ],
+    "follow_up_ca": [],
+    "follow_up_es": [],
+    "label_en": "Blockage with simple decisions",
+    "rationale_en": "Progressive loss of perceived capacity to decide, initiate actions or manage personal needs after years of control.",
+    "follow_up_en": []
+  },
+  {
+    "id": "internalized_dependency",
+    "domain": "autonomy_erosion",
+    "severity": "medium",
+    "label_ca": "Dependència interioritzada",
+    "label_es": "Dependencia interiorizada",
+    "rationale_ca": "Pèrdua progressiva de capacitat percebuda per decidir, iniciar accions o gestionar necessitats pròpies després d'anys de control.",
+    "rationale_es": "Pérdida progresiva de capacidad percibida para decidir, iniciar acciones o gestionar necesidades propias después de años de control.",
+    "source_ids": [
+      "SRC_CAT_DONES_GRANS"
+    ],
+    "follow_up_ca": [],
+    "follow_up_es": [],
+    "label_en": "Internalized dependency",
+    "rationale_en": "Progressive loss of perceived capacity to decide, initiate actions or manage personal needs after years of control.",
+    "follow_up_en": []
+  },
+  {
+    "id": "self_deprioritization",
+    "domain": "autonomy_erosion",
+    "severity": "medium",
+    "label_ca": "Despriorització sistemàtica de necessitats pròpies",
+    "label_es": "Despriorización sistemática de necesidades propias",
+    "rationale_ca": "Pèrdua progressiva de capacitat percebuda per decidir, iniciar accions o gestionar necessitats pròpies després d'anys de control.",
+    "rationale_es": "Pérdida progresiva de capacidad percibida para decidir, iniciar acciones o gestionar necesidades propias después de años de control.",
+    "source_ids": [
+      "SRC_CAT_DONES_GRANS"
+    ],
+    "follow_up_ca": [],
+    "follow_up_es": [],
+    "label_en": "Systematic deprioritization of her own needs",
+    "rationale_en": "Progressive loss of perceived capacity to decide, initiate actions or manage personal needs after years of control.",
+    "follow_up_en": []
+  },
+  {
+    "id": "economic_self_denial",
+    "domain": "autonomy_erosion",
+    "severity": "medium",
+    "label_ca": "Renúncia a despesa pròpia",
+    "label_es": "Renuncia a gasto propio",
+    "rationale_ca": "Pèrdua progressiva de capacitat percebuda per decidir, iniciar accions o gestionar necessitats pròpies després d'anys de control.",
+    "rationale_es": "Pérdida progresiva de capacidad percibida para decidir, iniciar acciones o gestionar necesidades propias después de años de control.",
+    "source_ids": [
+      "SRC_CAT_DONES_GRANS"
+    ],
+    "follow_up_ca": [],
+    "follow_up_es": [],
+    "label_en": "Renouncing spending on herself",
+    "rationale_en": "Progressive loss of perceived capacity to decide, initiate actions or manage personal needs after years of control.",
+    "follow_up_en": []
+  },
+  {
+    "id": "learned_compliance",
+    "domain": "autonomy_erosion",
+    "severity": "medium",
+    "label_ca": "Compliment après",
+    "label_es": "Cumplimiento aprendido",
+    "rationale_ca": "Pèrdua progressiva de capacitat percebuda per decidir, iniciar accions o gestionar necessitats pròpies després d'anys de control.",
+    "rationale_es": "Pérdida progresiva de capacidad percibida para decidir, iniciar acciones o gestionar necesidades propias después de años de control.",
+    "source_ids": [
+      "SRC_CAT_DONES_GRANS"
+    ],
+    "follow_up_ca": [],
+    "follow_up_es": [],
+    "label_en": "Learned compliance",
+    "rationale_en": "Progressive loss of perceived capacity to decide, initiate actions or manage personal needs after years of control.",
+    "follow_up_en": []
+  }
+]

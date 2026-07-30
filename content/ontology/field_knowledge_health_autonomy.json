@@ -1,0 +1,50 @@
+{
+  "_meta": {
+    "project": "LUCERNA 65",
+    "version": "0.2.0-draft",
+    "generated_at": "2026-07-30",
+    "title": "Coneixement de camp: salut, cures i erosió de l'autonomia"
+  },
+  "knowledge_patterns": [
+    {
+      "id": "KP_HEALTH_001",
+      "name": "Asimetria de cures sanitàries",
+      "description": "La dona assumeix visites, medicació i seguiment de la parella, però no rep suport equivalent.",
+      "system_implications": [
+        "Preguntar separadament qui cuida la salut de cadascú.",
+        "No donar per fet que conviure implica reciprocitat.",
+        "Explorar suport disponible per acudir a visites pròpies."
+      ]
+    },
+    {
+      "id": "KP_HEALTH_002",
+      "name": "Desplaçament de la pròpia salut",
+      "description": "La cura de la parella substitueix revisions, proves o tractaments de la dona.",
+      "system_implications": [
+        "Preguntar per revisions perdudes i motiu concret.",
+        "Distingir elecció puntual, manca de recursos i obligació coercitiva.",
+        "Activar revisió sanitària si hi ha proves o símptomes pendents."
+      ]
+    },
+    {
+      "id": "KP_AUTONOMY_001",
+      "name": "Dependència apresa",
+      "description": "Després d'anys de control, la dona pot deixar de percebre's capaç de decidir o iniciar accions.",
+      "system_implications": [
+        "No confondre dependència apresa amb deteriorament cognitiu.",
+        "Explorar decisions petites i quotidianes.",
+        "Proposar recuperació gradual d'autonomia, mai substitució."
+      ]
+    },
+    {
+      "id": "KP_AUTONOMY_002",
+      "name": "Despriorització interioritzada",
+      "description": "Les necessitats de la dona queden sistemàticament darrere de les de la parella, especialment en salut i despesa.",
+      "system_implications": [
+        "Preguntar qui queda fora quan no hi ha temps o diners per a tot.",
+        "Explorar si evita despeses o activitats per a ella.",
+        "Registrar el patró sense culpabilitzar."
+      ]
+    }
+  ]
+}

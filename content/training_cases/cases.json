@@ -1,0 +1,121 @@
+[
+  {
+    "id": "CASE_FICT_001",
+    "title_ca": "Relacions sexuals normalitzades dins del matrimoni",
+    "title_es": "Relaciones sexuales normalizadas dentro del matrimonio",
+    "profile": "psychology",
+    "brief_ca": "El meu marit tenia relacions quan volia.\nJo no sempre volia, però era el meu marit.\nEncara que estigués malalta o embarassada, era normal.",
+    "brief_es": "Mi marido tenía relaciones cuando quería.\nYo no siempre quería, pero era mi marido.\nAunque estuviera enferma o embarazada, era normal.",
+    "expected_indicators": [
+      "marital_entitlement",
+      "historical_normalization",
+      "unable_to_refuse_sex",
+      "sex_during_illness_or_pain",
+      "sex_during_pregnancy_without_consent"
+    ],
+    "safe_summary_ca": "El relat inclou expressions de normalització i manca percebuda de llibertat per rebutjar relacions íntimes. Convé explorar consentiment, conseqüències de la negativa i impacte actual.",
+    "must_not_output": [
+      "violació confirmada",
+      "marit violador",
+      "diagnòstic"
+    ],
+    "title_en": "Normalized sexual relations within marriage",
+    "brief_en": "My husband had sex whenever he wanted.\nI did not always want to, but he was my husband.\nEven if I was ill or pregnant, it was normal."
+  },
+  {
+    "id": "CASE_FICT_002",
+    "title_ca": "Control econòmic quotidià i prohibició de treballar",
+    "title_es": "Control económico cotidiano y prohibición de trabajar",
+    "profile": "social_work",
+    "brief_ca": "Ell no volia que treballés.\nPer comprar-me unes mitges havia de demanar permís.\nHavia de justificar cada pesseta.",
+    "brief_es": "Él no quería que yo trabajara.\nPara comprarme unas medias tenía que pedir permiso.\nTenía que justificar cada peseta.",
+    "expected_indicators": [
+      "forced_domesticity",
+      "permission_for_small_purchases",
+      "unknown_financial_state"
+    ],
+    "safe_summary_ca": "S'han registrat limitacions històriques de l'autonomia laboral i econòmica, inclosa la necessitat de permís per a despeses personals bàsiques.",
+    "must_not_output": [],
+    "title_en": "Everyday economic control and being forbidden to work",
+    "brief_en": "He did not want me to work.\nTo buy myself stockings I had to ask permission.\nI had to justify every peseta."
+  },
+  {
+    "id": "CASE_FICT_003",
+    "title_ca": "Apropiació d'estalvis i impacte sobre necessitats",
+    "title_es": "Apropiación de ahorros e impacto sobre necesidades",
+    "profile": "primary_care",
+    "brief_ca": "Ella havia estalviat treballant en neteja.\nLa parella va gastar els estalvis en una compra unilateral.\nElla justificava que ell treballava molt i tenia aficions cares.",
+    "brief_es": "Ella había ahorrado trabajando en limpieza.\nLa pareja gastó los ahorros en una compra unilateral.\nElla justificaba que él trabajaba mucho y tenía aficiones caras.",
+    "expected_indicators": [
+      "unilateral_spending",
+      "income_appropriation",
+      "excusing_perpetrator"
+    ],
+    "safe_summary_ca": "El relat descriu una possible apropiació o decisió unilateral sobre estalvis generats per ella, acompanyada de justificacions de la conducta de la parella.",
+    "must_not_output": [],
+    "title_en": "Appropriation of savings and impact on needs",
+    "brief_en": "She had saved money by working in cleaning.\nHer partner spent the savings on a unilateral purchase.\nShe justified it by saying he worked hard and had expensive hobbies."
+  },
+  {
+    "id": "CASE_FICT_004",
+    "title_ca": "Patró agressiu observable en residència",
+    "title_es": "Patrón agresivo observable en residencia",
+    "profile": "residential_care",
+    "brief_ca": "L'home insulta i amenaça personal femení.\nDurant la visita, colpeja amb el bastó.\nLa dona mesura les paraules, mostra temor i mira la filla abans de respondre.",
+    "brief_es": "El hombre insulta y amenaza a personal femenino.\nDurante la visita, golpea con el bastón.\nLa mujer mide las palabras, muestra temor y mira a la hija antes de responder.",
+    "expected_indicators": [
+      "violence_toward_staff",
+      "object_assault",
+      "fearful_behavior",
+      "emotional_lability_contextual"
+    ],
+    "safe_summary_ca": "S'han observat conductes agressives i una resposta de temor contextual en la dona. Cal prioritzar seguretat, entrevista privada i aplicació del protocol del centre.",
+    "must_not_output": [],
+    "title_en": "Observable aggressive pattern in residential care",
+    "brief_en": "The man insults and threatens female staff.\nDuring the visit, he strikes with his cane.\nThe woman measures her words, shows fear and looks at her daughter before answering."
+  },
+  {
+    "id": "CASE_FICT_005",
+    "title_ca": "Asimetria de cures i revisions mèdiques perdudes",
+    "title_es": "Asimetría de cuidados y revisiones médicas perdidas",
+    "profile": "primary_care",
+    "brief_ca": "Ella acompanya sempre el marit a les visites i li gestiona la medicació.\nHa faltat repetidament a revisions pròpies perquè no el podia deixar sol.\nTé una prova diagnòstica pendent des de fa mesos.",
+    "brief_es": "Ella acompaña siempre al marido a las visitas y le gestiona la medicación.\nHa faltado repetidamente a revisiones propias porque no lo podía dejar solo.\nTiene una prueba diagnóstica pendiente desde hace meses.",
+    "expected_indicators": [
+      "caregiving_asymmetry",
+      "self_neglect_due_to_partner_care",
+      "missed_preventive_care",
+      "delayed_diagnosis_risk",
+      "health_priority_displacement"
+    ],
+    "safe_summary_ca": "S'ha registrat una asimetria sostinguda de cures i pèrdua de seguiment sanitari propi. Convé recuperar les proves pendents i explorar alternatives de cura que permetin l'assistència.",
+    "must_not_output": [
+      "ella és negligent amb la seva salut",
+      "diagnòstic tardà confirmat"
+    ],
+    "title_en": "Care asymmetry and missed medical check-ups",
+    "brief_en": "She always accompanies her husband to appointments and manages his medication.\nShe has repeatedly missed her own check-ups because she could not leave him alone.\nShe has had a diagnostic test pending for months."
+  },
+  {
+    "id": "CASE_FICT_006",
+    "title_ca": "Dependència apresa després d'anys de control",
+    "title_es": "Dependencia aprendida después de años de control",
+    "profile": "social_work",
+    "brief_ca": "Demana permís per comprar objectes de baix cost.\nDiu que no sap decidir sola.\nNo inicia activitats per a ella mateixa tot i disposar de recursos.",
+    "brief_es": "Pide permiso para comprar objetos de bajo coste.\nDice que no sabe decidir sola.\nNo inicia actividades para sí misma aunque dispone de recursos.",
+    "expected_indicators": [
+      "permission_for_everyday_actions",
+      "initiative_loss",
+      "internalized_dependency",
+      "learned_compliance",
+      "economic_self_denial"
+    ],
+    "safe_summary_ca": "S'observen dificultats persistents per prendre decisions quotidianes i prioritzar necessitats pròpies. Cal diferenciar deteriorament cognitiu, manca d'experiència, por i dependència apresa.",
+    "must_not_output": [
+      "incapacitat",
+      "no pot decidir per si mateixa"
+    ],
+    "title_en": "Learned dependency after years of control",
+    "brief_en": "She asks permission to buy low-cost items.\nShe says she does not know how to decide alone.\nShe does not start activities for herself even though she has resources."
+  }
+]

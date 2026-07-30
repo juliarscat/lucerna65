@@ -1,0 +1,6 @@
+{
+  "inherits": "../ca/tree.json",
+  "locale": "es",
+  "note": "El arbol fuente es bilingue y vive en questions/ca/tree.json para mantener una unica version auditable."
+}
+
