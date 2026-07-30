@@ -2,7 +2,8 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "functions": {
     "api/analyze.py": {
-      "maxDuration": 60
+      "maxDuration": 60,
+      "excludeFiles": "{.venv/**,.pytest_cache/**,tmp/**,output/**,server.*.log,backend/test_*.py,docs/concurs/**}"
     }
   }
 }
